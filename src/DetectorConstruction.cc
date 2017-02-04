@@ -302,6 +302,30 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
   //rm->rotateZ(90.*deg);
   rm->rotateY(90.*deg);
   G4ThreeVector Tr(0, 0, 0);
+  //MIC_____________________________
+  G4VSolid* MIC_body =
+	  new G4Box("MIC body",
+		  98.044*mm, 185.039*mm, 12.7*mm);
+  G4ThreeVector pos_MIC_body(0, 0, 0);//height of 36.703 + 12.7 = 49.403
+
+  G4VSolid* MIC_cyl = 
+	  new G4Tubs("Subt Cyl",
+		  0, 38.227*mm, 12.8*mm, 0, twopi);
+  G4ThreeVector pos_MIC_cyl1(0, 63.627*mm, 0);
+  G4ThreeVector pos_MIC_cyl2(0, -63.627*mm, 0);
+
+  G4VSolid* MIC_rect =
+	  new G4Box("Subt Rect",
+		  38.227*mm, 63.627*mm, 12.8*mm);
+  G4ThreeVector pos_MIC_rect(0, 0, 0);
+
+  //MIC Subtraction
+  G4SubtractionSolid* m1 =
+	  new G4SubtractionSolid("M1", MIC_body, MIC_cyl, 0, pos_MIC_cyl1);
+  G4SubtractionSolid* m2 =
+	  new G4SubtractionSolid("M2", m1, MIC_cyl, 0, pos_MIC_cyl2);
+  G4SubtractionSolid* m3 =
+	  new G4SubtractionSolid("M3", m2, MIC_rect, 0, pos_MIC_rect);
 
   // Subtraction solids
   G4SubtractionSolid* s1 =
@@ -343,7 +367,11 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
     new G4LogicalVolume(s11,                  // Its solid volume
                         aluminum,             // Its material
                         "Logical Shrould");   // Its name
-
+  
+  G4LogicalVolume* logical_MIC =
+	  new G4LogicalVolume(m3,
+		  aluminum,
+		  "Logical MIC");
   new G4PVPlacement(0,                        // No rotation
                     G4ThreeVector(0, 0, 0),   // At position
                     logical_shrould,          // Its logical volume
@@ -352,7 +380,14 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                     true,                     // Boolean operation
                     0,                        // Copy number
                     checkOverlaps); // Overlaps checking
-
+  new G4PVPlacement(0,
+	  G4ThreeVector(0, 0, 138.303*mm), // 49.403 + 88.9 = 138.303
+	  logical_MIC,
+	  "Main Insulator Cap",
+	  logicEnv,
+	  true,
+	  0,
+	  checkOverlaps);
   //
   // Neutron moderator/reflector
   //
