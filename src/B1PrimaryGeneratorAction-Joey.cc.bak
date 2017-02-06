@@ -23,80 +23,57 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file PrimaryGeneratorAction.cc
-/// \brief Implementation of the PrimaryGeneratorAction class
+// $Id: B1PrimaryGeneratorAction.cc 94307 2015-11-11 13:42:46Z gcosmo $
 //
-//
-// $Id: PrimaryGeneratorAction.cc 67268 2013-02-13 11:38:40Z ihrivnac $
-//
-// 
+/// \file B1PrimaryGeneratorAction.cc
+/// \brief Implementation of the B1PrimaryGeneratorAction class
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-#include "PrimaryGeneratorAction.hh"
+#include "B1PrimaryGeneratorAction.hh"
 
 #include "G4LogicalVolumeStore.hh"
 #include "G4LogicalVolume.hh"
 #include "G4Box.hh"
 #include "G4RunManager.hh"
-#include "G4Event.hh"
 #include "G4ParticleGun.hh"
 #include "G4ParticleTable.hh"
 #include "G4ParticleDefinition.hh"
-#include "G4IonTable.hh"
-#include "G4ParticleDefinition.hh"
-#include "G4Geantino.hh"
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
 #include "G4GeneralParticleSource.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-PrimaryGeneratorAction::PrimaryGeneratorAction()
+B1PrimaryGeneratorAction::B1PrimaryGeneratorAction()
 : G4VUserPrimaryGeneratorAction(),
-  fParticleGun(0),
+  fParticleGun(0), 
   fEnvelopeBox(0)
 {
   //G4int n_particle = 1;
-  fParticleGun = new G4ParticleGun();
-  
-  // Default particle kinematic.
+  //fParticleGun  = new G4GeneralParticleSource(n_particle);
+  fParticleGun  = new G4GeneralParticleSource();
+
+  // default particle kinematic
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4String particleName;
   G4ParticleDefinition* particle
     = particleTable->FindParticle(particleName="neutron");
   fParticleGun->SetParticleDefinition(particle);
-
-  // fParticleGun->SetParticleEnergy(0*eV);
-  // fParticleGun->SetParticlePosition(G4ThreeVector(0.*cm,0.*cm,0.*cm));
-  // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
+  //fGeneralParticleSource->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
+  //fGeneralParticleSource->SetParticleEnergy(2.45*MeV);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-PrimaryGeneratorAction::~PrimaryGeneratorAction()
+B1PrimaryGeneratorAction::~B1PrimaryGeneratorAction()
 {
   delete fParticleGun;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
+void B1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
-/*  if (fParticleGun->GetParticleDefinition() == G4Geantino::Geantino()) {  
-    G4int Z = 10, A = 24;
-    G4double ionCharge   = 0.*eplus;
-    G4double excitEnergy = 0.*keV;
-    
-    G4ParticleDefinition* ion
-       = G4IonTable::GetIonTable()->GetIon(Z,A,excitEnergy);
-    fParticleGun->SetParticleDefinition(ion);
-    fParticleGun->SetParticleCharge(ionCharge);
-  }
-*/
-
-  // This function is called at the beginning of each event.
+  //this function is called at the begining of each event
   //
 
   // In order to avoid dependence of PrimaryGeneratorAction
@@ -133,8 +110,6 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   
   fParticleGun->SetParticlePosition(G4ThreeVector(x0,y0,z0));
 
-  //create vertex
-  //   
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }
 

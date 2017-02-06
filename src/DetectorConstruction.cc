@@ -213,7 +213,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
   fPhysiWorld =
     new G4PVPlacement(0,                     //no rotation
                       G4ThreeVector(),       //at (0,0,0)
-                      logicWorld,            //its logical volume
+                      lWorld,                //its logical volume
                       "World",               //its name
                       0,                     //its mother  volume
                       false,                 //no boolean operation
@@ -382,6 +382,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                     true,                     // Boolean operation
                     0,                        // Copy number
                     checkOverlaps); // Overlaps checking
+
   new G4PVPlacement(0,
     G4ThreeVector(0, 0, 138.303*mm), // 49.403 + 88.9 = 138.303
     logical_MIC,
@@ -452,6 +453,17 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                     0,                       //copy number
                     checkOverlaps);          //overlaps checking
 
+  // Rotation
+  G4RotationMatrix* rotate_object =          // Define the rotation matrix
+    new G4RotationMatrix();
+
+  rotate_object->rotateZ(pi/8);         // Perform the rotation operations
+  rotate_object->rotateY(pi/2);         // around the specified axes using
+                                        // the right-hand rule for each axis.
+                                        // Rotations are performed in backward
+                                        // order: Y and then Z in this case.
+
+  //
   // Target
   //
   G4Tubs* 
@@ -463,7 +475,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                              fTargetMater,              //material
                              "Target");                 //name
                                
-           new G4PVPlacement(pi/4,                      //rotation
+           new G4PVPlacement(rotate_object,             //rotation
                             G4ThreeVector(0, 1*m, 1*m), //location
                             fLogicTarget,               //logical volume
                             "Target",                   //name
@@ -471,6 +483,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                             false,                      //no boolean operation
                             0);                         //copy number
 
+  //
   // Detector
   //
   G4Tubs* 
@@ -482,7 +495,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                              fDetectorMater,            //material
                              "Detector");               //name
                                
-           new G4PVPlacement(pi/4,                      //no rotation
+           new G4PVPlacement(rotate_object,             //no rotation
                             G4ThreeVector(0, 2*m, 2*m), //location
                             fLogicDetector,             //logical volume
                             "Detector",                 //name

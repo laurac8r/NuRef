@@ -85,7 +85,7 @@ void RunAction::BeginOfRunAction(const G4Run*)
     G4double energy = fPrimary->GetParticleGun()->GetParticleEnergy();
     fRun->SetPrimary(particle, energy);
   }
-             
+
   //histograms
   //
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();

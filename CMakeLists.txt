@@ -43,7 +43,6 @@ set(HFNG_model_SCRIPTS
     debug.mac
     plotHisto.C
     HFNG_model.in
-    vis.mac
   )
 
 foreach(_script ${HFNG_model_SCRIPTS})

@@ -62,13 +62,15 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
   public:
     virtual void GeneratePrimaries(G4Event*);
-    // G4ParticleGun* GetParticleGun() {return fParticleGun;};  
+
+    G4ParticleGun* GetParticleGun() {return fParticleGun;};  
     
     // method to access particle gun
-    const G4GeneralParticleSource* GetGeneralParticleSource() const { return fParticleGun; }
+    // const G4GeneralParticleSource* GetGeneralParticleSource() const { return fParticleGun; }
 
   private:
-    G4GeneralParticleSource*  fParticleGun; // pointer a to G4 gun class
+    G4ParticleGun* fParticleGun; // pointer a to G4 gun class
+    // G4GeneralParticleSource*  fParticleGun; // pointer a to G4 gun class
     G4Box* fEnvelopeBox;
 };
 
