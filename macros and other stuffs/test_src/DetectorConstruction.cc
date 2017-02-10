@@ -33,7 +33,7 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #include "DetectorConstruction.hh"
-//#include "DetectorMessenger.hh"
+#include "DetectorMessenger.hh"
 
 #include "G4Material.hh"
 #include "G4NistManager.hh"
@@ -82,7 +82,7 @@ DetectorConstruction::DetectorConstruction()
       
   DefineMaterials();
     
-  //  fDetectorMessenger = new DetectorMessenger(this);
+  fDetectorMessenger = new DetectorMessenger(this);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -182,8 +182,6 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                     checkOverlaps);          //overlaps checking
 
 */
-  // Get nist material manager
-  G4NistManager* nist = G4NistManager::Instance();
   
   // Envelope parameters
   //
@@ -213,7 +211,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
   fPhysiWorld =
     new G4PVPlacement(0,                     //no rotation
                       G4ThreeVector(),       //at (0,0,0)
-                      lWorld,                //its logical volume
+                      logicWorld,            //its logical volume
                       "World",               //its name
                       0,                     //its mother  volume
                       false,                 //no boolean operation
@@ -304,30 +302,6 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
   //rm->rotateZ(90.*deg);
   rm->rotateY(90.*deg);
   G4ThreeVector Tr(0, 0, 0);
-  //MIC_____________________________
-  G4VSolid* MIC_body =
-    new G4Box("MIC body",
-      98.044*mm, 185.039*mm, 12.7*mm);
-  G4ThreeVector pos_MIC_body(0, 0, 0);//height of 36.703 + 12.7 = 49.403
-
-  G4VSolid* MIC_cyl = 
-    new G4Tubs("Subt Cyl",
-      0, 38.227*mm, 12.8*mm, 0, twopi);
-  G4ThreeVector pos_MIC_cyl1(0, 63.627*mm, 0);
-  G4ThreeVector pos_MIC_cyl2(0, -63.627*mm, 0);
-
-  G4VSolid* MIC_rect =
-    new G4Box("Subt Rect",
-      38.227*mm, 63.627*mm, 12.8*mm);
-  G4ThreeVector pos_MIC_rect(0, 0, 0);
-
-  //MIC Subtraction
-  G4SubtractionSolid* m1 =
-    new G4SubtractionSolid("M1", MIC_body, MIC_cyl, 0, pos_MIC_cyl1);
-  G4SubtractionSolid* m2 =
-    new G4SubtractionSolid("M2", m1, MIC_cyl, 0, pos_MIC_cyl2);
-  G4SubtractionSolid* m3 =
-    new G4SubtractionSolid("M3", m2, MIC_rect, 0, pos_MIC_rect);
 
   // Subtraction solids
   G4SubtractionSolid* s1 =
@@ -369,11 +343,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
     new G4LogicalVolume(s11,                  // Its solid volume
                         aluminum,             // Its material
                         "Logical Shrould");   // Its name
-  
-  G4LogicalVolume* logical_MIC =
-    new G4LogicalVolume(m3,
-      aluminum,
-      "Logical MIC");
+
   new G4PVPlacement(0,                        // No rotation
                     G4ThreeVector(0, 0, 0),   // At position
                     logical_shrould,          // Its logical volume
@@ -383,14 +353,6 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                     0,                        // Copy number
                     checkOverlaps); // Overlaps checking
 
-  new G4PVPlacement(0,
-    G4ThreeVector(0, 0, 138.303*mm), // 49.403 + 88.9 = 138.303
-    logical_MIC,
-    "Main Insulator Cap",
-    logicEnv,
-    true,
-    0,
-    checkOverlaps);
   //
   // Neutron moderator/reflector
   //
@@ -453,15 +415,238 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                     0,                       //copy number
                     checkOverlaps);          //overlaps checking
 
-  // Rotation
-  G4RotationMatrix* rotate_object =          // Define the rotation matrix
-    new G4RotationMatrix();
+  //
+  // Composite test build
+  //
 
-  rotate_object->rotateZ(pi/8);         // Perform the rotation operations
-  rotate_object->rotateY(pi/2);         // around the specified axes using
-                                        // the right-hand rule for each axis.
-                                        // Rotations are performed in backward
-                                        // order: Y and then Z in this case.
+  // Defining the material for the item
+  //
+
+  // Defining elements and compounds using the internal Geant4 database
+  G4Material* aluminum = nist->FindOrBuildMaterial("G4_Al");
+  G4Material* titanium = nist->FindOrBuildMaterial("G4_Ti");
+  G4Material* calcium_oxide = nist->FindOrBuildMaterial("G4_CALCIUM_OXIDE");
+  G4Material* iron = nist->FindOrBuildMaterial("G4_Fe");
+  G4Material* chromium = nist->FindOrBuildMaterial("G4_Cr");
+
+  // Defining an element using its isotopic composition
+  G4Isotope* boron_10 =
+    new G4Isotope("B-10",                 // Name
+      5,                      // Atomic (proton) number
+      10,                     // Nucleon (mass) number
+      10.012936992*g / mole);   // Molar mass (atomic mass in g/mole)
+
+  G4Isotope* boron_11 =
+    new G4Isotope("B-11",                 // Name
+      5,                      // Atomic (proton) number
+      11,                     // Nucleon (mass) number
+      11.009305406*g / mole);   // Molar mass (atomic mass in g/mole)
+
+  G4Element* boron =
+    new G4Element("Natural Boron",        // Name
+      "B",                    // Element symbol
+      2);                     // Number of isotopes
+
+  boron->AddIsotope(boron_10,             // First isotope
+    19.9*perCent);    // Relative abundance (mole percent composition)
+              // Source: Wikipedia
+
+  boron->AddIsotope(boron_11,             // Second isotope
+    80.1*perCent);    // Relative abundance (mole percent composition)
+              // Source: Wikipedia
+
+              // Defining elements using their atomic numbers and molar masses
+  G4Element* hydrogen =
+    new G4Element("Hydrogen",             // Name
+      "H",                    // Element symbol
+      1,                      // Atomic number
+      1.00794*g / mole);        // Molar mass
+
+  G4Element* oxygen =
+    new G4Element("Oxygen",               // Name
+      "O",                    // Element symbol
+      8,                      // Atomic number
+      15.9994*g / mole);        // Molar mass
+
+  G4Element* nitrogen =
+    new G4Element("Nitrogen",
+      "N",
+      7,
+      14.007*g / mole);
+  G4Element* carbon =
+    new G4Element("Carbon",
+      "C",
+      6,
+      12.0107*g / mole);
+  
+
+                    // Defining a compound using its molecular stoichiometry
+  G4Material* boric_acid =
+    new G4Material("Boric Acid",          // Name
+      2.46*g / cm3,            // Density
+      3);                    // Number of components
+
+  boric_acid->AddElement(boron,           // Name of first element in the compound
+    1);              // Number of atoms of the element in a molecule
+
+  boric_acid->AddElement(hydrogen,        // Name of second element in the compound
+    3);              // Number of atoms of the element in a molecule
+
+  boric_acid->AddElement(oxygen,          // Name of third element in the compound
+    3);              // Number of atoms of the element in a molecule
+
+             // Defining a mixture using its components
+             // The composite sample with an arbitrary composition is chosen here.
+  
+  G4Material* epoxy_resin =
+    new G4Material("Epoxy Resin",          // Name
+      1.1628*g / cm3,            // Density
+      3);
+  epoxy_resin->AddElement(carbon,
+    21);
+  epoxy_resin->AddElement(hydrogen,
+    24);
+  epoxy_resin->AddElement(oxygen,
+    4);
+
+  G4Material* epoxy_hardener =
+    new G4Material("Epoxy Hardener",          // Name
+      0.922*g / cm3,            // Density
+      3);
+  epoxy_hardener->AddElement(carbon,
+    10);
+  epoxy_hardener->AddElement(hydrogen,
+    22);
+  epoxy_hardener->AddElement(nitrogen,
+    2);
+  
+  G4double dens_comp = 10 * g / cm3;
+  G4double dens_steel = 7.9 * g / cm3;
+
+  G4double fract_mass_boric_acid = 50 * perCent;
+  G4double fract_mass_iron = 89.5 * perCent;
+  G4double fract_mass_epoxy_resin = 30.6 * perCent;
+  G4double fract_mass_epoxy_hardener = 19.4 * perCent;
+  G4double fract_mass_chromium = 10.5 * perCent;
+
+  G4Material* steel =
+    new G4Material("Absorber",           // Name
+      dens_steel,             // Density
+      2);
+  steel->AddMaterial(iron,                // Name
+    fract_mass_iron);
+  steel->AddMaterial(chromium,                // Name
+    fract_mass_chromium);
+
+
+  G4Material* absorber =
+    new G4Material("Absorber",           // Name
+      dens_comp,             // Density
+      3);                    // Number of components
+
+  absorber->AddMaterial(boric_acid,                // Name
+    fract_mass_boric_acid);    // Mass fraction
+
+                   // NOTE: The steel material NEEDS to be redefined. Iron is chosen as a
+                   // placeholder below just to make the overall code compile correctly.
+                   // Steel's elemental composition must be defined from scratch for complete
+                   // accuracy.
+
+  absorber->AddMaterial(epoxy_resin,                     // Name
+    fract_mass_epoxy_resin);         // Mass fraction
+
+                   // NOTE: The epoxy material NEEDS to be redefined. Polyethylene is
+                   // chosen as a placeholder below just to make the overall code compile
+                   // correctly. Epoxy's elemental composition must be defined from scratch
+                   // for complete accuracy.
+
+  absorber->AddMaterial(epoxy_hardener,                     // Name
+    fract_mass_epoxy_hardener);         // Mass fraction
+
+  G4Material* test1 =
+    new G4Material("test1",           // Name
+      dens_comp,             // Density
+      4);                    // Number of components
+  test1->AddMaterial(steel,                // Name
+    33.3 * perCent);
+
+  test1->AddMaterial(boric_acid,                // Name
+    33.3 * perCent);    // Mass fraction
+
+  test1->AddMaterial(epoxy_resin,                     // Name
+    20.6 * perCent);         // Mass fraction
+
+  test1->AddMaterial(epoxy_hardener,                     // Name
+    12.8 * perCent);         // Mass fraction
+
+  G4Material* test2 =
+    new G4Material("test2",           // Name
+      dens_comp,             // Density
+      3);                    // Number of components
+  
+  test2->AddMaterial(boric_acid,                // Name
+    25.0 * perCent);    // Mass fraction
+
+  test2->AddMaterial(epoxy_resin,                     // Name
+    45.8 * perCent);         // Mass fraction
+
+  test2->AddMaterial(epoxy_hardener,                     // Name
+    29.2 * perCent);         // Mass fraction
+
+  G4Material* test3 =
+    new G4Material("test3",           // Name
+      dens_comp,             // Density
+      4);                    // Number of components
+  test3->AddMaterial(steel,                // Name
+    33.0 * perCent);
+
+  test3->AddMaterial(boric_acid,                // Name
+    17.0 * perCent);    // Mass fraction
+
+  test3->AddMaterial(epoxy_resin,                     // Name
+    30.6 * perCent);         // Mass fraction
+
+  test3->AddMaterial(epoxy_hardener,                     // Name
+    19.4 * perCent);         // Mass fraction
+
+                   // Place SOLID VOLUME code for item of interest here.
+                   //
+
+                   // Various shapes for the solid volume are placed here as example references.
+                   //
+                   // NOTE: Each shape requires pointers to the header file for that shape. A
+                   // call to the header file MUST be made at the beginning of this source file.
+                   // The calls to the shapes in the examples below have been included.
+
+                   // Box shape
+  G4double x_half_dimension = 3.2*cm;
+  G4double y_half_dimension = 3.2*cm;
+  G4double z_half_dimension = 0.65*cm;
+
+  G4Box* box =
+    new G4Box("Box",                  // Its name
+      x_half_dimension,       // Half the intended x-dimension
+      y_half_dimension,       // Half the intended y-dimension
+      z_half_dimension);      // Half the intended z-dimension
+
+  
+                 // Place LOGICAL VOLUME code for item of interest here.
+                 //
+  G4LogicalVolume* logical_object =
+    new G4LogicalVolume(box,                // Its solid volume
+      absorber,               // Its material
+      "Logical Object");      // Its name
+
+                  // Place PHYSICAL VOLUME code for item of interest here.
+                  //
+  new G4PVPlacement(0,
+    G4ThreeVector(),
+    logical_object,
+    "Physical Object",
+    logicEnv,
+    true,
+    0,
+    checkOverlaps);
 
   //
   // Target
@@ -475,7 +660,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                              fTargetMater,              //material
                              "Target");                 //name
                                
-           new G4PVPlacement(rotate_object,             //rotation
+           new G4PVPlacement(pi/4,                      //rotation
                             G4ThreeVector(0, 1*m, 1*m), //location
                             fLogicTarget,               //logical volume
                             "Target",                   //name
@@ -495,7 +680,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                              fDetectorMater,            //material
                              "Detector");               //name
                                
-           new G4PVPlacement(rotate_object,             //no rotation
+           new G4PVPlacement(pi/4,                      //no rotation
                             G4ThreeVector(0, 2*m, 2*m), //location
                             fLogicDetector,             //logical volume
                             "Detector",                 //name
@@ -504,12 +689,93 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
                             0);                         //copy number
 
 
+  PrintParameters();
   
   //always return the root volume
   //
   return fPhysiWorld;
 }
 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::PrintParameters()
+{
+  G4cout << "\n Target : Length = " << G4BestUnit(fTargetLength,"Length")
+         << " Radius = " << G4BestUnit(fTargetRadius,"Length")  
+         << " Material = " << fTargetMater->GetName();
+  G4cout << "\n Detector : Length = " << G4BestUnit(fDetectorLength,"Length")
+         << " Tickness = " << G4BestUnit(fDetectorThickness,"Length")  
+         << " Material = " << fDetectorMater->GetName() << G4endl;          
+  G4cout << "\n" << fTargetMater << "\n" << fDetectorMater << G4endl;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::SetTargetMaterial(G4String materialChoice)
+{
+  // search the material by its name
+  G4Material* pttoMaterial =
+     G4NistManager::Instance()->FindOrBuildMaterial(materialChoice);   
+  
+  if (pttoMaterial) { 
+    fTargetMater = pttoMaterial;
+    if(fLogicTarget) { fLogicTarget->SetMaterial(fTargetMater); }
+    G4RunManager::GetRunManager()->PhysicsHasBeenModified();
+  } else {
+    G4cout << "\n--> warning from DetectorConstruction::SetTargetMaterial : "
+           << materialChoice << " not found" << G4endl;
+  }              
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::SetDetectorMaterial(G4String materialChoice)
+{
+  // search the material by its name
+  G4Material* pttoMaterial =
+     G4NistManager::Instance()->FindOrBuildMaterial(materialChoice);   
+  
+  if (pttoMaterial) { 
+    fDetectorMater = pttoMaterial;
+    if(fLogicDetector) { fLogicDetector->SetMaterial(fDetectorMater); }
+    G4RunManager::GetRunManager()->PhysicsHasBeenModified();
+  } else {
+    G4cout << "\n--> warning from DetectorConstruction::SetDetectorMaterial : "
+           << materialChoice << " not found" << G4endl;
+  }              
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::SetTargetRadius(G4double value)
+{
+  fTargetRadius = value;
+  G4RunManager::GetRunManager()->ReinitializeGeometry();
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::SetTargetLength(G4double value)
+{
+  fTargetLength = value;
+  G4RunManager::GetRunManager()->ReinitializeGeometry();
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::SetDetectorThickness(G4double value)
+{
+  fDetectorThickness = value;
+  G4RunManager::GetRunManager()->ReinitializeGeometry();
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void DetectorConstruction::SetDetectorLength(G4double value)
+{
+  fDetectorLength = value;
+  G4RunManager::GetRunManager()->ReinitializeGeometry();
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

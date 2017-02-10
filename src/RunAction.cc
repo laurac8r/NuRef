@@ -42,6 +42,9 @@
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh"
 
+#include "G4ParticleDefinition.hh"
+#include "G4particleTable.hh"
+
 #include "Randomize.hh"
 #include <iomanip>
 
@@ -75,18 +78,10 @@ G4Run* RunAction::GenerateRun()
 void RunAction::BeginOfRunAction(const G4Run*)
 {    
   // save Rndm status
-  G4RunManager::GetRunManager()->SetRandomNumberStore(false);
-  if (isMaster) G4Random::showEngineStatus();
+   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
+   if (isMaster) G4Random::showEngineStatus();
   
-  // keep run condition
-  if (fPrimary) { 
-    G4ParticleDefinition* particle 
-      = fPrimary->GetParticleGun()->GetParticleDefinition();
-    G4double energy = fPrimary->GetParticleGun()->GetParticleEnergy();
-    fRun->SetPrimary(particle, energy);
-  }
-
-  //histograms
+   //histograms
   //
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
   if ( analysisManager->IsActive() ) {

@@ -48,7 +48,7 @@
 
 Run::Run(DetectorConstruction* det)
 : G4Run(),
-  fDetector(det), fParticle(0), fEkin(0.)
+  fDetector(det)
 {
   fEdepTarget = fEdepTarget2 = 0.;
   fEdepDetect = fEdepDetect2 = 0.;  
@@ -59,14 +59,6 @@ Run::Run(DetectorConstruction* det)
 Run::~Run()
 { }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-void Run::SetPrimary(G4ParticleDefinition* particle, G4double energy)
-{ 
-  fParticle = particle;
-  fEkin = energy;
-}
- 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void Run::CountProcesses(const G4VProcess* process, G4int iVol) 
@@ -151,8 +143,8 @@ void Run::Merge(const G4Run* run)
   
   //primary particle info
   //
-  fParticle = localRun->fParticle;
-  fEkin     = localRun->fEkin;
+  // fParticle = localRun->fParticle;
+  // fEkin     = localRun->fEkin;
   
   // accumulate sums
   //
@@ -255,23 +247,7 @@ void Run::EndOfRun()
   
   // run condition
   //   
-  G4String Particle = fParticle->GetParticleName();    
-  G4cout << "\n The run is " << numberOfEvent << " "<< Particle << " of "
-         << G4BestUnit(fEkin,"Energy") << " through : ";
-          
-  G4cout << "\n Target   : Length = " 
-         << G4BestUnit(fDetector->GetTargetLength(),"Length")
-         << " Radius    = " 
-         << G4BestUnit(fDetector->GetTargetRadius(),"Length")  
-         << " Material = " 
-         << fDetector->GetTargetMaterial()->GetName();
-  G4cout << "\n Detector : Length = " 
-         << G4BestUnit(fDetector->GetDetectorLength(),"Length")
-         << " Thickness = " 
-         << G4BestUnit(fDetector->GetDetectorThickness(),"Length")  
-         << " Material = " 
-         << fDetector->GetDetectorMaterial()->GetName() << G4endl;
-
+ 
   if (numberOfEvent == 0) { G4cout.precision(dfprec);   return;}
   
   // compute mean Energy deposited and rms in target
