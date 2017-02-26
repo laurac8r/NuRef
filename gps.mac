@@ -5,8 +5,8 @@
 /gps/verbose 0
 /gps/particle neutron
 /gps/pos/type Point
-/gps/pos/centre 0 0 0
+/gps/pos/centre -17.8 5.0 0 
 /gps/ang/type iso
 /gps/ene/type Mono
 /gps/ene/mono 2.45 MeV
-/run/beamOn 10
+/run/beamOn 1000
