@@ -3,4 +3,6 @@ Neutron Reflection (NuRef) project supported through the Nuclear Engineering Des
 
 Code modified from the Geant4 example source and header files available through https://github.com/Geant4/geant4/tree/master/examples/
 
-Contributers: Robert Nnaemeka Nnamani, Alexander Blank, Yaroslav Kaminskiy, Haotian Zeng, Joseph Michael Gordon, Zirui Jiang, Donald Nordwick
+Contributers: Yaroslav Kaminskiy, Haotian Zeng, Joseph Michael Gordon, Zirui Jiang, Donald Nordwick, Alexander Blank
+
+Oversight: Robert Nnaemeka Nnamani

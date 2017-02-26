@@ -63,8 +63,8 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
   //
   G4LogicalVolume* lVolume = track->GetVolume()->GetLogicalVolume();
   G4int iVol = 0;
-  if (lVolume == fDetector->GetLogicTarget())   iVol = 1;
-  if (lVolume == fDetector->GetLogicDetector()) iVol = 2;
+  // if (lVolume == fDetector->GetLogicTarget())   iVol = 1;
+  // if (lVolume == fDetector->GetLogicDetector()) iVol = 2;
     
   //secondary particles only
   if (track->GetTrackID() == 1) return;

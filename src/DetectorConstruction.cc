@@ -33,7 +33,7 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #include "DetectorConstruction.hh"
-//#include "DetectorMessenger.hh"
+#include "ShroudConstruction.hh"
 
 #include "G4Material.hh"
 #include "G4NistManager.hh"
@@ -63,22 +63,24 @@
 #include "G4PhysicalConstants.hh"
 #include "G4UnitsTable.hh"
 
+#include "G4GDMLParser.hh"
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 DetectorConstruction::DetectorConstruction()
 :G4VUserDetectorConstruction(),
- fTargetMater(0), fLogicTarget(0),
- fDetectorMater(0), fLogicDetector(0), 
+ // fTargetMater(0), fLogicTarget(0),
+ // fDetectorMater(0), fLogicDetector(0), 
  fWorldMater(0), fPhysiWorld(0),
  fDetectorMessenger(0)
 {
-  fTargetLength      = 1*cm; 
-  fTargetRadius      = 0.5*cm;
-  fDetectorLength    = 5*cm; 
-  fDetectorThickness = 2*cm;
+  // fTargetLength      = 1*cm; 
+  // fTargetRadius      = 0.5*cm;
+  // fDetectorLength    = 5*cm; 
+  // fDetectorThickness = 2*cm;
   
-  fWorldLength = std::max(fTargetLength,fDetectorLength);
-  fWorldRadius = fTargetRadius + fDetectorThickness;
+  // fWorldLength = std::max(fTargetLength,fDetectorLength);
+  // fWorldRadius = fTargetRadius + fDetectorThickness;
       
   DefineMaterials();
     
@@ -101,10 +103,10 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
 void DetectorConstruction::DefineMaterials()
 {
-  // build materials
-  //
-  fDetectorMater = 
-  new G4Material("Germanium", 32, 72.61*g/mole, 5.323*g/cm3);
+  // // build materials
+  // //
+  // fDetectorMater = 
+  // new G4Material("Germanium", 32, 72.61*g/mole, 5.323*g/cm3);
   
 
   G4Element* N  = new G4Element("Nitrogen", "N", 7, 14.01*g/mole);
@@ -121,7 +123,7 @@ void DetectorConstruction::DefineMaterials()
   // or use G4 materials data base
   //
   G4NistManager* man = G4NistManager::Instance();  
-  fTargetMater = man->FindOrBuildMaterial("G4_CESIUM_IODIDE");
+  // fTargetMater = man->FindOrBuildMaterial("G4_CESIUM_IODIDE");
                    
   ///G4cout << *(G4Material::GetMaterialTable()) << G4endl;
 }
@@ -136,112 +138,73 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
   G4LogicalVolumeStore::GetInstance()->Clean();
   G4SolidStore::GetInstance()->Clean();
 
-/*  
-  // World
-  //
-  // (re) compute World dimensions if necessary
-  fWorldLength = std::max(fTargetLength,fDetectorLength);
-  fWorldRadius = fTargetRadius + fDetectorThickness;
-    
-  G4Tubs*
-  sWorld = new G4Tubs("World",                                 //name
-                 0.,fWorldRadius, 0.5*fWorldLength, 0.,twopi); //dimensions  
-                   
-  G4LogicalVolume*
-  lWorld = new G4LogicalVolume(sWorld,                  //shape
-                             fWorldMater,               //material
-                             "World");                  //name
-
-  fPhysiWorld = new G4PVPlacement(0,                    //no rotation
-                            G4ThreeVector(),            //at (0,0,0)
-                            lWorld,                     //logical volume
-                            "World",                    //name
-                            0,                          //mother volume
-                            false,                      //no boolean operation
-                            0);                         //copy number
-
-  //     
-  // Envelope
-  //  
-  G4Box* solidEnv =    
-    new G4Box("Envelope",                    //its name
-        0.5*env_sizeXY, 0.5*env_sizeXY, 0.5*env_sizeZ); //its size
-      
-  G4LogicalVolume* logicEnv =                         
-    new G4LogicalVolume(solidEnv,            //its solid
-                        env_mat,             //its material
-                        "Envelope");         //its name
-               
-  new G4PVPlacement(0,                       //no rotation
-                    G4ThreeVector(),         //at (0,0,0)
-                    logicEnv,                //its logical volume
-                    "Envelope",              //its name
-                    lWorld,                  //its mother  volume
-                    false,                   //no boolean operation
-                    0,                       //copy number
-                    checkOverlaps);          //overlaps checking
-
-*/
-  // Get nist material manager
-  G4NistManager* nist = G4NistManager::Instance();
+  // // Get nist material manager
+  // G4NistManager* nist = G4NistManager::Instance();
   
-  // Envelope parameters
-  //
-  G4double env_sizeXY = 10*m, env_sizeZ = 10*m;
-  G4Material* env_mat = nist->FindOrBuildMaterial("G4_AIR");
+  // // Envelope parameters
+  // //
+  // G4double env_sizeXY = 10*m, env_sizeZ = 10*m;
+  // G4Material* env_mat = nist->FindOrBuildMaterial("G4_AIR");
    
-  // Option to switch on/off checking of volumes overlaps
-  //
-  G4bool checkOverlaps = true;
+  // // Option to switch on/off checking of volumes overlaps
+  // //
+  // G4bool checkOverlaps = true;
 
-  //     
-  // World
-  //
-  G4double world_sizeXY = 1.2*env_sizeXY;
-  G4double world_sizeZ  = 1.2*env_sizeZ;
-  G4Material* world_mat = nist->FindOrBuildMaterial("G4_AIR");
+  // //     
+  // // World
+  // //
+  // G4double world_sizeXY = 1.2*env_sizeXY;
+  // G4double world_sizeZ  = 1.2*env_sizeZ;
+  // G4Material* world_mat = nist->FindOrBuildMaterial("G4_AIR");
   
-  G4Box* sWorld =    
-    new G4Box("World",                       //its name
-       0.5*world_sizeXY, 0.5*world_sizeXY, 0.5*world_sizeZ);     //its size
+  // G4Box* sWorld =    
+  //   new G4Box("World",                       //its name
+  //      0.5*world_sizeXY, 0.5*world_sizeXY, 0.5*world_sizeZ);     //its size
       
-  G4LogicalVolume* lWorld =                         
-    new G4LogicalVolume(sWorld,              //its solid
-                        world_mat,           //its material
-                        "World");            //its name
+  // G4LogicalVolume* lWorld =                         
+  //   new G4LogicalVolume(sWorld,              //its solid
+  //                       world_mat,           //its material
+  //                       "World");            //its name
                                    
-  fPhysiWorld =
-    new G4PVPlacement(0,                     //no rotation
-                      G4ThreeVector(),       //at (0,0,0)
-                      lWorld,                //its logical volume
-                      "World",               //its name
-                      0,                     //its mother  volume
-                      false,                 //no boolean operation
-                      0,                     //copy number
-                      checkOverlaps);        //overlaps checking
+  // fPhysiWorld =
+  //   new G4PVPlacement(0,                     //no rotation
+  //                     G4ThreeVector(),       //at (0,0,0)
+  //                     lWorld,                //its logical volume
+  //                     "World",               //its name
+  //                     0,                     //its mother  volume
+  //                     false,                 //no boolean operation
+  //                     0,                     //copy number
+  //                     checkOverlaps);        //overlaps checking
                      
-  //     
-  // Envelope
-  //  
-  G4Box* solidEnv =    
-    new G4Box("Envelope",                    //its name
-        0.5*env_sizeXY, 0.5*env_sizeXY, 0.5*env_sizeZ); //its size
+  // //     
+  // // Envelope
+  // //  
+  // G4Box* solidEnv =    
+  //   new G4Box("Envelope",                    //its name
+  //       0.5*env_sizeXY, 0.5*env_sizeXY, 0.5*env_sizeZ); //its size
       
-  G4LogicalVolume* logicEnv =                         
-    new G4LogicalVolume(solidEnv,            //its solid
-                        env_mat,             //its material
-                        "Envelope");         //its name
+  // G4LogicalVolume* logicEnv =                         
+  //   new G4LogicalVolume(solidEnv,            //its solid
+  //                       env_mat,             //its material
+  //                       "Envelope");         //its name
                
-  new G4PVPlacement(0,                       //no rotation
-                    G4ThreeVector(),         //at (0,0,0)
-                    logicEnv,                //its logical volume
-                    "Envelope",              //its name
-                    lWorld,                  //its mother  volume
-                    false,                   //no boolean operation
-                    0,                       //copy number
-                    checkOverlaps);          //overlaps checking
+  // new G4PVPlacement(0,                       //no rotation
+  //                   G4ThreeVector(),         //at (0,0,0)
+  //                   logicEnv,                //its logical volume
+  //                   "Envelope",              //its name
+  //                   lWorld,                  //its mother  volume
+  //                   false,                   //no boolean operation
+  //                   0,                       //copy number
+  //                   checkOverlaps);          //overlaps checking
 
+  G4GDMLParser parser;
 
+  parser.Read("TARGET_INSULATOR_CAP_1.STL.gdml", false);
+
+  G4VPhysicalVolume* fPhysiWorld = parser.GetWorldVolume(); //world volume
+  // W->GetLogicalVolume()->SetVisAttributes(G4VisAttributes:Invisible);
+
+/*
   //
   // Shrould and shells
   //
@@ -391,117 +354,121 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
     true,
     0,
     checkOverlaps);
+*/
+
+/*  ShroudConstruction* shroud =
+    new ShroudConstruction(logicEnv)*/
+
   //
   // Neutron moderator/reflector
   //
 
-  //
-  // Outer Box
-  G4Material* box_mat = nist->FindOrBuildMaterial("G4_POLYETHYLENE");
-  G4ThreeVector pos1 = G4ThreeVector();
-  G4double boxsize = .75*m;
+  // //
+  // // Outer Box
+  // G4Material* box_mat = nist->FindOrBuildMaterial("G4_POLYETHYLENE");
+  // G4ThreeVector pos1 = G4ThreeVector();
+  // G4double boxsize = .75*m;
 
-  G4Box* outer_boxshape = 
-    new G4Box("Outer_Box", boxsize, boxsize, boxsize);
+  // G4Box* outer_boxshape = 
+  //   new G4Box("Outer_Box", boxsize, boxsize, boxsize);
   
-  // G4LogicalVolume* outer_boxlogic = new G4LogicalVolume(outer_boxshape,box_mat,"Outer_Box");               
+  // // G4LogicalVolume* outer_boxlogic = new G4LogicalVolume(outer_boxshape,box_mat,"Outer_Box");               
 
-  //
-  // Inner Box
-  G4Material* innerbox_mat = nist->FindOrBuildMaterial("G4_AIR");
-  G4double innerboxsize = .70*m;
+  // //
+  // // Inner Box
+  // G4Material* innerbox_mat = nist->FindOrBuildMaterial("G4_AIR");
+  // G4double innerboxsize = .70*m;
 
-  G4Box* inner_boxshape =
-    new G4Box("Inner_Box", innerboxsize, innerboxsize, innerboxsize);
-  // G4LogicalVolume* inner_boxlogic = new G4LogicalVolume(inner_boxshape,innerbox_mat,"Inner_Box");
+  // G4Box* inner_boxshape =
+  //   new G4Box("Inner_Box", innerboxsize, innerboxsize, innerboxsize);
+  // // G4LogicalVolume* inner_boxlogic = new G4LogicalVolume(inner_boxshape,innerbox_mat,"Inner_Box");
 
-  //
-  // Beam Holes
-  G4double hole_rad = .05*m;
-  G4double hole_len = .8*m;
+  // //
+  // // Beam Holes
+  // G4double hole_rad = .05*m;
+  // G4double hole_len = .8*m;
 
-  G4Tubs* beamhole_shape =
-    new G4Tubs("Beam_hole",
-               0.*m,
-               hole_rad,
-               hole_len,
-               0.*deg,
-               360.*deg);
+  // G4Tubs* beamhole_shape =
+  //   new G4Tubs("Beam_hole",
+  //              0.*m,
+  //              hole_rad,
+  //              hole_len,
+  //              0.*deg,
+  //              360.*deg);
 
-  // G4LogicalVolume* beamhole_logic = new G4LogicalVolume(beamhole_shape,innerbox_mat,"Beam_hole");
-  // G4Tubs beamhole_shape("Beam_hole",0.*m,hole_rad,hole_len,0.*deg,360.*deg);
-  // G4Box inner_boxshape("Inner_Box",innerboxsize,innerboxsize,innerboxsize);
-  // G4Box outer_boxshape("Outer_Box",boxsize,boxsize,boxsize);  
+  // // G4LogicalVolume* beamhole_logic = new G4LogicalVolume(beamhole_shape,innerbox_mat,"Beam_hole");
+  // // G4Tubs beamhole_shape("Beam_hole",0.*m,hole_rad,hole_len,0.*deg,360.*deg);
+  // // G4Box inner_boxshape("Inner_Box",innerboxsize,innerboxsize,innerboxsize);
+  // // G4Box outer_boxshape("Outer_Box",boxsize,boxsize,boxsize);  
 
-  G4SubtractionSolid* shell_noholes =
-    new G4SubtractionSolid("Shell_noholes",
-                           outer_boxshape,
-                           inner_boxshape);
+  // G4SubtractionSolid* shell_noholes =
+  //   new G4SubtractionSolid("Shell_noholes",
+  //                          outer_boxshape,
+  //                          inner_boxshape);
 
-  G4SubtractionSolid* shell_withholes =
-    new G4SubtractionSolid("ShellSol",shell_noholes,beamhole_shape);
+  // G4SubtractionSolid* shell_withholes =
+  //   new G4SubtractionSolid("ShellSol",shell_noholes,beamhole_shape);
 
-  G4LogicalVolume* shell_withholesL =
-    new G4LogicalVolume(shell_noholes,box_mat,"ShellLog");
+  // G4LogicalVolume* shell_withholesL =
+  //   new G4LogicalVolume(shell_noholes,box_mat,"ShellLog");
 
-  new G4PVPlacement(0,                       //no rotation
-                    pos1,                    //at position
-                    shell_withholesL,        //its logical volume
-                    "Shell",                 //its name
-                    logicEnv,                //its mother  volume
-                    false,                   //no boolean operation
-                    0,                       //copy number
-                    checkOverlaps);          //overlaps checking
+  // new G4PVPlacement(0,                       //no rotation
+  //                   pos1,                    //at position
+  //                   shell_withholesL,        //its logical volume
+  //                   "Shell",                 //its name
+  //                   logicEnv,                //its mother  volume
+  //                   false,                   //no boolean operation
+  //                   0,                       //copy number
+  //                   checkOverlaps);          //overlaps checking
 
-  // Rotation
-  G4RotationMatrix* rotate_object =          // Define the rotation matrix
-    new G4RotationMatrix();
+  // // Rotation
+  // G4RotationMatrix* rotate_object =          // Define the rotation matrix
+  //   new G4RotationMatrix();
 
-  rotate_object->rotateZ(pi/8);         // Perform the rotation operations
-  rotate_object->rotateY(pi/2);         // around the specified axes using
-                                        // the right-hand rule for each axis.
-                                        // Rotations are performed in backward
-                                        // order: Y and then Z in this case.
+  // rotate_object->rotateZ(pi/8);         // Perform the rotation operations
+  // rotate_object->rotateY(pi/2);         // around the specified axes using
+  //                                       // the right-hand rule for each axis.
+  //                                       // Rotations are performed in backward
+  //                                       // order: Y and then Z in this case.
 
-  //
-  // Target
-  //
-  G4Tubs* 
-  sTarget = new G4Tubs("Target",                                   //name
-                  0., fTargetRadius, 0.5*fTargetLength, 0.,twopi); //dimensions
+  // //
+  // //Target
+  // //
+  // G4Tubs* sTarget = new G4Tubs("Target",                           //name
+  //                 0., fTargetRadius, 0.5*fTargetLength, 0.,twopi); //dimensions
 
 
-  fLogicTarget = new G4LogicalVolume(sTarget,           //shape
-                             fTargetMater,              //material
-                             "Target");                 //name
+  // fLogicTarget = new G4LogicalVolume(sTarget,           //shape
+  //                            fTargetMater,              //material
+  //                            "Target");                 //name
                                
-           new G4PVPlacement(rotate_object,             //rotation
-                            G4ThreeVector(0, 1*m, 1*m), //location
-                            fLogicTarget,               //logical volume
-                            "Target",                   //name
-                            lWorld,                     //mother  volume
-                            false,                      //no boolean operation
-                            0);                         //copy number
+  //          new G4PVPlacement(rotate_object,             //rotation
+  //                           G4ThreeVector(0, 1*m, 1*m), //location
+  //                           fLogicTarget,               //logical volume
+  //                           "Target",                   //name
+  //                           lWorld,                     //mother  volume
+  //                           false,                      //no boolean operation
+  //                           0);                         //copy number
 
-  //
-  // Detector
-  //
-  G4Tubs* 
-  sDetector = new G4Tubs("Detector",  
-                fTargetRadius, fWorldRadius, 0.5*fDetectorLength, 0.,twopi);
+  // //
+  // // Detector
+  // //
+  // G4Tubs* 
+  // sDetector = new G4Tubs("Detector",  
+  //               fTargetRadius, fWorldRadius, 0.5*fDetectorLength, 0.,twopi);
 
 
-  fLogicDetector = new G4LogicalVolume(sDetector,       //shape
-                             fDetectorMater,            //material
-                             "Detector");               //name
+  // fLogicDetector = new G4LogicalVolume(sDetector,       //shape
+  //                            fDetectorMater,            //material
+  //                            "Detector");               //name
                                
-           new G4PVPlacement(rotate_object,             //no rotation
-                            G4ThreeVector(0, 2*m, 2*m), //location
-                            fLogicDetector,             //logical volume
-                            "Detector",                 //name
-                            lWorld,                     //mother  volume
-                            false,                      //no boolean operation
-                            0);                         //copy number
+  //          new G4PVPlacement(rotate_object,             //no rotation
+  //                           G4ThreeVector(0, 2*m, 2*m), //location
+  //                           fLogicDetector,             //logical volume
+  //                           "Detector",                 //name
+  //                           lWorld,                     //mother  volume
+  //                           false,                      //no boolean operation
+  //                           0);                         //copy number
 
 
   
@@ -511,60 +478,60 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
 }
 
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4double DetectorConstruction::GetTargetLength()
-{
-  return fTargetLength;
-}
+// G4double DetectorConstruction::GetTargetLength()
+// {
+//   return fTargetLength;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4double DetectorConstruction::GetTargetRadius()
-{
-  return fTargetRadius;
-}
+// G4double DetectorConstruction::GetTargetRadius()
+// {
+//   return fTargetRadius;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4Material* DetectorConstruction::GetTargetMaterial()
-{
-  return fTargetMater;
-}
+// G4Material* DetectorConstruction::GetTargetMaterial()
+// {
+//   return fTargetMater;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4LogicalVolume* DetectorConstruction::GetLogicTarget()
-{
-  return fLogicTarget;
-}
+// G4LogicalVolume* DetectorConstruction::GetLogicTarget()
+// {
+//   return fLogicTarget;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4double DetectorConstruction::GetDetectorLength()
-{
-  return fDetectorLength;
-}
+// G4double DetectorConstruction::GetDetectorLength()
+// {
+//   return fDetectorLength;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4double DetectorConstruction::GetDetectorThickness()
-{
-  return fDetectorThickness;
-}
+// G4double DetectorConstruction::GetDetectorThickness()
+// {
+//   return fDetectorThickness;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4Material* DetectorConstruction::GetDetectorMaterial()
-{
-  return fDetectorMater;
-}
+// G4Material* DetectorConstruction::GetDetectorMaterial()
+// {
+//   return fDetectorMater;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4LogicalVolume* DetectorConstruction::GetLogicDetector()
-{
-  return fLogicDetector;
-}
+// G4LogicalVolume* DetectorConstruction::GetLogicDetector()
+// {
+//   return fLogicDetector;
+// }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

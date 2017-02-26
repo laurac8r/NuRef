@@ -56,39 +56,39 @@ class DetectorConstruction : public G4VUserDetectorConstruction
   
     virtual G4VPhysicalVolume* Construct();
     
-    void SetTargetLength (G4double value);
-    void SetTargetRadius (G4double value);
-    void SetTargetMaterial (G4String);
+    // void SetTargetLength (G4double value);
+    // void SetTargetRadius (G4double value);
+    // void SetTargetMaterial (G4String);
     
-    void SetDetectorLength(G4double value);           
-    void SetDetectorThickness(G4double value);  
-    void SetDetectorMaterial(G4String);               
+    // void SetDetectorLength(G4double value);           
+    // void SetDetectorThickness(G4double value);  
+    // void SetDetectorMaterial(G4String);
                    
-    void PrintParameters();
+    // void PrintParameters();
     
-  public:
+  // public:
       
-    G4double GetTargetLength();
-    G4double GetTargetRadius();
-    G4Material* GetTargetMaterial();       
-    G4LogicalVolume* GetLogicTarget();
+  //   G4double GetTargetLength();
+  //   G4double GetTargetRadius();
+  //   G4Material* GetTargetMaterial();       
+  //   G4LogicalVolume* GetLogicTarget();
     
-    G4double GetDetectorLength();
-    G4double GetDetectorThickness();
-    G4Material* GetDetectorMaterial();                 
-    G4LogicalVolume* GetLogicDetector();      
+  //   G4double GetDetectorLength();
+  //   G4double GetDetectorThickness();
+  //   G4Material* GetDetectorMaterial();                 
+  //   G4LogicalVolume* GetLogicDetector();      
                        
   private:
   
-    G4double           fTargetLength; 
-    G4double           fTargetRadius;
-    G4Material*        fTargetMater;
-    G4LogicalVolume*   fLogicTarget;
+    // G4double           fTargetLength; 
+    // G4double           fTargetRadius;
+    // G4Material*        fTargetMater;
+    // G4LogicalVolume*   fLogicTarget;
                  
-    G4double           fDetectorLength;
-    G4double           fDetectorThickness;
-    G4Material*        fDetectorMater;
-    G4LogicalVolume*   fLogicDetector;
+    // G4double           fDetectorLength;
+    // G4double           fDetectorThickness;
+    // G4Material*        fDetectorMater;
+    // G4LogicalVolume*   fLogicDetector;
                
     G4double           fWorldLength;
     G4double           fWorldRadius;
