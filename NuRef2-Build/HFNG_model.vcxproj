@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{6A3B430A-BDEE-32E7-94D0-B7E138AE6F3E}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>HFNG_model</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">HFNG_model.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">HFNG_model</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">HFNG_model.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">HFNG_model</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">HFNG_model.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">HFNG_model</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">HFNG_model.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">HFNG_model</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4Tree.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4GMocren.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4visHepRep.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4RayTracer.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4VRML.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4OpenGL.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4gl2ps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4interfaces.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4persistency.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4analysis.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4error_propagation.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4readout.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4physicslists.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4parmodels.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4FR.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4vis_management.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;\Users\Nnaemeka\xercesc\lib\xerces-c_3.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4run.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4event.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4tracking.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4processes.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4expat.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4zlib.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4digits_hits.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4track.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4particles.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4geometry.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4materials.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4graphics_reps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4intercoms.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4global.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4clhep.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Nnaemeka/Geant4/NuRef-Build/Debug/HFNG_model.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Nnaemeka/Geant4/NuRef-Build/Debug/HFNG_model.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;NDEBUG;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;NDEBUG;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4Tree.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4GMocren.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4visHepRep.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4RayTracer.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4VRML.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4OpenGL.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4gl2ps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4interfaces.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4persistency.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4analysis.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4error_propagation.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4readout.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4physicslists.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4parmodels.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4FR.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4vis_management.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;\Users\Nnaemeka\xercesc\lib\xerces-c_3.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4run.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4event.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4tracking.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4processes.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4expat.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4zlib.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4digits_hits.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4track.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4particles.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4geometry.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4materials.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4graphics_reps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4intercoms.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4global.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4clhep.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Nnaemeka/Geant4/NuRef-Build/Release/HFNG_model.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Nnaemeka/Geant4/NuRef-Build/Release/HFNG_model.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;NDEBUG;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;NDEBUG;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4Tree.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4GMocren.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4visHepRep.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4RayTracer.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4VRML.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4OpenGL.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4gl2ps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4interfaces.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4persistency.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4analysis.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4error_propagation.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4readout.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4physicslists.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4parmodels.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4FR.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4vis_management.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;\Users\Nnaemeka\xercesc\lib\xerces-c_3.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4run.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4event.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4tracking.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4processes.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4expat.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4zlib.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4digits_hits.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4track.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4particles.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4geometry.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4materials.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4graphics_reps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4intercoms.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4global.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4clhep.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Nnaemeka/Geant4/NuRef-Build/MinSizeRel/HFNG_model.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Nnaemeka/Geant4/NuRef-Build/MinSizeRel/HFNG_model.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;G4USE_STD11;G4_STORE_TRAJECTORY;G4VERBOSE;G4UI_USE;G4VIS_USE;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\NuRef\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4Tree.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4GMocren.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4visHepRep.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4RayTracer.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4VRML.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4OpenGL.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4gl2ps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4interfaces.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4persistency.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4analysis.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4error_propagation.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4readout.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4physicslists.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4parmodels.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4FR.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4vis_management.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;\Users\Nnaemeka\xercesc\lib\xerces-c_3.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4run.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4event.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4tracking.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4processes.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4expat.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4zlib.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4digits_hits.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4track.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4particles.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4geometry.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4materials.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4graphics_reps.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4intercoms.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4global.lib;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\G4clhep.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Nnaemeka/Geant4/NuRef-Build/RelWithDebInfo/HFNG_model.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Nnaemeka/Geant4/NuRef-Build/RelWithDebInfo/HFNG_model.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/NuRef -BC:/Users/Nnaemeka/Geant4/NuRef-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\NuRef\plotHisto.C;\Users\Nnaemeka\Geant4\NuRef\read_gdml.mac;\Users\Nnaemeka\Geant4\NuRef\vis.mac;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/NuRef -BC:/Users/Nnaemeka/Geant4/NuRef-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\NuRef\plotHisto.C;\Users\Nnaemeka\Geant4\NuRef\read_gdml.mac;\Users\Nnaemeka\Geant4\NuRef\vis.mac;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/NuRef -BC:/Users/Nnaemeka/Geant4/NuRef-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">/Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\NuRef\plotHisto.C;\Users\Nnaemeka\Geant4\NuRef\read_gdml.mac;\Users\Nnaemeka\Geant4\NuRef\vis.mac;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/NuRef -BC:/Users/Nnaemeka/Geant4/NuRef-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">/Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\NuRef\plotHisto.C;\Users\Nnaemeka\Geant4\NuRef\read_gdml.mac;\Users\Nnaemeka\Geant4\NuRef\vis.mac;\Users\Nnaemeka\Geant4\NuRef\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Nnaemeka\Geant4\NuRef-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\ActionInitialization.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\DetectorConstruction.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\DetectorMessenger.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\EmStandardPhysics.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\EventAction.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\GammaPhysics.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\HistoManager.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\PhysicsList.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\PrimaryGeneratorAction.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\Run.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\RunAction.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\ShroudConstruction.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\SteppingAction.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\SteppingVerbose.hh" />
+    <ClInclude Include="\Users\Nnaemeka\Geant4\NuRef\include\TrackingAction.hh" />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\HFNG_model.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\ActionInitialization.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\DetectorConstruction.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\DetectorMessenger.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\EventAction.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\GammaPhysics.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\HistoManager.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\PrimaryGeneratorAction.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\Run.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\RunAction.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\SteppingAction.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\SteppingVerbose.cc"  />
+    <ClCompile Include="\Users\Nnaemeka\Geant4\NuRef\src\TrackingAction.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/Nnaemeka/Geant4/NuRef-Build/ZERO_CHECK.vcxproj">
+      <Project>BCEE659F-9601-3A0B-B078-13F87464771A</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

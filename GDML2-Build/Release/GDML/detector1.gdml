@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="TrackerinWorldpos" unit="mm" x="0" y="0" z="100"/>
+ <rotation name="TrackerinWorldrot" unit="degree" x="0" y="0" z="0" />
+</define>
+<materials>
+<element name="Oxygen" formula="O" Z="8.">
+<atom value = "15.9994"/>
+</element>
+<element name="Nitrogen" formula="N" Z="7.">
+<atom value="14.01"/>
+</element>
+<material formula=" " name="Air" >
+<D value="1.290" unit="mg/cm3"/>
+<fraction n="0.7" ref="Nitrogen" />
+<fraction n="0.3" ref="Oxygen" />
+</material>
+</materials>
+<solids>
+<box lunit="mm" name="TheTracker1" x="30" y="30" z="30"/>
+</solids>
+<structure>
+<volume name="Tracker1" >
+<materialref ref="Air" />
+<solidref ref="TheTracker1" />
+</volume>
+</structure>
+<setup name="Default" version="1.0" >
+<world ref="Tracker1" />
+</setup>
+</gdml>

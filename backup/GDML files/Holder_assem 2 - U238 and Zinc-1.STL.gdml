@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0" unit="mm" x="-156.837509155273" y="43.7141876220703" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v1" unit="mm" x="-156.830883026123" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v2" unit="mm" x="-156.830883026123" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3" unit="mm" x="-156.837509155273" y="43.1994018554688" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v4" unit="mm" x="-156.837509155273" y="43.1994018554688" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v5" unit="mm" x="-156.890441894531" y="42.6873397827148" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v6" unit="mm" x="-156.890441894531" y="42.6873397827148" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v7" unit="mm" x="-156.890441894531" y="42.6873397827148" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v8" unit="mm" x="-156.995738983154" y="42.1834411621094" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v9" unit="mm" x="-156.995738983154" y="42.1834411621094" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v10" unit="mm" x="-156.995738983154" y="42.1834411621094" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v11" unit="mm" x="-157.152294158936" y="41.6930351257324" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v12" unit="mm" x="-157.152294158936" y="41.6930351257324" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v13" unit="mm" x="-157.152294158936" y="41.6930351257324" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v14" unit="mm" x="-157.358444213867" y="41.2213287353516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v15" unit="mm" x="-157.358444213867" y="41.2213287353516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v16" unit="mm" x="-157.358444213867" y="41.2213287353516" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v17" unit="mm" x="-157.612003326416" y="40.7733116149902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v18" unit="mm" x="-157.612003326416" y="40.7733116149902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v19" unit="mm" x="-157.612003326416" y="40.7733116149902" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v20" unit="mm" x="-157.91028213501" y="40.3537483215332" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v21" unit="mm" x="-157.91028213501" y="40.3537483215332" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v22" unit="mm" x="-157.91028213501" y="40.3537483215332" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v23" unit="mm" x="-158.250122070312" y="39.9670753479004" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v24" unit="mm" x="-158.250122070312" y="39.9670753479004" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v25" unit="mm" x="-158.250122070312" y="39.9670753479004" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v26" unit="mm" x="-158.627914428711" y="39.6173934936523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v27" unit="mm" x="-158.627914428711" y="39.6173934936523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v28" unit="mm" x="-158.627914428711" y="39.6173934936523" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v29" unit="mm" x="-159.039661407471" y="39.3084106445312" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v30" unit="mm" x="-159.039661407471" y="39.3084106445312" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v31" unit="mm" x="-159.039661407471" y="39.3084106445312" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v32" unit="mm" x="-159.48099899292" y="39.043399810791" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v33" unit="mm" x="-159.48099899292" y="39.043399810791" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v34" unit="mm" x="-159.48099899292" y="39.043399810791" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v35" unit="mm" x="-159.947238922119" y="38.8251762390137" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v36" unit="mm" x="-159.947238922119" y="38.8251762390137" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v37" unit="mm" x="-159.947238922119" y="38.8251762390137" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v38" unit="mm" x="-160.433452606201" y="38.6560440063477" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v39" unit="mm" x="-160.433452606201" y="38.6560440063477" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v40" unit="mm" x="-160.433452606201" y="38.6560440063477" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v41" unit="mm" x="-160.934474945068" y="38.5378074645996" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v42" unit="mm" x="-160.934474945068" y="38.5378074645996" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v43" unit="mm" x="-160.934474945068" y="38.5378074645996" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v44" unit="mm" x="-161.445003509521" y="38.4717102050781" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v45" unit="mm" x="-161.445003509521" y="38.4717102050781" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v46" unit="mm" x="-161.445003509521" y="38.4717102050781" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v47" unit="mm" x="-161.959617614746" y="38.4584541320801" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v48" unit="mm" x="-161.959617614746" y="38.4584541320801" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v49" unit="mm" x="-161.959617614746" y="38.4584541320801" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v50" unit="mm" x="-162.472869873047" y="38.4981803894043" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v51" unit="mm" x="-162.472869873047" y="38.4981803894043" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v52" unit="mm" x="-162.472869873047" y="38.4981803894043" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v53" unit="mm" x="-162.472869873047" y="38.4981803894043" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v54" unit="mm" x="-162.472869873047" y="38.4981803894043" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v55" unit="mm" x="-162.979320526123" y="38.5904731750488" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v56" unit="mm" x="-162.472869873047" y="38.4981803894043" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v57" unit="mm" x="-162.979320526123" y="38.5904731750488" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v58" unit="mm" x="-162.979320526123" y="38.5904731750488" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v59" unit="mm" x="-162.979320526123" y="38.5904731750488" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v60" unit="mm" x="-162.979320526123" y="38.5904731750488" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v61" unit="mm" x="-163.47359085083" y="38.7343521118164" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v62" unit="mm" x="-162.979320526123" y="38.5904731750488" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v63" unit="mm" x="-163.47359085083" y="38.7343521118164" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v64" unit="mm" x="-163.47359085083" y="38.7343521118164" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v65" unit="mm" x="-163.47359085083" y="38.7343521118164" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v66" unit="mm" x="-163.47359085083" y="38.7343521118164" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v67" unit="mm" x="-163.950450897217" y="38.9282836914062" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v68" unit="mm" x="-163.47359085083" y="38.7343521118164" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v69" unit="mm" x="-163.950450897217" y="38.9282836914062" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v70" unit="mm" x="-163.950450897217" y="38.9282836914062" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v71" unit="mm" x="-163.950450897217" y="38.9282836914062" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v72" unit="mm" x="-163.950450897217" y="38.9282836914062" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v73" unit="mm" x="-164.404842376709" y="39.170223236084" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v74" unit="mm" x="-163.950450897217" y="38.9282836914062" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v75" unit="mm" x="-164.404842376709" y="39.170223236084" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v76" unit="mm" x="-164.404842376709" y="39.170223236084" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v77" unit="mm" x="-164.404842376709" y="39.170223236084" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v78" unit="mm" x="-164.404842376709" y="39.170223236084" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v79" unit="mm" x="-164.831951141357" y="39.4575996398926" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v80" unit="mm" x="-164.404842376709" y="39.170223236084" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v81" unit="mm" x="-164.831951141357" y="39.4575996398926" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v82" unit="mm" x="-164.831951141357" y="39.4575996398926" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v83" unit="mm" x="-164.831951141357" y="39.4575996398926" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v84" unit="mm" x="-164.831951141357" y="39.4575996398926" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v85" unit="mm" x="-165.227245330811" y="39.7873725891113" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v86" unit="mm" x="-164.831951141357" y="39.4575996398926" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v87" unit="mm" x="-165.227245330811" y="39.7873725891113" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v88" unit="mm" x="-165.227245330811" y="39.7873725891113" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v89" unit="mm" x="-165.227245330811" y="39.7873725891113" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v90" unit="mm" x="-165.227245330811" y="39.7873725891113" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v91" unit="mm" x="-165.586540222168" y="40.1560363769531" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v92" unit="mm" x="-165.227245330811" y="39.7873725891113" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v93" unit="mm" x="-165.586540222168" y="40.1560363769531" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v94" unit="mm" x="-165.586540222168" y="40.1560363769531" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v95" unit="mm" x="-165.586540222168" y="40.1560363769531" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v96" unit="mm" x="-165.586540222168" y="40.1560363769531" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v97" unit="mm" x="-165.906021118164" y="40.5596885681152" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v98" unit="mm" x="-165.586540222168" y="40.1560363769531" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v99" unit="mm" x="-165.906021118164" y="40.5596885681152" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v100" unit="mm" x="-165.906021118164" y="40.5596885681152" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v101" unit="mm" x="-165.906021118164" y="40.5596885681152" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v102" unit="mm" x="-165.906021118164" y="40.5596885681152" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v103" unit="mm" x="-166.182308197021" y="40.9940567016602" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v104" unit="mm" x="-165.906021118164" y="40.5596885681152" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v105" unit="mm" x="-166.182308197021" y="40.9940567016602" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v106" unit="mm" x="-166.182308197021" y="40.9940567016602" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v107" unit="mm" x="-166.182308197021" y="40.9940567016602" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v108" unit="mm" x="-166.182308197021" y="40.9940567016602" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v109" unit="mm" x="-166.412464141846" y="41.4545288085938" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v110" unit="mm" x="-166.182308197021" y="40.9940567016602" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v111" unit="mm" x="-166.412464141846" y="41.4545288085938" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v112" unit="mm" x="-166.412464141846" y="41.4545288085938" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v113" unit="mm" x="-166.412464141846" y="41.4545288085938" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v114" unit="mm" x="-166.412464141846" y="41.4545288085938" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v115" unit="mm" x="-166.594058990479" y="41.936222076416" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v116" unit="mm" x="-166.412464141846" y="41.4545288085938" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v117" unit="mm" x="-166.594058990479" y="41.936222076416" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v118" unit="mm" x="-166.594058990479" y="41.936222076416" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v119" unit="mm" x="-166.594058990479" y="41.936222076416" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v120" unit="mm" x="-166.594058990479" y="41.936222076416" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v121" unit="mm" x="-166.725158691406" y="42.4340362548828" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v122" unit="mm" x="-166.594058990479" y="41.936222076416" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v123" unit="mm" x="-166.725158691406" y="42.4340362548828" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v124" unit="mm" x="-166.725158691406" y="42.4340362548828" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v125" unit="mm" x="-166.725158691406" y="42.4340362548828" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v126" unit="mm" x="-166.725158691406" y="42.4340362548828" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v127" unit="mm" x="-166.804382324219" y="42.9426918029785" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v128" unit="mm" x="-166.725158691406" y="42.4340362548828" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v129" unit="mm" x="-166.804382324219" y="42.9426918029785" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v130" unit="mm" x="-166.804382324219" y="42.9426918029785" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v131" unit="mm" x="-166.804382324219" y="42.9426918029785" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v132" unit="mm" x="-166.804382324219" y="42.9426918029785" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v133" unit="mm" x="-166.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v134" unit="mm" x="-166.804382324219" y="42.9426918029785" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v135" unit="mm" x="-166.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v136" unit="mm" x="-166.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v137" unit="mm" x="-166.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v138" unit="mm" x="-166.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v139" unit="mm" x="-166.804382324219" y="43.9709014892578" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v140" unit="mm" x="-166.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v141" unit="mm" x="-166.804382324219" y="43.9709014892578" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v142" unit="mm" x="-166.804382324219" y="43.9709014892578" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v143" unit="mm" x="-166.804382324219" y="43.9709014892578" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v144" unit="mm" x="-166.804382324219" y="43.9709014892578" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v145" unit="mm" x="-166.725158691406" y="44.4795570373535" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v146" unit="mm" x="-166.804382324219" y="43.9709014892578" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v147" unit="mm" x="-166.725158691406" y="44.4795570373535" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v148" unit="mm" x="-166.725158691406" y="44.4795570373535" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v149" unit="mm" x="-166.725158691406" y="44.4795570373535" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v150" unit="mm" x="-166.725158691406" y="44.4795570373535" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v151" unit="mm" x="-166.594058990479" y="44.9773712158203" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v152" unit="mm" x="-166.725158691406" y="44.4795570373535" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v153" unit="mm" x="-166.594058990479" y="44.9773712158203" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v154" unit="mm" x="-166.594058990479" y="44.9773712158203" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v155" unit="mm" x="-166.594058990479" y="44.9773712158203" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v156" unit="mm" x="-166.594058990479" y="44.9773712158203" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v157" unit="mm" x="-166.412464141846" y="45.4590644836426" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v158" unit="mm" x="-166.594058990479" y="44.9773712158203" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v159" unit="mm" x="-166.412464141846" y="45.4590644836426" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v160" unit="mm" x="-166.412464141846" y="45.4590644836426" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v161" unit="mm" x="-166.412464141846" y="45.4590644836426" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v162" unit="mm" x="-166.412464141846" y="45.4590644836426" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v163" unit="mm" x="-166.182308197021" y="45.9195365905762" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v164" unit="mm" x="-166.412464141846" y="45.4590644836426" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v165" unit="mm" x="-166.182308197021" y="45.9195365905762" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v166" unit="mm" x="-166.182308197021" y="45.9195365905762" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v167" unit="mm" x="-166.182308197021" y="45.9195365905762" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v168" unit="mm" x="-166.182308197021" y="45.9195365905762" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v169" unit="mm" x="-165.906021118164" y="46.3539009094238" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v170" unit="mm" x="-166.182308197021" y="45.9195365905762" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v171" unit="mm" x="-165.906021118164" y="46.3539009094238" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v172" unit="mm" x="-165.906021118164" y="46.3539009094238" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v173" unit="mm" x="-165.906021118164" y="46.3539009094238" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v174" unit="mm" x="-165.906021118164" y="46.3539009094238" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v175" unit="mm" x="-165.586540222168" y="46.7575569152832" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v176" unit="mm" x="-165.906021118164" y="46.3539009094238" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v177" unit="mm" x="-165.586540222168" y="46.7575569152832" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v178" unit="mm" x="-165.586540222168" y="46.7575569152832" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v179" unit="mm" x="-165.586540222168" y="46.7575569152832" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v180" unit="mm" x="-165.586540222168" y="46.7575569152832" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v181" unit="mm" x="-165.227245330811" y="47.126220703125" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v182" unit="mm" x="-165.586540222168" y="46.7575569152832" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v183" unit="mm" x="-165.227245330811" y="47.126220703125" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v184" unit="mm" x="-165.227245330811" y="47.126220703125" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v185" unit="mm" x="-165.227245330811" y="47.126220703125" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v186" unit="mm" x="-165.227245330811" y="47.126220703125" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v187" unit="mm" x="-164.831951141357" y="47.4559936523438" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v188" unit="mm" x="-165.227245330811" y="47.126220703125" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v189" unit="mm" x="-164.831951141357" y="47.4559936523438" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v190" unit="mm" x="-164.831951141357" y="47.4559936523438" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v191" unit="mm" x="-164.831951141357" y="47.4559936523438" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v192" unit="mm" x="-164.831951141357" y="47.4559936523438" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v193" unit="mm" x="-164.404842376709" y="47.7433700561523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v194" unit="mm" x="-164.831951141357" y="47.4559936523438" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v195" unit="mm" x="-164.404842376709" y="47.7433700561523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v196" unit="mm" x="-164.404842376709" y="47.7433700561523" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v197" unit="mm" x="-164.404842376709" y="47.7433700561523" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v198" unit="mm" x="-164.404842376709" y="47.7433700561523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v199" unit="mm" x="-163.950450897217" y="47.9853096008301" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v200" unit="mm" x="-164.404842376709" y="47.7433700561523" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v201" unit="mm" x="-163.950450897217" y="47.9853096008301" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v202" unit="mm" x="-163.950450897217" y="47.9853096008301" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v203" unit="mm" x="-163.950450897217" y="47.9853096008301" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v204" unit="mm" x="-163.950450897217" y="47.9853096008301" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v205" unit="mm" x="-163.47359085083" y="48.1792411804199" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v206" unit="mm" x="-163.950450897217" y="47.9853096008301" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v207" unit="mm" x="-163.47359085083" y="48.1792411804199" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v208" unit="mm" x="-163.47359085083" y="48.1792411804199" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v209" unit="mm" x="-163.47359085083" y="48.1792411804199" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v210" unit="mm" x="-163.47359085083" y="48.1792411804199" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v211" unit="mm" x="-162.979320526123" y="48.3231163024902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v212" unit="mm" x="-163.47359085083" y="48.1792411804199" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v213" unit="mm" x="-162.979320526123" y="48.3231163024902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v214" unit="mm" x="-162.979320526123" y="48.3231163024902" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v215" unit="mm" x="-162.979320526123" y="48.3231163024902" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v216" unit="mm" x="-162.979320526123" y="48.3231163024902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v217" unit="mm" x="-162.472869873047" y="48.4154090881348" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v218" unit="mm" x="-162.979320526123" y="48.3231163024902" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v219" unit="mm" x="-162.472869873047" y="48.4154090881348" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v220" unit="mm" x="-162.472869873047" y="48.4154090881348" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v221" unit="mm" x="-162.472869873047" y="48.4154090881348" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v222" unit="mm" x="-162.472869873047" y="48.4154090881348" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v223" unit="mm" x="-161.959617614746" y="48.4551391601562" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v224" unit="mm" x="-162.472869873047" y="48.4154090881348" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v225" unit="mm" x="-161.959617614746" y="48.4551391601562" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v226" unit="mm" x="-161.959617614746" y="48.4551391601562" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v227" unit="mm" x="-161.959617614746" y="48.4551391601562" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v228" unit="mm" x="-161.959617614746" y="48.4551391601562" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v229" unit="mm" x="-161.445003509521" y="48.4418830871582" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v230" unit="mm" x="-161.959617614746" y="48.4551391601562" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v231" unit="mm" x="-161.445003509521" y="48.4418830871582" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v232" unit="mm" x="-161.445003509521" y="48.4418830871582" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v233" unit="mm" x="-161.445003509521" y="48.4418830871582" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v234" unit="mm" x="-161.445003509521" y="48.4418830871582" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v235" unit="mm" x="-160.934474945068" y="48.3757858276367" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v236" unit="mm" x="-161.445003509521" y="48.4418830871582" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v237" unit="mm" x="-160.934474945068" y="48.3757858276367" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v238" unit="mm" x="-160.934474945068" y="48.3757858276367" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v239" unit="mm" x="-160.934474945068" y="48.3757858276367" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v240" unit="mm" x="-160.934474945068" y="48.3757858276367" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v241" unit="mm" x="-160.433452606201" y="48.2575454711914" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v242" unit="mm" x="-160.934474945068" y="48.3757858276367" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v243" unit="mm" x="-160.433452606201" y="48.2575454711914" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v244" unit="mm" x="-160.433452606201" y="48.2575454711914" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v245" unit="mm" x="-160.433452606201" y="48.2575454711914" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v246" unit="mm" x="-160.433452606201" y="48.2575454711914" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v247" unit="mm" x="-159.947238922119" y="48.0884170532227" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v248" unit="mm" x="-160.433452606201" y="48.2575454711914" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v249" unit="mm" x="-159.947238922119" y="48.0884170532227" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v250" unit="mm" x="-159.947238922119" y="48.0884170532227" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v251" unit="mm" x="-159.947238922119" y="48.0884170532227" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v252" unit="mm" x="-159.947238922119" y="48.0884170532227" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v253" unit="mm" x="-159.48099899292" y="47.870189666748" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v254" unit="mm" x="-159.947238922119" y="48.0884170532227" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v255" unit="mm" x="-159.48099899292" y="47.870189666748" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v256" unit="mm" x="-159.48099899292" y="47.870189666748" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v257" unit="mm" x="-159.48099899292" y="47.870189666748" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v258" unit="mm" x="-159.48099899292" y="47.870189666748" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v259" unit="mm" x="-159.039661407471" y="47.6051788330078" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v260" unit="mm" x="-159.48099899292" y="47.870189666748" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v261" unit="mm" x="-159.039661407471" y="47.6051788330078" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v262" unit="mm" x="-159.039661407471" y="47.6051788330078" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v263" unit="mm" x="-159.039661407471" y="47.6051788330078" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v264" unit="mm" x="-159.039661407471" y="47.6051788330078" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v265" unit="mm" x="-158.627914428711" y="47.296199798584" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v266" unit="mm" x="-159.039661407471" y="47.6051788330078" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v267" unit="mm" x="-158.627914428711" y="47.296199798584" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v268" unit="mm" x="-158.627914428711" y="47.296199798584" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v269" unit="mm" x="-158.627914428711" y="47.296199798584" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v270" unit="mm" x="-158.627914428711" y="47.296199798584" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v271" unit="mm" x="-158.250122070312" y="46.9465179443359" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v272" unit="mm" x="-158.627914428711" y="47.296199798584" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v273" unit="mm" x="-158.250122070312" y="46.9465179443359" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v274" unit="mm" x="-158.250122070312" y="46.9465179443359" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v275" unit="mm" x="-158.250122070312" y="46.9465179443359" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v276" unit="mm" x="-158.250122070312" y="46.9465179443359" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v277" unit="mm" x="-157.91028213501" y="46.5598449707031" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v278" unit="mm" x="-158.250122070312" y="46.9465179443359" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v279" unit="mm" x="-157.91028213501" y="46.5598449707031" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v280" unit="mm" x="-157.91028213501" y="46.5598449707031" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v281" unit="mm" x="-157.91028213501" y="46.5598449707031" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v282" unit="mm" x="-157.91028213501" y="46.5598449707031" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v283" unit="mm" x="-157.612003326416" y="46.1402740478516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v284" unit="mm" x="-157.91028213501" y="46.5598449707031" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v285" unit="mm" x="-157.612003326416" y="46.1402740478516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v286" unit="mm" x="-157.612003326416" y="46.1402740478516" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v287" unit="mm" x="-157.612003326416" y="46.1402740478516" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v288" unit="mm" x="-157.612003326416" y="46.1402740478516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v289" unit="mm" x="-157.358444213867" y="45.6922645568848" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v290" unit="mm" x="-157.612003326416" y="46.1402740478516" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v291" unit="mm" x="-157.358444213867" y="45.6922645568848" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v292" unit="mm" x="-157.358444213867" y="45.6922645568848" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v293" unit="mm" x="-157.358444213867" y="45.6922645568848" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v294" unit="mm" x="-157.358444213867" y="45.6922645568848" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v295" unit="mm" x="-157.152294158936" y="45.2205581665039" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v296" unit="mm" x="-157.358444213867" y="45.6922645568848" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v297" unit="mm" x="-157.152294158936" y="45.2205581665039" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v298" unit="mm" x="-157.152294158936" y="45.2205581665039" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v299" unit="mm" x="-157.152294158936" y="45.2205581665039" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v300" unit="mm" x="-157.152294158936" y="45.2205581665039" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v301" unit="mm" x="-156.995738983154" y="44.730152130127" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v302" unit="mm" x="-157.152294158936" y="45.2205581665039" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v303" unit="mm" x="-156.995738983154" y="44.730152130127" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v304" unit="mm" x="-156.995738983154" y="44.730152130127" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v305" unit="mm" x="-156.995738983154" y="44.730152130127" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v306" unit="mm" x="-156.995738983154" y="44.730152130127" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v307" unit="mm" x="-156.890441894531" y="44.2262496948242" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v308" unit="mm" x="-156.995738983154" y="44.730152130127" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v309" unit="mm" x="-156.890441894531" y="44.2262496948242" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v310" unit="mm" x="-156.890441894531" y="44.2262496948242" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v311" unit="mm" x="-156.890441894531" y="44.2262496948242" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v312" unit="mm" x="-156.890441894531" y="44.2262496948242" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v313" unit="mm" x="-156.890441894531" y="44.2262496948242" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v314" unit="mm" x="-156.837509155273" y="43.7141876220703" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v315" unit="mm" x="-156.837509155273" y="43.7141876220703" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v316" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v317" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v318" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v319" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v320" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v321" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v322" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v323" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v324" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v325" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v326" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v327" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v328" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v329" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v330" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v331" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v332" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v333" unit="mm" x="-163.47359085083" y="38.7343521118164" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v334" unit="mm" x="-162.979320526123" y="38.5904731750488" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v335" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v336" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v337" unit="mm" x="-162.979320526123" y="38.5904731750488" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v338" unit="mm" x="-162.472869873047" y="38.4981803894043" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v339" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v340" unit="mm" x="-162.472869873047" y="38.4981803894043" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v341" unit="mm" x="-164.831951141357" y="39.4575996398926" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v342" unit="mm" x="-164.404842376709" y="39.170223236084" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v343" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v344" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v345" unit="mm" x="-164.404842376709" y="39.170223236084" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v346" unit="mm" x="-163.950450897217" y="38.9282836914062" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v347" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v348" unit="mm" x="-163.950450897217" y="38.9282836914062" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v349" unit="mm" x="-163.47359085083" y="38.7343521118164" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v350" unit="mm" x="-165.906021118164" y="40.5596885681152" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v351" unit="mm" x="-165.586540222168" y="40.1560363769531" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v352" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v353" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v354" unit="mm" x="-165.586540222168" y="40.1560363769531" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v355" unit="mm" x="-165.227245330811" y="39.7873725891113" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v356" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v357" unit="mm" x="-165.227245330811" y="39.7873725891113" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v358" unit="mm" x="-164.831951141357" y="39.4575996398926" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v359" unit="mm" x="-166.594058990479" y="41.936222076416" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v360" unit="mm" x="-166.412464141846" y="41.4545288085938" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v361" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v362" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v363" unit="mm" x="-166.412464141846" y="41.4545288085938" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v364" unit="mm" x="-166.182308197021" y="40.9940567016602" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v365" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v366" unit="mm" x="-166.182308197021" y="40.9940567016602" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v367" unit="mm" x="-165.906021118164" y="40.5596885681152" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v368" unit="mm" x="-166.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v369" unit="mm" x="-166.804382324219" y="42.9426918029785" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v370" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v371" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v372" unit="mm" x="-166.804382324219" y="42.9426918029785" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v373" unit="mm" x="-166.725158691406" y="42.4340362548828" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v374" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v375" unit="mm" x="-166.725158691406" y="42.4340362548828" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v376" unit="mm" x="-166.594058990479" y="41.936222076416" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v377" unit="mm" x="-166.594058990479" y="44.9773712158203" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v378" unit="mm" x="-166.725158691406" y="44.4795570373535" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v379" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v380" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v381" unit="mm" x="-166.725158691406" y="44.4795570373535" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v382" unit="mm" x="-166.804382324219" y="43.9709014892578" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v383" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v384" unit="mm" x="-166.804382324219" y="43.9709014892578" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v385" unit="mm" x="-166.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v386" unit="mm" x="-165.906021118164" y="46.3539009094238" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v387" unit="mm" x="-166.182308197021" y="45.9195365905762" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v388" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v389" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v390" unit="mm" x="-166.182308197021" y="45.9195365905762" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v391" unit="mm" x="-166.412464141846" y="45.4590644836426" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v392" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v393" unit="mm" x="-166.412464141846" y="45.4590644836426" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v394" unit="mm" x="-166.594058990479" y="44.9773712158203" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v395" unit="mm" x="-164.831951141357" y="47.4559936523438" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v396" unit="mm" x="-165.227245330811" y="47.126220703125" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v397" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v398" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v399" unit="mm" x="-165.227245330811" y="47.126220703125" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v400" unit="mm" x="-165.586540222168" y="46.7575569152832" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v401" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v402" unit="mm" x="-165.586540222168" y="46.7575569152832" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v403" unit="mm" x="-165.906021118164" y="46.3539009094238" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v404" unit="mm" x="-163.47359085083" y="48.1792411804199" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v405" unit="mm" x="-163.950450897217" y="47.9853096008301" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v406" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v407" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v408" unit="mm" x="-163.950450897217" y="47.9853096008301" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v409" unit="mm" x="-164.404842376709" y="47.7433700561523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v410" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v411" unit="mm" x="-164.404842376709" y="47.7433700561523" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v412" unit="mm" x="-164.831951141357" y="47.4559936523438" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v413" unit="mm" x="-161.959617614746" y="48.4551391601562" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v414" unit="mm" x="-162.472869873047" y="48.4154090881348" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v415" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v416" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v417" unit="mm" x="-162.472869873047" y="48.4154090881348" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v418" unit="mm" x="-162.979320526123" y="48.3231163024902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v419" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v420" unit="mm" x="-162.979320526123" y="48.3231163024902" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v421" unit="mm" x="-163.47359085083" y="48.1792411804199" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v422" unit="mm" x="-160.433452606201" y="48.2575454711914" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v423" unit="mm" x="-160.934474945068" y="48.3757858276367" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v424" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v425" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v426" unit="mm" x="-160.934474945068" y="48.3757858276367" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v427" unit="mm" x="-161.445003509521" y="48.4418830871582" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v428" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v429" unit="mm" x="-161.445003509521" y="48.4418830871582" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v430" unit="mm" x="-161.959617614746" y="48.4551391601562" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v431" unit="mm" x="-159.039661407471" y="47.6051788330078" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v432" unit="mm" x="-159.48099899292" y="47.870189666748" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v433" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v434" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v435" unit="mm" x="-159.48099899292" y="47.870189666748" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v436" unit="mm" x="-159.947238922119" y="48.0884170532227" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v437" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v438" unit="mm" x="-159.947238922119" y="48.0884170532227" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v439" unit="mm" x="-160.433452606201" y="48.2575454711914" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v440" unit="mm" x="-157.91028213501" y="46.5598449707031" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v441" unit="mm" x="-158.250122070312" y="46.9465179443359" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v442" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v443" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v444" unit="mm" x="-158.250122070312" y="46.9465179443359" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v445" unit="mm" x="-158.627914428711" y="47.296199798584" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v446" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v447" unit="mm" x="-158.627914428711" y="47.296199798584" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v448" unit="mm" x="-159.039661407471" y="47.6051788330078" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v449" unit="mm" x="-157.152294158936" y="45.2205581665039" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v450" unit="mm" x="-157.358444213867" y="45.6922645568848" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v451" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v452" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v453" unit="mm" x="-157.358444213867" y="45.6922645568848" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v454" unit="mm" x="-157.612003326416" y="46.1402740478516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v455" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v456" unit="mm" x="-157.612003326416" y="46.1402740478516" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v457" unit="mm" x="-157.91028213501" y="46.5598449707031" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v458" unit="mm" x="-156.890441894531" y="44.2262496948242" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v459" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v460" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v461" unit="mm" x="-156.890441894531" y="44.2262496948242" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v462" unit="mm" x="-156.995738983154" y="44.730152130127" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v463" unit="mm" x="-161.830879211426" y="43.4567947387695" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v464" unit="mm" x="-156.995738983154" y="44.730152130127" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v465" unit="mm" x="-157.152294158936" y="45.2205581665039" z="65.4260482788086"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v466" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v467" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v468" unit="mm" x="-156.837509155273" y="43.7141876220703" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v469" unit="mm" x="-157.152294158936" y="45.2205581665039" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v470" unit="mm" x="-156.995738983154" y="44.730152130127" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v471" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v472" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v473" unit="mm" x="-156.995738983154" y="44.730152130127" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v474" unit="mm" x="-156.890441894531" y="44.2262496948242" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v475" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v476" unit="mm" x="-156.890441894531" y="44.2262496948242" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v477" unit="mm" x="-156.837509155273" y="43.7141876220703" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v478" unit="mm" x="-157.91028213501" y="46.5598449707031" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v479" unit="mm" x="-157.612003326416" y="46.1402740478516" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v480" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v481" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v482" unit="mm" x="-157.612003326416" y="46.1402740478516" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v483" unit="mm" x="-157.358444213867" y="45.6922645568848" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v484" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v485" unit="mm" x="-157.358444213867" y="45.6922645568848" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v486" unit="mm" x="-157.152294158936" y="45.2205581665039" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v487" unit="mm" x="-159.039661407471" y="47.6051788330078" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v488" unit="mm" x="-158.627914428711" y="47.296199798584" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v489" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v490" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v491" unit="mm" x="-158.627914428711" y="47.296199798584" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v492" unit="mm" x="-158.250122070312" y="46.9465179443359" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v493" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v494" unit="mm" x="-158.250122070312" y="46.9465179443359" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v495" unit="mm" x="-157.91028213501" y="46.5598449707031" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v496" unit="mm" x="-160.433452606201" y="48.2575454711914" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v497" unit="mm" x="-159.947238922119" y="48.0884170532227" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v498" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v499" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v500" unit="mm" x="-159.947238922119" y="48.0884170532227" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v501" unit="mm" x="-159.48099899292" y="47.870189666748" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v502" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v503" unit="mm" x="-159.48099899292" y="47.870189666748" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v504" unit="mm" x="-159.039661407471" y="47.6051788330078" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v505" unit="mm" x="-161.959617614746" y="48.4551391601562" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v506" unit="mm" x="-161.445003509521" y="48.4418830871582" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v507" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v508" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v509" unit="mm" x="-161.445003509521" y="48.4418830871582" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v510" unit="mm" x="-160.934474945068" y="48.3757858276367" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v511" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v512" unit="mm" x="-160.934474945068" y="48.3757858276367" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v513" unit="mm" x="-160.433452606201" y="48.2575454711914" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v514" unit="mm" x="-163.47359085083" y="48.1792411804199" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v515" unit="mm" x="-162.979320526123" y="48.3231163024902" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v516" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v517" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v518" unit="mm" x="-162.979320526123" y="48.3231163024902" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v519" unit="mm" x="-162.472869873047" y="48.4154090881348" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v520" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v521" unit="mm" x="-162.472869873047" y="48.4154090881348" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v522" unit="mm" x="-161.959617614746" y="48.4551391601562" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v523" unit="mm" x="-164.831951141357" y="47.4559936523438" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v524" unit="mm" x="-164.404842376709" y="47.7433700561523" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v525" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v526" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v527" unit="mm" x="-164.404842376709" y="47.7433700561523" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v528" unit="mm" x="-163.950450897217" y="47.9853096008301" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v529" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v530" unit="mm" x="-163.950450897217" y="47.9853096008301" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v531" unit="mm" x="-163.47359085083" y="48.1792411804199" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v532" unit="mm" x="-165.906021118164" y="46.3539009094238" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v533" unit="mm" x="-165.586540222168" y="46.7575569152832" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v534" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v535" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v536" unit="mm" x="-165.586540222168" y="46.7575569152832" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v537" unit="mm" x="-165.227245330811" y="47.126220703125" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v538" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v539" unit="mm" x="-165.227245330811" y="47.126220703125" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v540" unit="mm" x="-164.831951141357" y="47.4559936523438" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v541" unit="mm" x="-166.594058990479" y="44.9773712158203" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v542" unit="mm" x="-166.412464141846" y="45.4590644836426" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v543" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v544" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v545" unit="mm" x="-166.412464141846" y="45.4590644836426" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v546" unit="mm" x="-166.182308197021" y="45.9195365905762" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v547" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v548" unit="mm" x="-166.182308197021" y="45.9195365905762" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v549" unit="mm" x="-165.906021118164" y="46.3539009094238" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v550" unit="mm" x="-166.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v551" unit="mm" x="-166.804382324219" y="43.9709014892578" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v552" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v553" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v554" unit="mm" x="-166.804382324219" y="43.9709014892578" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v555" unit="mm" x="-166.725158691406" y="44.4795570373535" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v556" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v557" unit="mm" x="-166.725158691406" y="44.4795570373535" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v558" unit="mm" x="-166.594058990479" y="44.9773712158203" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v559" unit="mm" x="-166.594058990479" y="41.936222076416" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v560" unit="mm" x="-166.725158691406" y="42.4340362548828" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v561" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v562" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v563" unit="mm" x="-166.725158691406" y="42.4340362548828" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v564" unit="mm" x="-166.804382324219" y="42.9426918029785" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v565" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v566" unit="mm" x="-166.804382324219" y="42.9426918029785" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v567" unit="mm" x="-166.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v568" unit="mm" x="-165.906021118164" y="40.5596885681152" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v569" unit="mm" x="-166.182308197021" y="40.9940567016602" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v570" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v571" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v572" unit="mm" x="-166.182308197021" y="40.9940567016602" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v573" unit="mm" x="-166.412464141846" y="41.4545288085938" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v574" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v575" unit="mm" x="-166.412464141846" y="41.4545288085938" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v576" unit="mm" x="-166.594058990479" y="41.936222076416" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v577" unit="mm" x="-164.831951141357" y="39.4575996398926" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v578" unit="mm" x="-165.227245330811" y="39.7873725891113" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v579" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v580" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v581" unit="mm" x="-165.227245330811" y="39.7873725891113" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v582" unit="mm" x="-165.586540222168" y="40.1560363769531" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v583" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v584" unit="mm" x="-165.586540222168" y="40.1560363769531" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v585" unit="mm" x="-165.906021118164" y="40.5596885681152" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v586" unit="mm" x="-163.47359085083" y="38.7343521118164" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v587" unit="mm" x="-163.950450897217" y="38.9282836914062" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v588" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v589" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v590" unit="mm" x="-163.950450897217" y="38.9282836914062" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v591" unit="mm" x="-164.404842376709" y="39.170223236084" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v592" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v593" unit="mm" x="-164.404842376709" y="39.170223236084" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v594" unit="mm" x="-164.831951141357" y="39.4575996398926" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v595" unit="mm" x="-162.472869873047" y="38.4981803894043" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v596" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v597" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v598" unit="mm" x="-162.472869873047" y="38.4981803894043" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v599" unit="mm" x="-162.979320526123" y="38.5904731750488" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v600" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v601" unit="mm" x="-162.979320526123" y="38.5904731750488" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v602" unit="mm" x="-163.47359085083" y="38.7343521118164" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v603" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v604" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v605" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v606" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v607" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v608" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v609" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v610" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v611" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v612" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v613" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v614" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v615" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v616" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+    <position name="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v617" unit="mm" x="-161.830879211426" y="43.4567947387695" z="63.9260559082031"/>
+  </define>
+
+  <materials>
+    <isotope N="1" Z="1" name="H10x1c23680">
+      <atom unit="g/mole" value="1.00782503081372"/>
+    </isotope>
+    <isotope N="2" Z="1" name="H20x1c23f60">
+      <atom unit="g/mole" value="2.01410199966617"/>
+    </isotope>
+    <element name="H0x1c234f0">
+      <fraction n="0.999885" ref="H10x1c23680"/>
+      <fraction n="0.000115" ref="H20x1c23f60"/>
+    </element>
+    <isotope N="16" Z="8" name="O160x1c1bc70">
+      <atom unit="g/mole" value="15.9949"/>
+    </isotope>
+    <isotope N="17" Z="8" name="O170x1c1bd10">
+      <atom unit="g/mole" value="16.9991"/>
+    </isotope>
+    <isotope N="18" Z="8" name="O180x1c1bd60">
+      <atom unit="g/mole" value="17.9992"/>
+    </isotope>
+    <element name="O0x1c1ba60">
+      <fraction n="0.99757" ref="O160x1c1bc70"/>
+      <fraction n="0.00038" ref="O170x1c1bd10"/>
+      <fraction n="0.00205" ref="O180x1c1bd60"/>
+    </element>
+    <material name="G4_WATER0x1c233d0" state="solid">
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="78"/>
+      <D unit="g/cm3" value="1"/>
+      <fraction n="0.111898477841067" ref="H0x1c234f0"/>
+      <fraction n="0.888101522158933" ref="O0x1c1ba60"/>
+    </material>
+    <isotope N="12" Z="6" name="C120x1c063e0">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x1c1b740">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="C0x1c1b4f0">
+      <fraction n="0.9893" ref="C120x1c063e0"/>
+      <fraction n="0.0107" ref="C130x1c1b740"/>
+    </element>
+    <isotope N="14" Z="7" name="N140x1c1b6a0">
+      <atom unit="g/mole" value="14.0031"/>
+    </isotope>
+    <isotope N="15" Z="7" name="N150x1c1b9f0">
+      <atom unit="g/mole" value="15.0001"/>
+    </isotope>
+    <element name="N0x1c1b7b0">
+      <fraction n="0.99632" ref="N140x1c1b6a0"/>
+      <fraction n="0.00368" ref="N150x1c1b9f0"/>
+    </element>
+    <isotope N="36" Z="18" name="Ar360x1c1bfc0">
+      <atom unit="g/mole" value="35.9675"/>
+    </isotope>
+    <isotope N="38" Z="18" name="Ar380x1c1c010">
+      <atom unit="g/mole" value="37.9627"/>
+    </isotope>
+    <isotope N="40" Z="18" name="Ar400x1c1bcc0">
+      <atom unit="g/mole" value="39.9624"/>
+    </isotope>
+    <element name="Ar0x1c1bdb0">
+      <fraction n="0.003365" ref="Ar360x1c1bfc0"/>
+      <fraction n="0.000632" ref="Ar380x1c1c010"/>
+      <fraction n="0.996003" ref="Ar400x1c1bcc0"/>
+    </element>
+    <material name="G4_AIR0x1c1b3d0" state="gas">
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="85.7"/>
+      <D unit="g/cm3" value="0.00120479"/>
+      <fraction n="0.000124000124000124" ref="C0x1c1b4f0"/>
+      <fraction n="0.755267755267755" ref="N0x1c1b7b0"/>
+      <fraction n="0.231781231781232" ref="O0x1c1ba60"/>
+      <fraction n="0.0128270128270128" ref="Ar0x1c1bdb0"/>
+    </material>
+  </materials>
+
+  <solids>
+    <tessellated aunit="deg" lunit="mm" name="../../../models/Emeka/Holder_assem2-U238andZinc-1.STL0x1c3cb10">
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v1" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v2"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v2" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v1" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v1" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v4" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v4" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v5"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v6" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v7"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v7" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v5" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v8"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v7" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v9" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v10"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v10" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v8" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v11"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v10" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v12" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v13"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v13" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v11" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v14"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v13" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v15" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v16"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v16" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v14" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v17"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v16" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v18" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v19"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v19" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v17" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v20"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v19" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v21" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v22"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v22" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v20" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v23"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v22" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v24" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v25"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v25" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v23" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v26"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v25" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v27" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v28"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v28" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v26" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v29"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v28" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v30" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v31"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v31" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v29" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v32"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v31" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v33" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v34"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v34" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v32" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v35"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v34" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v36" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v37"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v37" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v35" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v38"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v37" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v39" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v40"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v40" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v38" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v41"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v40" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v42" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v43"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v43" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v41" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v44"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v43" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v45" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v46"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v46" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v44" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v47"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v46" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v48" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v49"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v49" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v47" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v50"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v49" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v51" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v52"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v53" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v54" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v55"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v56" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v57" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v58"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v59" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v60" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v61"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v62" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v63" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v64"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v65" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v66" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v67"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v68" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v69" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v70"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v71" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v72" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v73"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v74" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v75" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v76"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v77" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v78" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v79"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v80" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v81" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v82"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v83" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v84" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v85"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v86" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v87" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v88"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v89" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v90" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v91"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v92" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v93" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v94"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v95" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v96" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v97"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v98" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v99" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v100"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v101" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v102" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v103"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v104" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v105" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v106"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v107" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v108" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v109"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v110" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v111" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v112"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v113" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v114" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v115"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v116" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v117" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v118"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v119" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v120" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v121"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v122" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v123" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v124"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v125" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v126" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v127"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v128" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v129" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v130"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v131" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v132" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v133"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v134" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v135" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v136"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v137" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v138" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v139"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v140" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v141" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v142"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v143" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v144" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v145"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v146" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v147" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v148"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v149" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v150" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v151"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v152" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v153" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v154"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v155" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v156" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v157"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v158" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v159" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v160"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v161" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v162" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v163"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v164" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v165" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v166"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v167" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v168" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v169"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v170" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v171" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v172"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v173" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v174" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v175"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v176" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v177" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v178"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v179" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v180" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v181"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v182" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v183" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v184"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v185" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v186" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v187"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v188" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v189" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v190"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v191" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v192" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v193"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v194" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v195" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v196"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v197" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v198" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v199"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v200" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v201" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v202"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v203" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v204" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v205"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v206" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v207" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v208"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v209" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v210" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v211"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v212" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v213" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v214"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v215" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v216" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v217"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v218" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v219" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v220"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v221" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v222" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v223"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v224" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v225" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v226"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v227" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v228" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v229"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v230" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v231" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v232"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v233" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v234" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v235"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v236" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v237" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v238"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v239" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v240" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v241"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v242" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v243" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v244"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v245" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v246" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v247"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v248" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v249" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v250"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v251" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v252" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v253"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v254" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v255" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v256"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v257" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v258" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v259"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v260" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v261" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v262"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v263" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v264" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v265"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v266" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v267" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v268"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v269" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v270" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v271"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v272" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v273" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v274"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v275" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v276" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v277"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v278" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v279" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v280"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v281" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v282" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v283"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v284" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v285" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v286"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v287" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v288" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v289"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v290" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v291" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v292"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v293" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v294" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v295"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v296" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v297" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v298"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v299" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v300" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v301"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v302" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v303" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v304"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v305" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v306" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v307"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v308" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v309" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v310"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v311" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v312" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v313" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v314"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v315" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v2"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v1" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v316"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v1" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v317" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v4"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v11" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v8" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v318"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v319" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v8" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v5"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v320" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v5" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v4"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v20" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v17" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v321"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v322" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v17" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v14"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v323" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v14" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v11"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v29" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v26" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v324"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v325" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v26" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v23"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v326" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v23" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v20"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v38" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v35" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v327"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v328" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v35" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v32"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v329" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v32" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v29"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v47" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v44" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v330"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v331" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v44" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v41"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v332" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v41" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v38"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v333" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v334" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v335"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v336" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v337" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v338"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v339" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v340" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v47"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v341" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v342" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v343"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v344" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v345" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v346"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v347" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v348" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v349"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v350" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v351" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v352"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v353" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v354" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v355"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v356" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v357" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v358"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v359" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v360" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v361"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v362" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v363" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v364"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v365" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v366" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v367"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v368" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v369" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v370"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v371" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v372" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v373"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v374" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v375" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v376"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v377" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v378" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v379"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v380" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v381" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v382"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v383" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v384" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v385"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v386" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v387" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v388"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v389" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v390" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v391"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v392" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v393" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v394"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v395" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v396" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v397"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v398" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v399" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v400"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v401" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v402" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v403"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v404" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v405" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v406"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v407" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v408" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v409"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v410" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v411" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v412"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v413" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v414" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v415"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v416" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v417" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v418"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v419" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v420" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v421"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v422" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v423" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v424"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v425" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v426" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v427"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v428" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v429" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v430"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v431" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v432" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v433"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v434" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v435" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v436"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v437" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v438" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v439"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v440" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v441" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v442"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v443" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v444" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v445"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v446" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v447" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v448"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v449" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v450" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v451"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v452" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v453" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v454"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v455" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v456" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v457"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v0" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v458" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v459"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v460" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v461" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v462"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v463" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v464" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v465"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v2" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v466"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v2" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v467" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v468"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v469" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v470" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v471"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v472" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v473" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v474"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v475" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v476" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v477"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v478" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v479" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v480"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v481" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v482" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v483"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v484" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v485" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v486"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v487" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v488" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v489"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v490" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v491" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v492"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v493" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v494" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v495"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v496" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v497" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v498"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v499" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v500" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v501"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v502" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v503" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v504"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v505" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v506" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v507"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v508" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v509" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v510"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v511" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v512" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v513"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v514" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v515" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v516"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v517" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v518" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v519"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v520" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v521" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v522"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v523" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v524" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v525"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v526" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v527" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v528"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v529" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v530" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v531"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v532" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v533" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v534"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v535" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v536" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v537"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v538" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v539" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v540"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v541" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v542" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v543"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v544" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v545" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v546"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v547" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v548" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v549"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v550" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v551" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v552"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v553" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v554" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v555"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v556" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v557" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v558"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v559" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v560" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v561"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v562" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v563" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v564"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v565" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v566" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v567"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v568" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v569" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v570"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v571" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v572" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v573"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v574" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v575" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v576"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v577" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v578" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v579"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v580" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v581" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v582"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v583" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v584" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v585"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v586" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v587" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v588"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v589" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v590" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v591"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v592" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v593" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v594"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v49" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v595" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v596"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v597" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v598" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v599"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v600" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v601" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v602"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v40" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v43" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v603"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v604" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v43" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v46"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v605" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v46" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v49"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v31" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v34" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v606"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v607" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v34" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v37"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v608" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v37" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v40"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v22" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v25" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v609"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v610" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v25" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v28"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v611" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v28" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v31"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v13" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v16" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v612"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v613" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v16" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v19"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v614" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v19" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v22"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v3" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v7" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v615"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v616" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v7" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v10"/>
+      <triangular vertex1="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v617" vertex2="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v10" vertex3="../../../models/Emeka/Holder_assem 2 - U238 and Zinc-1.STL_v13"/>
+    </tessellated>
+    <box lunit="mm" name="world_solid0x1c24010" x="1000" y="1000" z="1000"/>
+  </solids>
+
+  <structure>
+    <volume name="cad_logical0x1c33ce0">
+      <materialref ref="G4_WATER0x1c233d0"/>
+      <solidref ref="../../../models/Emeka/Holder_assem2-U238andZinc-1.STL0x1c3cb10"/>
+    </volume>
+    <volume name="world_logical0x1c24a20">
+      <materialref ref="G4_AIR0x1c1b3d0"/>
+      <solidref ref="world_solid0x1c24010"/>
+      <physvol name="cad_physical0x1c33c80">
+        <volumeref ref="cad_logical0x1c33ce0"/>
+        <rotation name="cad_physical0x1c33c80_rot" unit="deg" x="0" y="0" z="90"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="world_logical0x1c24a20"/>
+  </setup>
+
+</gdml>

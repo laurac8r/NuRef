@@ -1,0 +1,248 @@
+//
+// ********************************************************************
+// * License and Disclaimer                                           *
+// *                                                                  *
+// * The Geant4 software  is  copyright of the Copyright Holders  of *
+// * the Geant4 Collaboration.  It is provided  under  the terms  and *
+// * conditions of the Geant4 Software License,  included in the file *
+// * LICENSE and available at  http://cern.ch/geant4/license .  These *
+// * include a list of copyright holders.                             *
+// *                                                                  *
+// * Neither the authors of this software system, nor their employing *
+// * institutes,nor the agencies providing financial support for this *
+// * work  make  any representation or  warranty, express or implied, *
+// * regarding  this  software system or assume any liability for its *
+// * use.  Please see the license in the file  LICENSE  and URL above *
+// * for the full disclaimer and the limitation of liability.         *
+// *                                                                  *
+// * This  code  implementation is the result of  the  scientific and *
+// * technical work of the GEANT4 collaboration.                      *
+// * By using,  copying,  modifying or  distributing the software (or *
+// * any work based  on the software)  you  agree  to acknowledge its *
+// * use  in  resulting  scientific  publications,  and indicate your *
+// * acceptance of all terms of the Geant4 Software license.          *
+// ********************************************************************
+//
+/// \file DetectorConstruction.cc
+/// \brief Implementation of the DetectorConstruction class
+//
+// $Id: DetectorConstruction.cc 70755 2013-06-05 12:17:48Z ihrivnac $
+//
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#include "ShroudConstruction.hh"
+
+#include "G4Material.hh"
+#include "G4NistManager.hh"
+
+#include "G4Box.hh"
+#include "G4Cons.hh"
+#include "G4Sphere.hh"
+#include "G4Trd.hh"
+#include "G4Tubs.hh"
+#include "G4GenericTrap.hh"
+#include "G4Para.hh"
+
+#include "G4SubtractionSolid.hh"
+
+#include "G4LogicalVolume.hh"
+#include "G4PVPlacement.hh"
+
+#include "G4RotationMatrix.hh"
+
+#include "G4GeometryManager.hh"
+#include "G4PhysicalVolumeStore.hh"
+#include "G4LogicalVolumeStore.hh"
+#include "G4SolidStore.hh"
+#include "G4RunManager.hh"
+
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+#include "G4UnitsTable.hh"
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+ShroudConstruction::DetectorConstruction()
+:G4VUserDetectorConstruction()
+{      
+  DefineMaterials();
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+ShroudConstruction::~DetectorConstruction()
+{ delete fDetectorMessenger;}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+G4VPhysicalVolume* ShroudConstruction::Construct()
+{
+  return ConstructVolumes(G4VPhysicalVolume* logicEnv);
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void ShroudConstruction::DefineMaterials()
+{
+
+  // Get nist material manager
+  G4NistManager* nist = G4NistManager::Instance();
+
+  G4Material* aluminum = nist->FindOrBuildMaterial("G4_Al");
+  G4ThreeVector pos_shrould = G4ThreeVector();
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+G4VPhysicalVolume* ShroudConstruction::ConstructVolumes(G4VPhysicalVolume* logicEnv)
+{
+  //
+  // Shrould and shells
+  //
+
+  //Main Block
+  G4VSolid* main_block =
+    new G4Tubs("Main Block",                            // Name
+                0, 100.33*mm, 88.9*mm, 0, twopi);       // Size
+
+  //G4RotationMatrix* rs = new G4RotationMatrix();
+  //rs->rotateY(90.*deg);
+
+  G4VSolid* shave_block =
+    new G4Box("Shave Block",
+              34.415*mm, 100.33*mm, 90.*mm);
+
+  G4ThreeVector pos_shave_block1(65.915*mm, 0, 0);
+  G4ThreeVector pos_shave_block2(-65.915*mm, 0, 0);
+  
+  G4VSolid* inside_cyl =
+    new G4Tubs("Inside Cylinder",
+               0, 26.046*mm, 80.01*mm, 0, twopi);
+
+  G4ThreeVector pos_inside_cyl1(0, -64.146*mm, -3.81*mm);
+  G4ThreeVector pos_inside_cyl2(0, 64.146*mm, -3.81*mm);
+
+  G4VSolid * inside_block =
+    new G4Box("Inside Block",
+              31.115*mm, 60.146*mm, 80.01*mm); // The walls are actually thinner.
+                                               // Set x to 31.115*mm, but 26.046 matches the shape
+                                               // of the inside cylinders. y dimension 64.146 appears
+                                               // to have trouble ->60
+  G4ThreeVector pos_inside_block(0, 0, -3.81*mm);
+
+  // Side Rectangle
+  G4VSolid* side_rect =
+    new G4Box("Side Rectangle",
+              3.175*mm, 10.5*mm, 31.75*mm);
+  G4ThreeVector pos_side_rect(0, 100.3*mm, 0);
+
+  // Top Stuff geometry
+  G4VSolid* top_cyl =
+    new G4Tubs("Top Cylinder",
+               0, 6.0325*mm, 16*mm, 0, twopi);
+
+  G4ThreeVector pos_top_cyl1(9.017*mm, -70.358*mm, 80.9*mm);
+  G4ThreeVector pos_top_cyl2(0, -36.5*mm, 80.9*mm);
+  G4ThreeVector pos_top_cyl3(0, 36.5*mm, 80.9*mm);
+  G4ThreeVector pos_top_cyl4(-9.017*mm, 70.369*mm, 80.9*mm);
+
+  // Center hole
+  G4VSolid* cent_hole =
+    new G4Tubs("Center Hole",
+               0, 10.1205*mm, 32.*mm, 0, twopi);
+  G4RotationMatrix* rm = new G4RotationMatrix();
+
+  //rm->rotateZ(90.*deg);
+  rm->rotateY(90.*deg);
+  G4ThreeVector Tr(0, 0, 0);
+  //MIC_____________________________
+  G4VSolid* MIC_body =
+    new G4Box("MIC body",
+      98.044*mm, 185.039*mm, 12.7*mm);
+  G4ThreeVector pos_MIC_body(0, 0, 0);//height of 36.703 + 12.7 = 49.403
+
+  G4VSolid* MIC_cyl = 
+    new G4Tubs("Subt Cyl",
+      0, 38.227*mm, 12.8*mm, 0, twopi);
+  G4ThreeVector pos_MIC_cyl1(0, 63.627*mm, 0);
+  G4ThreeVector pos_MIC_cyl2(0, -63.627*mm, 0);
+
+  G4VSolid* MIC_rect =
+    new G4Box("Subt Rect",
+      38.227*mm, 63.627*mm, 12.8*mm);
+  G4ThreeVector pos_MIC_rect(0, 0, 0);
+
+  //MIC Subtraction
+  G4SubtractionSolid* m1 =
+    new G4SubtractionSolid("M1", MIC_body, MIC_cyl, 0, pos_MIC_cyl1);
+  G4SubtractionSolid* m2 =
+    new G4SubtractionSolid("M2", m1, MIC_cyl, 0, pos_MIC_cyl2);
+  G4SubtractionSolid* m3 =
+    new G4SubtractionSolid("M3", m2, MIC_rect, 0, pos_MIC_rect);
+
+  // Subtraction solids
+  G4SubtractionSolid* s1 =
+    new G4SubtractionSolid("S1", main_block, shave_block,  0, pos_shave_block1);
+  
+  G4SubtractionSolid* s2 =
+    new G4SubtractionSolid("S2", s1, shave_block, 0, pos_shave_block2);
+ 
+  G4SubtractionSolid* s3 =
+    new G4SubtractionSolid("S3", s2, inside_cyl, 0, pos_inside_cyl1);
+  
+  G4SubtractionSolid* s4 =
+    new G4SubtractionSolid("S4", s3, inside_cyl, 0, pos_inside_cyl2);
+  
+  G4SubtractionSolid* s5 =
+    new G4SubtractionSolid("S5", s4, inside_block, 0, pos_inside_block);
+  
+  G4SubtractionSolid* s6 =
+    new G4SubtractionSolid("S6", s5, side_rect, 0, pos_side_rect);
+  
+  G4SubtractionSolid* s7 =
+    new G4SubtractionSolid("S7", s6, top_cyl, 0, pos_top_cyl1);
+  
+  G4SubtractionSolid* s8 =
+    new G4SubtractionSolid("S8", s7, top_cyl, 0, pos_top_cyl2);
+  
+  G4SubtractionSolid* s9 =
+    new G4SubtractionSolid("S9", s8, top_cyl, 0, pos_top_cyl3);
+  
+  G4SubtractionSolid* s10 =
+    new G4SubtractionSolid("S10", s9, top_cyl, 0, pos_top_cyl4);
+  
+  G4SubtractionSolid* s11 =
+    new G4SubtractionSolid("S11", s10, cent_hole, rm, Tr);
+
+  //Logic Volume
+
+  G4LogicalVolume* logical_shrould =
+    new G4LogicalVolume(s11,                  // Its solid volume
+                        aluminum,             // Its material
+                        "Logical Shrould");   // Its name
+  
+  G4LogicalVolume* logical_MIC =
+    new G4LogicalVolume(m3,
+      aluminum,
+      "Logical MIC");
+  new G4PVPlacement(0,                        // No rotation
+                    G4ThreeVector(0, 0, 0),   // At position
+                    logical_shrould,          // Its logical volume
+                    "Physical Shrould",       // Its name
+                    logicEnv,                 // Its mother volume
+                    true,                     // Boolean operation
+                    0,                        // Copy number
+                    checkOverlaps); // Overlaps checking
+
+  new G4PVPlacement(0,
+    G4ThreeVector(0, 0, 138.303*mm), // 49.403 + 88.9 = 138.303
+    logical_MIC,
+    "Main Insulator Cap",
+    logicEnv,
+    true,
+    0,
+    checkOverlaps);
+
+}

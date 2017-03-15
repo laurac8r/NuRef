@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\geotest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02ChamberParameterisation.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02DetectorConstruction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02DetectorMessenger.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02EventAction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02PrimaryGeneratorAction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02RunAction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="\Users\Nnaemeka\Geant4\GDML2\src\G02SteppingAction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02ChamberParameterisation.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02DetectorConstruction.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02DetectorMessenger.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02EventAction.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02PrimaryGeneratorAction.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02RunAction.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="\Users\Nnaemeka\Geant4\GDML2\include\G02SteppingAction.hh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E3085EF3-967B-3E2E-B035-C04AC20D0281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{72A4F756-6B66-3742-8E78-5F801ECFE344}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+Below is a description of each file and folder in Backup.
+
+NuRef1 is the code incorporating the ability to read a gdml files. it already implemented the use of GPS. NuRef1-Build is where it it was built. One can either run the built one or build another one.
+
+NuRef2 is the code that incoporate computing energy deposited nad dose using vector container as well as what NuRef1 does. NuRef2-Build is where it it was build. One can either run the built one or build another one.
+
+hfng.gdml is the gdml file that we are currently working with.
+
+run.mac is the macro file with the correct positioning and anular and enery distribution for running NuReF at 100 KeV deuterium beam energy.
+
+test.gdml is for use in adding functionality to NuReF. It enables easy testing of the functionality as it only loads about three parts of the geometry.
+
+test.mac is used to test run. it provides isotropic source at 2.45 MeV correctly positioned
