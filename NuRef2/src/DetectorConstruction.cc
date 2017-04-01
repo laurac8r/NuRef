@@ -99,7 +99,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     //fScoringVolume1.push_back(fParser.GetVolume("Ion_Source_Assembly_1_Source_Magnets_2_logical"));
    fScoringVolume = fParser.GetVolume("Target_logical");     
    fScoringVolume1.push_back(fParser.GetVolume("TargetV4_Assem-1_Target_Faceplate2-2_logical"));
-fScoringVolume1.push_back(fParser.GetVolume("Target_logical"));
+   fScoringVolume1.push_back(fParser.GetVolume("Target_logical"));
   return fWorldPhysVol;
 }
 

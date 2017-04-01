@@ -23,13 +23,14 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file HistoManager.hh
+/// \file analysis/AnaEx01/include/HistoManager.hh
 /// \brief Definition of the HistoManager class
 //
-// $Id: HistoManager.hh 66586 2012-12-21 10:48:39Z ihrivnac $
+//
+// $Id: HistoManager.hh 99607 2016-09-28 13:33:42Z gcosmo $
 // 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo...... 
 
 #ifndef HistoManager_h
 #define HistoManager_h 1
@@ -37,20 +38,30 @@
 #include "globals.hh"
 
 //#include "g4root.hh"
-//#include "g4xml.hh"
 #include "g4csv.hh"
+//#include "g4xml.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 class HistoManager
 {
   public:
-   HistoManager();
-  ~HistoManager();
+    HistoManager();
+   ~HistoManager();
 
-  private:
     void Book();
-    G4String fFileName;
+    void Save();
+    
+    void FillHisto(G4int id, G4double e, G4double weight = 1.0);
+    void Normalize(G4int id, G4double fac);    
+
+    void FillNtuple(G4double EnergyAbs, G4double EnergyGap,
+                    G4double TrackLAbs, G4double TrackLGap);
+    
+    void PrintStatistic();        
+    
+  private:
+    G4bool fFactoryOn;    
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

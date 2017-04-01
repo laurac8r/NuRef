@@ -78,7 +78,7 @@ G4cout<<"Total Edep for this event "<< eventID<<" is:"<<G4BestUnit(fEdep,"Energy
 
 //using vector container
 
-//fRunAction->AddEdep1(fEdep1);
+fRunAction->AddEdep1(fEdep1);
   //print energy deposited in each event
 for(int i = 0;i<2;i++)
  {

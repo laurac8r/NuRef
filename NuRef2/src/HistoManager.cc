@@ -23,31 +23,29 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file HistoManager.cc
+/// \file analysis/AnaEx01/src/HistoManager.cc
 /// \brief Implementation of the HistoManager class
 //
-// $Id: HistoManager.cc 83882 2014-09-22 11:09:30Z maire $
+//
+// $Id: HistoManager.cc 100674 2016-10-31 10:43:40Z gcosmo $
 // 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo...... 
 
 #include "HistoManager.hh"
 #include "G4UnitsTable.hh"
+#include "G4SystemOfUnits.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 HistoManager::HistoManager()
-  : fFileName("rdecay02")
-{
-  Book();
-}
+ : fFactoryOn(false)
+{}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 HistoManager::~HistoManager()
-{
-  delete G4AnalysisManager::Instance();
-}
+{}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -56,89 +54,141 @@ void HistoManager::Book()
   // Create or get analysis manager
   // The choice of analysis technology is done via selection of a namespace
   // in HistoManager.hh
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+  analysisManager->SetVerboseLevel(1);
+  analysisManager->SetNtupleMerging(true);
+      
+  // Create directories 
+  analysisManager->SetHistoDirectoryName("histo");
+  analysisManager->SetNtupleDirectoryName("ntuple");
+    
+  // Open an output file
   //
-  G4AnalysisManager* analysis = G4AnalysisManager::Instance();
+  G4bool fileOpen = analysisManager->OpenFile("HFNG_binning");
+  if (! fileOpen) {
+    G4cerr << "\n---> HistoManager::Book(): cannot open " 
+           << analysisManager->GetFileName() << G4endl;
+    return;
+  }
   
-  analysis->SetFileName(fFileName);
-  analysis->SetVerboseLevel(1);
-  analysis->SetActivation(true);     //enable inactivation of histos, nTuples
-    
-  // Default values (to be reset via /analysis/h1/set command)               
-  G4int nbins = 100;
-  G4double vmin = 0.;
-  G4double vmax = 100.;
+  // Create histograms.
+  // Histogram ids are generated automatically starting from 0.
+  // The start value can be changed by:
+  // analysisManager->SetFirstHistoId(1);  
+  
+  // id = 0
+  analysisManager->CreateH1("Keng","Kinetic Energy of Neutrons (MeV)", 100, 0., 800*MeV);
 
-  // Create all histograms as inactivated 
-  // as we have not yet set nbins, vmin, vmax
+  // id = 1
+  analysisManager->CreateH1("PartNum","Number of Particles Entering Volume", 100, 0., 100*MeV);
+
+  // id = 2
+  analysisManager->CreateH1("PartEngDep","Particle Energy Deposited")
+
+  // Create ntuples.
+  // Ntuples ids are generated automatically starting from 0.
+  // The start value can be changed by:
+  // analysisManager->SetFirstMtupleId(1);  
+  
+  // Create ntuple for the kinetic energy of the neutrons. (id = 0)
   //
-  ////analysis->SetHistoDirectoryName("histo");  
-  ////analysis->SetFirstHistoId(1);
-    
-  G4int id = analysis->CreateH1("H10","Energy deposit (MeV) in the target",
-                       nbins, vmin, vmax);
-  analysis->SetH1Activation(id, false);
-    
-  id = analysis->CreateH1("H11","Energy deposit (MeV) in the detector",
-                 nbins, vmin, vmax);
-  analysis->SetH1Activation(id, false);
+  analysisManager->CreateNtuple("Ntuple 1", "Kinetic Energy (MeV)");
+  analysisManager->CreateNtupleDColumn("Main Insulator Cap"); // column Id = 0
+  analysisManager->FinishNtuple();
 
-  id = analysis->CreateH1("H12","Total energy (MeV) in target and detector",
-                 nbins, vmin, vmax);
-  analysis->SetH1Activation(id, false);
+  // Create ntuple for the number of neutrons. (id = 1)
+  //    
+  analysisManager->CreateNtuple("Ntuple 2", "Particle Number");
+  analysisManager->CreateNtupleDColumn("Main Insulator Cap"); // column Id = 0
+  analysisManager->FinishNtuple();
 
-  id = analysis->CreateH1("H13",
-                "Coincidence spectrum (MeV) between the target and detector",
-                 nbins, vmin, vmax);
-  analysis->SetH1Activation(id, false);  
-
-  id = analysis->CreateH1("H14",
-                "Anti-coincidence spectrum (MeV) in the traget",
-                 nbins, vmin, vmax);
-  analysis->SetH1Activation(id, false);
-
-  id = analysis->CreateH1("H15",
-                "Anti-coincidence spectrum (MeV) in the detector",
-                 nbins, vmin, vmax);
-  analysis->SetH1Activation(id, false);  
-
-  id = analysis->CreateH1("H16","Decay emission spectrum (MeV)",
-                 nbins, vmin, vmax);
-  analysis->SetH1Activation(id, true);  
-    
-  // nTuples
+  // Create ntuple for the particle energy. (id = 2)
   //
-  ////analysis->SetNtupleDirectoryName("ntuple");
-  ////analysis->SetFirstNtupleId(1);
-  //       
-  analysis->CreateNtuple("T1", "Emitted Particles");
-  analysis->CreateNtupleDColumn("PID");       //column 0
-  analysis->CreateNtupleDColumn("Energy");    //column 1
-  analysis->CreateNtupleDColumn("Time");      //column 2
-  analysis->CreateNtupleDColumn("Weight");    //column 3
-  analysis->FinishNtuple();
-  
-  analysis->CreateNtuple("T2", "RadioIsotopes");
-  analysis->CreateNtupleDColumn("PID");       //column 0
-  analysis->CreateNtupleDColumn("Time");      //column 1
-  analysis->CreateNtupleDColumn("Weight");    //column 2
-  analysis->FinishNtuple();
-  
-  analysis->CreateNtuple("T3", "Energy depositions");
-  analysis->CreateNtupleDColumn("Energy");    //column 0
-  analysis->CreateNtupleDColumn("Time");      //column 1
-  analysis->CreateNtupleDColumn("Weight");    //column 2
-  analysis->FinishNtuple();
-  
-  analysis->CreateNtuple("RDecayProducts", "All Products of RDecay");
-  analysis->CreateNtupleDColumn("PID");       //column 0
-  analysis->CreateNtupleDColumn("Z");         //column 1
-  analysis->CreateNtupleDColumn("A");         //column 2    
-  analysis->CreateNtupleDColumn("Energy");    //column 3
-  analysis->CreateNtupleDColumn("Time");      //column 4
-  analysis->CreateNtupleDColumn("Weight");    //column 5
-  analysis->FinishNtuple();
-  
-  analysis->SetNtupleActivation(true);          
+  analysisManager->CreateNtuple("Ntuple 3", "Particle Energy Deposited");
+  analysisManager->CreateNtupleDColumn("Main Insulator Cap"); // column Id = 0
+  analysisManager->FinishNtuple();
+
+
+  fFactoryOn = true;       
+
+  G4cout << "\n----> Output file is open in " 
+         << analysisManager->GetFileName() << "." 
+         << analysisManager->GetFileType() << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void HistoManager::Save()
+{
+  if (! fFactoryOn) return;
+  
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();    
+  analysisManager->Write();
+  analysisManager->CloseFile(); 
+   
+  G4cout << "\n----> Histograms and ntuples are saved\n" << G4endl;
+      
+  delete G4AnalysisManager::Instance();
+  fFactoryOn = false;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void HistoManager::FillHisto(G4int ih, G4double xbin, G4double weight)
+{
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance(); 
+  analysisManager->FillH1(ih, xbin, weight);
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void HistoManager::Normalize(G4int ih, G4double fac)
+{
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance(); 
+  G4H1* h1 = analysisManager->GetH1(ih);
+  if (h1) h1->scale(fac);
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void HistoManager::FillNtuple(G4double kinEngTarget,
+                              G4double partNumbTarget,
+                              G4double partEngTarget)
+{                
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+  // Fill ntuple for the kinetic energy of the neutrons. ( id = 0 )
+  analysisManager->FillNtupleDColumn(0, kinEngTarget);
+  analysisManager->AddNtupleRow(0);
+  // Fill ntuple for the number of neutrons. ( id = 1 )
+  analysisManager->FillNtupleDColumn(1, partNumbTarget);
+  analysisManager->AddNtupleRow(1);
+  // Fill ntuple for the particle energy deposited. ( id = 2 )
+  analysisManager->FillNtupleDColumn(2, partEngTarget)
+  analysisManager->AddNtupleRow(2);
+
+{
+  if (! fFactoryOn) return;
+
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+    
+  G4cout << "\n ----> print histograms statistic \n" << G4endl;
+  for ( G4int i=0; i<analysisManager->GetNofH1s(); ++i ) {
+    G4String name = analysisManager->GetH1Name(i);
+    G4H1* h1 = analysisManager->GetH1(i);
+    
+    // G4String unitCategory;
+    // if (name[0U] == 'E' ) unitCategory = "Energy"; 
+    // if (name[0U] == 'L' ) unitCategory = "Length";
+         // we use an explicit unsigned int type for operator [] argument
+         // to avoid problems with windows compiler
+
+    // G4cout << name
+    //        << ": mean = " << G4BestUnit(h1->mean(), unitCategory) 
+    //        << " rms = " << G4BestUnit(h1->rms(), unitCategory ) 
+    //        << G4endl;
+  }
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+
