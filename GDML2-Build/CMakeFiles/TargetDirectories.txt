@@ -1,5 +1,0 @@
-C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/INSTALL.dir
-C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/geotest.dir
-C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/G02.dir
-C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/ZERO_CHECK.dir

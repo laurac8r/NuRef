@@ -1,4 +1,0 @@
-C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/HFNG_model.dir
-C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/INSTALL.dir
-C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/ZERO_CHECK.dir

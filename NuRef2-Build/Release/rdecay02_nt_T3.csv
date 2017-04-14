@@ -1,7 +1,0 @@
-#class tools::wcsv::ntuple
-#title Energy depositions
-#separator 44
-#vector_separator 59
-#column double Energy
-#column double Time
-#column double Weight
