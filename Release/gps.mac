@@ -9,4 +9,4 @@
 /gps/ang/type iso
 /gps/ene/type Mono
 /gps/ene/mono 2.45 MeV
-/run/beamOn 1000
+/run/beamOn 100000000
