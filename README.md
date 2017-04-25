@@ -7,15 +7,11 @@ Contributers: Yaroslav Kaminskiy, Alexander Blank, Haotian Zeng, Joseph Michael 
 
 Oversight and project management: Robert Nnaemeka Nnamani
 
----------------
-~Histogramming~
----------------
+# Histogramming
 It contains the implementation of historamming of particles entering a volume, one where all particles are binned including incident one, the other where only scattered particles are binned. 
 The Build folder is where it was built. One can build ones own. But one need to go to the Release folder inside the Build folder and copy the necessary files to the Release folder of one's own build. 
 
-------------
-~How to run~
-------------
+# How to run
 At Idle, type the following: /control/execute run1.mac
 
 Note that the full hfng geometry is not read in the read_gdml file. Instead a geometry that consists of few hfng parts were used. This geometry is named "test".
