@@ -8,10 +8,18 @@ Contributers: Yaroslav Kaminskiy, Alexander Blank, Haotian Zeng, Joseph Michael 
 Oversight and project management: Robert Nnaemeka Nnamani
 
 # Histogramming
-It contains the implementation of historamming of particles entering a volume, one where all particles are binned including incident one, the other where only scattered particles are binned. 
-The Build folder is where it was built. One can build ones own. But one need to go to the Release folder inside the Build folder and copy the necessary files to the Release folder of one's own build. 
+The following histograms are produced for each volume of interest:
 
-# How to run
-At Idle, type the following: /control/execute run1.mac
+- All Neutrons Entering the Volume
+- Neutrons Scattered In the Volume
+- Energy Absorbed in the Volume
 
-Note that the full hfng geometry is not read in the read_gdml file. Instead a geometry that consists of few hfng parts were used. This geometry is named "test".
+Producing a set of these histograms for each logical volume in a scoring volume store will be introduced in the next release. The flux and absorption histogram binning will be introduced in a future release.
+
+# Build Files
+The build files and other necessary files to run the simulation executable are in the Release folder. Any ROOT and HepRApp files from the latest simulation output are stored in the the Simulation Output folder.
+
+# How to Run
+At Idle, type the following: /control/execute gps.mac
+
+Note that the full hfng geometry is not read in the read_gdml.mac file. Instead a geometry that consists of few HFNG parts were used. This geometry is named "test".
