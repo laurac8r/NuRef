@@ -68,7 +68,7 @@ void HistoManager::Book()
   analysisManager->SetFileName(fFileName);
   analysisManager->SetVerboseLevel(1);
   analysisManager->SetActivation(true);     // Enable activation of histograms
-  
+
   //get scoring volume
   //
   const DetectorConstruction* detectorConstruction = static_cast<const DetectorConstruction*>
@@ -88,12 +88,16 @@ void HistoManager::Book()
       // Define histograms start values.
       const G4int kMaxHisto = 3;
       // const G4String id[] = {"0", "1", "2"};
-      const G4String id[] = {std::to_string(j*10), std::to_string(j*10 + 1), std::to_string(j*10 + 2)};
+      const G4String id[] = {std::to_string(j*10), std::to_string(j*10 + 1), 
+                             std::to_string(j*10 + 2), std::to_string(j*10 + 3),
+                             std::to_string(j*10 + 4)};
       const G4String title[] = 
                     {
-                      "All Neutrons Entering the Volume " + volume_name,  // ID = 10*j + 0
-                      "Neutrons Scattered In the Volume " + volume_name,  // ID = 10*j + 1
-                      "Energy Absorbed in the Volume " + volume_name      // ID = 10*j + 2
+                      "All Neutrons Entering the Volume " + volume_name,            // ID = 10*j + 0
+                      "Neutrons Scattered in the Volume " + volume_name,            // ID = 10*j + 1
+                      "Energy Absorbed in the Volume " + volume_name,               // ID = 10*j + 2
+                      "Fission Reactions Occurring in the Volume " + volume_name,   // ID = 10*j + 3
+                      "Capture Reactions Occurring in the Volume " + volume_name    // ID = 10*j + 4
                     };
 
       // Bin parameters               

@@ -48,6 +48,7 @@
 #include "G4UnitsTable.hh"
 
 #include "G4TouchableHandle.hh"
+#include "G4VProcess.hh"
                            
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -98,6 +99,9 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
   // Obtain the name of the particle for binning.
   G4String particle = aStep->GetTrack()->GetDefinition()->GetParticleName();
 
+  // Get the interaction process name.
+  G4String process_name = process->GetProcessName();
+
   // Obtain the kinetic energy of the current event.
   const G4Event* event = static_cast<const G4Event*>(G4RunManager::GetRunManager()->GetCurrentEvent());
   G4PrimaryVertex* primaryVertex = event->GetPrimaryVertex();
@@ -114,7 +118,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
         G4double kinetic_energy = aStep->GetTrack()->GetKineticEnergy();
 
         // Fill the histogram for the kinetic energy.
-        analysisManager->FillH1(i, kinetic_energy);
+        analysisManager->FillH1(i*10, kinetic_energy);
 
         // Obtain the energy deposited within the volume
         G4double energy_deposited = aStep->GetTotalEnergyDeposit();
@@ -122,8 +126,17 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
         // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
         if(kinetic_energy < ke)
           {
-            analysisManager->FillH1(i+1, kinetic_energy);
-            analysisManager->FillH1(i+2, energy_deposited);
+            analysisManager->FillH1(i*10+1, kinetic_energy);
+            analysisManager->FillH1(i*10+2, energy_deposited);
+          }
+
+        if(process_name == "nFission")
+          {
+            analysisManager->FillH1(i*10+3, energy_deposited);
+          }
+        else if(process_name == "nCapture")
+          {
+            analysisManager->FillH1(i*10+4, energy_deposited);
           }
 
         //G4cout<<"E is: "<<kinetic_energy<<G4endl;

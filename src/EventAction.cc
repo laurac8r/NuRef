@@ -36,7 +36,6 @@
 
 #include "Run.hh"
 #include "HistoManager.hh"
-
 #include "G4ios.hh"
 #include "G4Event.hh"
 #include "G4RunManager.hh"
@@ -68,24 +67,25 @@ void EventAction::BeginOfEventAction(const G4Event* )
 
 void EventAction::EndOfEventAction(const G4Event* event)
 {
-  // accumulate statistics in run action
+
+  // Accumulate statistics in run action.
   G4int eventID = event->GetEventID();
 
-  //print energy deposited in each event
+  // Print energy deposited in each event.
   fRunAction->AddEdep(fEdep);
 
-if(fEdep > 0){ 
-G4cout<<"Total Edep for this event "<< eventID<<" is:"<<G4BestUnit(fEdep,"Energy")<<G4endl;}
+  if(fEdep > 0){ 
+  G4cout<<"Total Edep for this event "<< eventID<<" is:"<<G4BestUnit(fEdep,"Energy")<<G4endl;}
 
-//using vector container
+  // Using vector container
+  // fRunAction->AddEdep1(fEdep1);
 
-//fRunAction->AddEdep1(fEdep1);
-  //print energy deposited in each event
-for(int i = 0; i<2; i++)
- {
-  if(fEdep1[i]>0){ 
-  G4cout<<"Total Edep for this event "<< eventID<<" for logical volume having the ID "<<i<<" is:"<<G4BestUnit(fEdep1[i],"Energy")<<G4endl;}
- }        
+  // Print energy deposited in each event
+  for(int i = 0; i<2; i++)
+   {
+    if(fEdep1[i]>0){ 
+    G4cout<<"Total Edep for this event "<< eventID<<" for logical volume having the ID "<<i<<" is:"<<G4BestUnit(fEdep1[i],"Energy")<<G4endl;}
+   }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -38,6 +38,7 @@
 #include "globals.hh"
 #include "vector"
 #include "HistoManager.hh"
+#include "G4VProcess.hh"
 class Histomanager;
 class DetectorConstruction;
 class EventAction;
@@ -55,10 +56,11 @@ class SteppingAction : public G4UserSteppingAction
     
   private:
     HistoManager* fHisto;
-    DetectorConstruction* fDetector;  
+    DetectorConstruction* fDetector;
     EventAction* fEventAction;
     G4LogicalVolume* fScoringVolume;
     std::vector<G4LogicalVolume*> fScoringVolume1;
+    G4VProcess* process;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
