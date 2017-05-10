@@ -33,7 +33,7 @@
 #include "RunAction.hh"
 #include "EventAction.hh"
 #include "HistoManager.hh"
-//#include "TrackingAction.hh"
+#include "TrackingAction.hh"
 #include "SteppingAction.hh"
 #include "SteppingVerbose.hh"
 
@@ -68,13 +68,14 @@ void ActionInitialization::Build() const
   SetUserAction(runAction);
   
   EventAction* event = new EventAction(runAction);
-  SetUserAction(event);  
+  SetUserAction(event);
+
+  HistoManager* histo = new HistoManager(fDetector);
   
-  //TrackingAction* trackingAction = new TrackingAction(fDetector);
-  //SetUserAction(trackingAction);
-  HistoManager* histo = new HistoManager();
+  TrackingAction* trackingAction = new TrackingAction(fDetector, event, histo);
+  SetUserAction(trackingAction);
   
-  SteppingAction* steppingAction = new SteppingAction(fDetector, event,histo);
+  SteppingAction* steppingAction = new SteppingAction(fDetector, event, histo);
   SetUserAction(steppingAction);
 }  
 

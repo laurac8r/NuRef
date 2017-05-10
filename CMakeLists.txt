@@ -40,7 +40,16 @@ target_link_libraries(HFNG_model ${Geant4_LIBRARIES} )
 # relies on these scripts being in the current working directory.
 #
 set(HFNG_model_SCRIPTS
-    plotHisto.C read_gdml.mac vis.mac
+    gps.mac
+    plotHisto.C
+    run.mac
+    Target.gdml
+    "TargetV4_Assem-1 Target_Faceplate2-2.gdml"
+    "TargetV4_Assem-1 Target_Lid_4-1.gdml"
+    "TargetV4_Assem-1 Target_Lid_4-2.gdml"
+    test3.gdml
+    vis.mac
+    xerces-c_3_1.dll
   )
 
 foreach(_script ${HFNG_model_SCRIPTS})

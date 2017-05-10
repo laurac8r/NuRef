@@ -52,8 +52,8 @@ class ActionInitialization : public G4VUserActionInitialization
    
   private:
     DetectorConstruction* fDetector;
+    // EventAction* fEventAction;
+    // HistoManager* fHisto;
 };
 
 #endif
-
-    

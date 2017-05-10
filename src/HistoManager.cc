@@ -40,8 +40,8 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-HistoManager::HistoManager()
-  : fFileName("HFNG")
+HistoManager::HistoManager(DetectorConstruction* det)
+  : fFileName("HFNG"), fDetector(det), fScoringVolume1(0.)
 {
   Book();
 }
@@ -68,7 +68,7 @@ void HistoManager::Book()
   analysisManager->SetFileName(fFileName);
   analysisManager->SetVerboseLevel(1);
   analysisManager->SetActivation(true);     // Enable activation of histograms
-
+  
   //get scoring volume
   //
   const DetectorConstruction* detectorConstruction = static_cast<const DetectorConstruction*>
@@ -76,28 +76,38 @@ void HistoManager::Book()
 
   // G4LogicalVolume* fScoringVolume1 = detectorConstruction->GetScoringVolume();
 
-  if (fScoringVolume1.empty()){fScoringVolume1 = detectorConstruction->GetScoringVolume1();}
+ // if (fScoringVolume1.empty()){fScoringVolume1 = detectorConstruction->GetScoringVolume1();}
+//if (fScoringVolume1.empty()){fScoringVolume1 = fDetector->GetScoringVolume1();}
+//G4cout<<"First scoring volume is: "<<fScoringVolume1[0]<<G4endl;
+//fScoringVolume1 = fDetector->GetScoringVolume1();
+//G4cout<<"Scoring volume size is: "<<fScoringVolume1.size()<<G4endl;
+//getchar();
   
   // fScoringVolume1 = detectorConstruction->GetScoringVolume1();
 
-  for(int j = 0; j < fScoringVolume1.size(); j++)
-    {
+  //for(int j = 0; j < 3; j++)
+   // {
       // Retrieve the name of the current scoring volume.
-      G4String volume_name = fScoringVolume1[j]->GetName();
+  //  if (!fScoringVolume) { 
+   //  fScoringVolume = detectorConstruction->ReturnVolume();   
+  // }
+   //   G4String volume_name = fScoringVolume1[j]->GetName();
 
       // Define histograms start values.
-      const G4int kMaxHisto = 3;
-      // const G4String id[] = {"0", "1", "2"};
-      const G4String id[] = {std::to_string(j*10), std::to_string(j*10 + 1), 
-                             std::to_string(j*10 + 2), std::to_string(j*10 + 3),
-                             std::to_string(j*10 + 4)};
+      const G4int kMaxHisto = 8;
+      const G4String id[] = {"0", "1", "2","3", "4", "5", "6", "7", "8"};
+      //const G4String id[] = {std::to_string(j*10), std::to_string(j*10 + 1), std::to_string(j*10 + 2)};
       const G4String title[] = 
                     {
-                      "All Neutrons Entering the Volume " + volume_name,            // ID = 10*j + 0
-                      "Neutrons Scattered in the Volume " + volume_name,            // ID = 10*j + 1
-                      "Energy Absorbed in the Volume " + volume_name,               // ID = 10*j + 2
-                      "Fission Reactions Occurring in the Volume " + volume_name,   // ID = 10*j + 3
-                      "Capture Reactions Occurring in the Volume " + volume_name    // ID = 10*j + 4
+                      "All Neutrons Entering Volume 1",               // ID = 0
+                      "All Neutrons Entering Volume 2",               // ID = 1
+                      "Energy of Neutrons Scattered Into Volume 1",   // ID = 2
+                      "Energy of Neutrons Scattered Into Volume 2"    // ID = 3
+                      "Neutron Flux Into Volume 1"                    // ID = 4
+                      "Neutron Flux Into Volume 2"                    // ID = 5
+                      "Neutron Captured in Volume 1"                  // ID = 6
+                      "Neutron Captured in Volume 2"                  // ID = 7
+                      "Neutrons Leaving World"                        // ID = 8
                     };
 
       // Bin parameters               
@@ -111,7 +121,7 @@ void HistoManager::Book()
           G4int ih = analysisManager->CreateH1(id[k], title[k], nbins, x_min, x_max);
           analysisManager->SetH1Activation(ih, true);
         }
-    }
+    //}
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

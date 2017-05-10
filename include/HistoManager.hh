@@ -44,17 +44,22 @@
 #include "Run.hh"
 #include "G4RunManager.hh"
 #include "G4LogicalVolume.hh"
+#include "vector"
+class DetectorConstruction;
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+class G4LogicalVolume;
 
 class HistoManager
 {
   public:
-    HistoManager();
+    HistoManager(DetectorConstruction* det);
    ~HistoManager();
 
   private:
     void Book();
+    DetectorConstruction* fDetector;  
     G4String fFileName;
     G4LogicalVolume* fScoringVolume;
     std::vector<G4LogicalVolume*> fScoringVolume1;

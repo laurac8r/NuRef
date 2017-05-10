@@ -48,7 +48,8 @@
 #include "G4UnitsTable.hh"
 
 #include "G4TouchableHandle.hh"
-#include "G4VProcess.hh"
+
+#include "G4Neutron.hh"
                            
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -78,76 +79,78 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 
   if (fScoringVolume1.empty()){fScoringVolume1 = detectorConstruction->GetScoringVolume1();}
   
-  // fScoringVolume = detectorConstruction->GetScoringVolume();
-
   // Get the post and pre step points for a track.
   G4StepPoint* post = aStep->GetPostStepPoint();
   G4StepPoint* pre = aStep->GetPreStepPoint();
 
-  // Touch the volume for binning.
-  // G4TouchableHandle touch_handle = post->GetTouchableHandle();
-
-  // // Obtain the name of the volume for binning
-  G4String name = pre->GetPhysicalVolume()->GetLogicalVolume()->GetName();
-
-  // Create a pointer to the volume of interest for binning.
-  // G4LogicalVolume* volume1 = aStep->GetPreStepPoint()->GetTouchableHandle()
-                              // ->GetVolume()->GetLogicalVolume();
-  // G4LogicalVolume* volume1 = aStep->GetPreStepPoint()->GetTouchableHandle()
-  //     ->GetVolume()->GetLogicalVolume();
-
-  // Obtain the name of the particle for binning.
+  // Obtain the name of the particle.
   G4String particle = aStep->GetTrack()->GetDefinition()->GetParticleName();
+ 
+  G4Track * theTrack = aStep->GetTrack();
 
-  // Get the interaction process name.
-  G4String process_name = process->GetProcessName();
+  // Get the process object.
+  const G4VProcess* process = post->GetProcessDefinedStep();
 
-  // Obtain the kinetic energy of the current event.
-  const G4Event* event = static_cast<const G4Event*>(G4RunManager::GetRunManager()->GetCurrentEvent());
-  G4PrimaryVertex* primaryVertex = event->GetPrimaryVertex();
-  G4PrimaryParticle* primaryParticle = primaryVertex->GetPrimary();
-  G4double ke = primaryParticle->GetKineticEnergy();
+  // Get the process name.
+  G4String processName = process->GetProcessName();
 
-  // Check if the pre-step point in the track is the volume of interest for binning.
-  // If so, bin the particle if it is a neutron.
-  for(int i=0; i < fScoringVolume1.size(); i++)
+  // check if it is alive
+  if( theTrack->GetTrackStatus()!=fAlive && particle =="neutron")
     {
-      if (pre->GetStepStatus() == fGeomBoundary && name == fScoringVolume1[i]->GetName() && particle =="neutron")
-      {
-        // Obtain the kinetic energy of the particle
-        G4double kinetic_energy = aStep->GetTrack()->GetKineticEnergy();
+      G4cout<<"Neutron is dead"<<G4endl;
+      
+      G4cout<<"The process in the step is: "<<processName<<G4endl;}
 
-        // Fill the histogram for the kinetic energy.
-        analysisManager->FillH1(i*10, kinetic_energy);
+      // Touch the volume for binning.
+      // G4TouchableHandle touch_handle = post->GetTouchableHandle();
 
-        // Obtain the energy deposited within the volume
-        G4double energy_deposited = aStep->GetTotalEnergyDeposit();
+      // // Obtain the name of the volume for binning
+      G4String name = pre->GetPhysicalVolume()->GetLogicalVolume()->GetName();
+      // G4LogicalVolume* step_vol = pre->GetPhysicalVolume()->GetLogicalVolume();
 
-        // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
-        if(kinetic_energy < ke)
-          {
-            analysisManager->FillH1(i*10+1, kinetic_energy);
-            analysisManager->FillH1(i*10+2, energy_deposited);
+      // Obtain the initial kinetic energy of the current event.
+      const G4Event* event = static_cast<const G4Event*>(G4RunManager::GetRunManager()->GetCurrentEvent());
+      G4PrimaryVertex* primaryVertex = event->GetPrimaryVertex();
+      G4PrimaryParticle* primaryParticle = primaryVertex->GetPrimary();
+      G4double initial_ke = primaryParticle->GetKineticEnergy();
+
+      // Obtain the kinetic energy of the particle in the current step
+      G4double current_ke = aStep->GetTrack()->GetKineticEnergy();
+
+      G4double deposited_ke = initial_ke - current_ke;
+
+      if (processName == "Transportation") { analysisManager->FillH1(8, current_ke); }
+
+      // Check if the pre-step point in the track is the volume of interest for binning.
+      // If so, bin the particle if it is a neutron.
+      // for(int ih=0; ih < fScoringVolume1.size(); ih++)
+      for(int ih=0; ih < 2; ih++)
+        {
+          //Check if we are in the scorin volume and particle is neutron
+          // if ( step_vol == fScoringVolume1[i] && particle == "neutron" )
+          if ( name == fScoringVolume1[ih]->GetName() && particle == "neutron" )
+            {
+              if (processName == "nCapture") { analysisManager->FillH1(ih+6, deposited_ke); }
+
+              // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
+              if (deposited_ke > 0) { analysisManager->FillH1(ih+2, current_ke); }
+
+              //Check if the particle just entered the volume, ie it its first step in the volume
+              if (pre->GetStepStatus() == fGeomBoundary)
+                {
+
+                  // Fill the histogram for the kinetic energy.
+                  analysisManager->FillH1(ih, current_ke);
+                  //G4cout<<"vol is: "<<fScoringVolume1[i]->GetName()<<" Energy is: "<<kinetic_energy<<G4endl;
+
+
+                  //G4cout<<"E is: "<<kinetic_energy<<G4endl;
+                  //G4double energy_deposited = aStep->GetTotalEnergyDeposit();
+                  //analysisManager->FillH1(3,energy_deposited);
+                }
           }
-
-        if(process_name == "nFission")
-          {
-            analysisManager->FillH1(i*10+3, energy_deposited);
-          }
-        else if(process_name == "nCapture")
-          {
-            analysisManager->FillH1(i*10+4, energy_deposited);
-          }
-
-        //G4cout<<"E is: "<<kinetic_energy<<G4endl;
-        //G4double energy_deposited = aStep->GetTotalEnergyDeposit();
-        //analysisManager->FillH1(3,energy_deposited);
-      }
-      else
-         return;
-    }
   }
-
+}
 // void SteppingAction::UserSteppingAction(const G4Step* aStep)
 // {
 //   Run* run = static_cast<Run*>(
