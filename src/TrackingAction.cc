@@ -118,7 +118,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* track)
     // Check if we are in the scoring volume and particle is a neutron.
     if ( track_volume == fScoringVolume1[ih] && particle == G4Neutron::Neutron() )
       {
-        analysis->FillH1(ih+7,energy);
+        analysis->FillH1(ih+6,energy);
       }
   }
 }

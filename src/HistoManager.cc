@@ -94,7 +94,7 @@ void HistoManager::Book()
    //   G4String volume_name = fScoringVolume1[j]->GetName();
 
       // Define histograms start values.
-      const G4int kMaxHisto = 8;
+      const G4int kMaxHisto = 9;
       const G4String id[] = {"0", "1", "2","3", "4", "5", "6", "7", "8"};
       //const G4String id[] = {std::to_string(j*10), std::to_string(j*10 + 1), std::to_string(j*10 + 2)};
       const G4String title[] = 
@@ -103,10 +103,10 @@ void HistoManager::Book()
                       "All Neutrons Entering Volume 2",               // ID = 1
                       "Energy of Neutrons Scattered Into Volume 1",   // ID = 2
                       "Energy of Neutrons Scattered Into Volume 2"    // ID = 3
-                      "Neutron Flux Into Volume 1"                    // ID = 4
-                      "Neutron Flux Into Volume 2"                    // ID = 5
-                      "Neutron Captured in Volume 1"                  // ID = 6
-                      "Neutron Captured in Volume 2"                  // ID = 7
+                      "Neutron Captured in Volume 1"                  // ID = 4
+                      "Neutron Captured in Volume 2"                  // ID = 5
+                      "Neutron Flux Into Volume 1"                    // ID = 6
+                      "Neutron Flux Into Volume 2"                    // ID = 7
                       "Neutrons Leaving World"                        // ID = 8
                     };
 

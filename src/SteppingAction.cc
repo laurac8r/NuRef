@@ -130,7 +130,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
           // if ( step_vol == fScoringVolume1[i] && particle == "neutron" )
           if ( name == fScoringVolume1[ih]->GetName() && particle == "neutron" )
             {
-              if (processName == "nCapture") { analysisManager->FillH1(ih+6, deposited_ke); }
+              if (processName == "nCapture") { analysisManager->FillH1(ih+4, deposited_ke); }
 
               // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
               if (deposited_ke > 0) { analysisManager->FillH1(ih+2, current_ke); }
