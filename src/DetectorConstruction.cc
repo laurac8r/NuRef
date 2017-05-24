@@ -114,6 +114,10 @@ void DetectorConstruction::DefineMaterials(){
     Air20->AddElement(O, fractionmass=0.3);
   //
   fWorldMater = Air20;
+
+  // G4NistManager* nist = G4NistManager::Instance();
+
+  // G4Material* fWorldMater = nist->FindOrBuildMaterial("G4_Al");
   
   // or use G4 materials data base
   

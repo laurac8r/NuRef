@@ -102,11 +102,11 @@ void HistoManager::Book()
                       "All Neutrons Entering Volume 1",               // ID = 0
                       "All Neutrons Entering Volume 2",               // ID = 1
                       "Energy of Neutrons Scattered Into Volume 1",   // ID = 2
-                      "Energy of Neutrons Scattered Into Volume 2"    // ID = 3
-                      "Neutron Captured in Volume 1"                  // ID = 4
-                      "Neutron Captured in Volume 2"                  // ID = 5
-                      "Neutron Flux Into Volume 1"                    // ID = 6
-                      "Neutron Flux Into Volume 2"                    // ID = 7
+                      "Energy of Neutrons Scattered Into Volume 2",   // ID = 3
+                      "Neutron Captured in Volume 1",                 // ID = 4
+                      "Neutron Captured in Volume 2",                 // ID = 5
+                      "Neutron Flux Into Volume 1",                   // ID = 6
+                      "Neutron Flux Into Volume 2",                   // ID = 7
                       "Neutrons Leaving World"                        // ID = 8
                     };
 

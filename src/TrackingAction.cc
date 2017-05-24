@@ -70,7 +70,7 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
   G4double energy = track->GetKineticEnergy();
   Run* run = static_cast<Run*>(
         G4RunManager::GetRunManager()->GetNonConstCurrentRun());    
-  run->ParticleCount(name,energy);
+  // run->ParticleCount(name,energy);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -99,7 +99,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* track)
     (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
 
  // Add a flux modifier to the neutron energy.
- run->ParticleFlux(name,energy);               
+ // run->ParticleFlux(name,energy);
  
  // Create a flux histogram for every energy flow.
  //

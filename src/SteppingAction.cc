@@ -92,14 +92,15 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
   const G4VProcess* process = post->GetProcessDefinedStep();
 
   // Get the process name.
-  G4String processName = process->GetProcessName();
+  // G4String processName = process->GetProcessName();
+  G4String processName = process->GetProcessDefinedStep()->GetName
 
   // check if it is alive
   if( theTrack->GetTrackStatus()!=fAlive && particle =="neutron")
     {
-      G4cout<<"Neutron is dead"<<G4endl;
+      // G4cout<<"Neutron is dead"<<G4endl;
       
-      G4cout<<"The process in the step is: "<<processName<<G4endl;}
+      // G4cout<<"The process in the step is: "<<processName<<G4endl;
 
       // Touch the volume for binning.
       // G4TouchableHandle touch_handle = post->GetTouchableHandle();
@@ -107,6 +108,8 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
       // // Obtain the name of the volume for binning
       G4String name = pre->GetPhysicalVolume()->GetLogicalVolume()->GetName();
       // G4LogicalVolume* step_vol = pre->GetPhysicalVolume()->GetLogicalVolume();
+
+      // G4cout << "The name of the logical volume of particle death is: " << name << G4endl << G4endl;
 
       // Obtain the initial kinetic energy of the current event.
       const G4Event* event = static_cast<const G4Event*>(G4RunManager::GetRunManager()->GetCurrentEvent());
@@ -117,9 +120,17 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
       // Obtain the kinetic energy of the particle in the current step
       G4double current_ke = aStep->GetTrack()->GetKineticEnergy();
 
-      G4double deposited_ke = initial_ke - current_ke;
+      // G4double deposited_ke = initial_ke - current_ke;
+      G4double deposited_ke = aStep->GetTotalEnergyDeposit();
 
-      if (processName == "Transportation") { analysisManager->FillH1(8, current_ke); }
+      // G4cout << "Initial kinetic energy of particle: " << initial_ke << G4endl << G4endl;
+      // G4cout << "Current kinetic energy of particle: " << current_ke << G4endl << G4endl;
+      // G4cout << "Deposited energy from particle kinetic energy: " << deposited_ke << G4endl << G4endl;
+
+      if (processName == "Transportation" && pre->GetStepStatus() == fWorldBoundary )
+        {
+          analysisManager->FillH1(8, current_ke);
+        }
 
       // Check if the pre-step point in the track is the volume of interest for binning.
       // If so, bin the particle if it is a neutron.
@@ -130,7 +141,17 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
           // if ( step_vol == fScoringVolume1[i] && particle == "neutron" )
           if ( name == fScoringVolume1[ih]->GetName() && particle == "neutron" )
             {
-              if (processName == "nCapture") { analysisManager->FillH1(ih+4, deposited_ke); }
+              G4cout << "Initial kinetic energy of particle: " << initial_ke << G4endl << G4endl;
+              G4cout << "Current kinetic energy of particle: " << current_ke << G4endl << G4endl;
+              G4cout << "Deposited energy from particle kinetic energy: " << deposited_ke << G4endl << G4endl;
+
+
+              if (processName == "nCapture")
+                {
+                  analysisManager->FillH1(ih+4, deposited_ke);
+
+                  runAction->IncrementCount()
+                }
 
               // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
               if (deposited_ke > 0) { analysisManager->FillH1(ih+2, current_ke); }
@@ -149,6 +170,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
                   //analysisManager->FillH1(3,energy_deposited);
                 }
           }
+      }
   }
 }
 // void SteppingAction::UserSteppingAction(const G4Step* aStep)
