@@ -59,23 +59,21 @@ class DetectorConstruction : public G4VUserDetectorConstruction
   public:
 
     virtual G4VPhysicalVolume* Construct();
-    G4LogicalVolume* ReturnVolume() const
+    G4LogicalVolume* ReturnVolume() const {return fScoringVolume;}
+    G4LogicalVolume* GetScoringVolume() const {return fScoringVolume;}
+
+    std::vector<G4LogicalVolume*> GetScoringVolumeVec() const
     {
-    return fScoringVolume;
-    }
-    G4LogicalVolume* GetScoringVolume() const
-    {
-    return fScoringVolume;
+      return fScoringVolumeVec;
     }
 
-    std::vector<G4LogicalVolume*> GetScoringVolume1() const
-    {
-    return fScoringVolume1;
-    }
+    // Return the number of elements in the scoring volume vector.
+    G4int GetScoreVolVecSize() const {return fScoringVolumeVec.size();}
 
     // Reading GDML
     //
-    void SetReadFile( const G4String& File );
+    // void SetReadFile( const G4String& File);
+    void SetReadFile( const G4String&);
 
     void ConstructSDandField();
 
@@ -88,7 +86,7 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     G4String fReadFile;
     DetectorMessenger* fDetectorMessenger;
     G4LogicalVolume* fScoringVolume;
-    std::vector<G4LogicalVolume*> fScoringVolume1;
+    std::vector<G4LogicalVolume*> fScoringVolumeVec;
 
     void DefineMaterials();
     G4VPhysicalVolume* ConstructVolumes();

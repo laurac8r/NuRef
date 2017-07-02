@@ -61,6 +61,10 @@ class RunAction : public G4UserRunAction
     //   occurs.
     virtual void BeginOfRunAction(const G4Run*);
 
+    // Define the end of the run action, in which saving of the ROOT file,
+    //   dumping of the fluence data, merging of the energy deposition
+    //   accumulables, and calculation of the root-mean-squared (RMS) energy
+    //   deposition occurs.
     virtual void EndOfRunAction(const G4Run*);
 
     void AddEngDep (G4double&);

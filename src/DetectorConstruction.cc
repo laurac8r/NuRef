@@ -79,7 +79,7 @@ DetectorConstruction::DetectorConstruction()
 :G4VUserDetectorConstruction(),
  fWorldMater(0), fPhysiWorld(0),
  fDetectorMessenger(0),fScoringVolume(0),
- fScoringVolume1(0)
+ fScoringVolumeVec(0)
 {
   fReadFile ="test3.gdml";
   fWritingChoice=1;
@@ -101,8 +101,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     fParser.Read(fReadFile,false);
     fWorldPhysVol = fParser.GetWorldVolume();
     fScoringVolume = fParser.GetVolume("Target_logical");
-    fScoringVolume1.push_back(fParser.GetVolume("TargetV4_Assem-1_Target_Faceplate2-2_logical"));
-    fScoringVolume1.push_back(fParser.GetVolume("Target_logical"));
+    fScoringVolumeVec.push_back(fParser.GetVolume("TargetV4_Assem-1_Target_Faceplate2-2_logical"));
+    fScoringVolumeVec.push_back(fParser.GetVolume("Target_logical"));
 
     ConstructSDandField();
 

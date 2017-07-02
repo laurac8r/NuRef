@@ -66,9 +66,19 @@ RunAction::RunAction(const G4String& outputFile)
   // Create an instance of an accumulable manager.
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
 
-  // Register the energy deposit accumulable and the square of that quantity.
+  // Register the energy deposit accumulable and the square of that quantity for
+  //   the case of only a single scoring volume.
   accumulableManager->RegisterAccumulable(fEngDep);
   accumulableManager->RegisterAccumulable(fEngDepSqr);
+
+  // Iterate through and register all the elements in the vectors containing the
+  //   energy deposition accumulables and the squares of those quantities in the
+  //   case of multiple scoring volumes.
+  for (i = 0; i < 2; i++)
+  {
+    accumulableManager->RegisterAccumulable(fEngDepArr.at(i));
+    accumulableManager->RegisterAccumulable(fEngDepSqrArr.at(i));
+  }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -134,7 +144,7 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
   // Dump the fluence data into the output file.
   theRun->DumpData(fOutputFileSpec);
 
-  // Merge accumulables
+  // Merge the energy deposition accumulables.
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
   accumulableManager->Merge();
 
@@ -166,17 +176,19 @@ void RunAction::AddEngDep(G4double& engDep)
 
 void RunAction::AddEngDepArr(std::vector<G4double&>& engDep)
 {
+  // Iterate through all the scoring volumes and accumulate the energy
+  //   deposition from the event action calling this method.
   for (i = 0; i < 2; i++)
   {
-      // Grab the energy deposition for the scoring volume of interest. Throw an
-      //   error if we are out of range of the energy deposition vector number
-      //   of elements. (Use of ".at(i)" in place of "[i]" ensures this error
-      //   checking.)
-      engDepForI = engDep.at(i);
+    // Grab the energy deposition for the scoring volume of interest. Throw an
+    //   error if we are out of range of the energy deposition vector number
+    //   of elements. (Use of ".at(i)" in place of "[i]" ensures this error
+    //   checking.)
+    engDepForI = engDep.at(i);
 
-      // Accumulate the energy deposition from the event calling this method for
-      //   the case of multiple scoring volumes.
-      fEngDep.at(i)  += engDepForI;
-      fEngDepSqr.at(i) += engDepForI * engDepForI;
+    // Accumulate the energy deposition from the event action calling this
+    //   method for the case of multiple scoring volumes.
+    fEngDepArr.at(i)  += engDepForI;
+    fEngDepSqrArr.at(i) += engDepForI * engDepForI;
   }
 }
