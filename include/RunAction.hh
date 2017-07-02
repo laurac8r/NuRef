@@ -38,6 +38,8 @@
 #include "globals.hh"
 #include "G4Accumulable.hh"
 
+#include <vector>
+
 class Run;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -45,18 +47,42 @@ class Run;
 class RunAction : public G4UserRunAction
 {
   public:
+    // Define the constructor for the run action.
     RunAction(const G4String&);
+
+    // Define the destructor for the run action.
     virtual ~RunAction();
 
-    // virtual void BeginOfRunAction(const G4Run*);
-    virtual G4Run* GenerateRun();
+    // Define a method to generate a new run.
+    virtual G4Run* GenerateRun() {return new Run;};
+
+    // Define the beginning of the run action, in which initialization of the
+    //   energy deposition accumulables and the histogram analysis manager
+    //   occurs.
+    virtual void BeginOfRunAction(const G4Run*);
 
     virtual void EndOfRunAction(const G4Run*);
-    void AddEngDep (G4double edep);
+
+    void AddEngDep (G4double&);
+    void AddEngDepArr (std::vector<G4double&>&);
 
   private:
-    G4Accumulable<G4double> fEdep;
-    G4Accumulable<G4double> fEdep2;
+    // Create ordinary accumulables for energy deposition for the case of only
+    //   one scoring logical volume.
+    G4Accumulable<G4double> fEngDep;
+    G4Accumulable<G4double> fEngDepSqr;
+
+    // Define vectors to store the accumulables for the case of multiple
+    //   scoring logical volumes. CHANGE THE DEFAULT NUMBER OF SCORING
+    //   VOLUMES TO THAT DEFINED BY SOME CUSTOM METHOD CALLING A PRIVATE
+    //   VARIABLE IN THE DETECTOR CONSTRUCTION CLASS.
+    std::vector< G4Accumulable<G4double> > fEngDepArr(2);
+    std::vector< G4Accumulable<G4double> > fEngDepSqrArr(2);
+
+    // // Reserve the number of scoring logical volumes for memory for the energy
+    // //   deposit arrays.
+    // fEngDepArr.reserve(2);
+    // fEngDepSqrArr.reserve(2);
 
     G4String fOutputFileSpec;
 };

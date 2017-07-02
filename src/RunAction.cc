@@ -33,8 +33,8 @@
 
 #include "RunAction.hh"
 #include "Run.hh"
-#include "DetectorConstruction.hh"
-#include "PrimaryGeneratorAction.hh"
+// #include "DetectorConstruction.hh"
+// #include "PrimaryGeneratorAction.hh"
 #include "HistoManager.hh"
 
 #include "G4Run.hh"
@@ -61,39 +61,24 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 RunAction::RunAction(const G4String& outputFile)
-: G4UserRunAction(), fOutputFileSpec(outputFile)
-// fEdep(0.),
-// fEdep2(0.)
+: G4UserRunAction(), fOutputFileSpec(outputFile), fEngDep(0.), fEngDepSqr(0.)
 {
+  // Create an instance of an accumulable manager.
+  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
 
-// // add new units for dose
-//   //
-//   const G4double milligray = 1.e-3*gray;
-//   const G4double microgray = 1.e-6*gray;
-//   const G4double nanogray  = 1.e-9*gray;
-//   const G4double picogray  = 1.e-12*gray;
-//
-//   new G4UnitDefinition("milligray", "milliGy" , "Dose", milligray);
-//   new G4UnitDefinition("microgray", "microGy" , "Dose", microgray);
-//   new G4UnitDefinition("nanogray" , "nanoGy"  , "Dose", nanogray);
-//   new G4UnitDefinition("picogray" , "picoGy"  , "Dose", picogray);
-//
-//   // Register accumulable to the accumulable manager
-//   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-//   accumulableManager->RegisterAccumulable(fEdep);
-//   accumulableManager->RegisterAccumulable(fEdep2);
+  // Register the energy deposit accumulable and the square of that quantity.
+  accumulableManager->RegisterAccumulable(fEngDep);
+  accumulableManager->RegisterAccumulable(fEngDepSqr);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 RunAction::~RunAction()
-{
-}
+{ }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-// void RunAction::BeginOfRunAction(const G4Run* aRun)
-G4Run* RunAction::GenerateRun()
+void RunAction::BeginOfRunAction(const G4Run* aRun)
 {
   // Histograms
   //
@@ -106,12 +91,9 @@ G4Run* RunAction::GenerateRun()
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
   if (isMaster) G4Random::showEngineStatus();
 
-  // // reset accumulables to their initial values
-  // G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-  // accumulableManager->Reset();
-
-  // Generate a new run.
-  return new Run;
+  // Reset accumulables held in the accumulable manager to their initial values.
+  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
+  accumulableManager->Reset();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -119,7 +101,7 @@ G4Run* RunAction::GenerateRun()
 void RunAction::EndOfRunAction(const G4Run* aRun)
 {
 
-  // If a visul manager exists.
+  // If a visual manager exists.
   //
   if (G4VVisManager::GetConcreteInstance())
   {
@@ -135,8 +117,8 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
   const Run* theRun = dynamic_cast<const Run*>(aRun);
   assert (0 != theRun);
 
-  // G4int nofEvents = aRun->GetNumberOfEvent();
-  // if (nofEvents == 0) return;
+  G4int nofEvents = aRun->GetNumberOfEvent();
+  if (nofEvents == 0) return;
 
   // Get an instance of the analysis manager to save the histograms.
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
@@ -151,46 +133,50 @@ void RunAction::EndOfRunAction(const G4Run* aRun)
 
   // Dump the fluence data into the output file.
   theRun->DumpData(fOutputFileSpec);
+
+  // Merge accumulables
+  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
+  accumulableManager->Merge();
+
+  // Compute dose = total energy deposit in a run and its variance
+  //
+  G4double engDep  = fEngDep.GetValue();
+  G4double engDepSqr = fEngDepSqr.GetValue();
+
+  G4double rms = engDepSqr - engDep*engDep/nofEvents;
+  if (rms > 0.) rms = std::sqrt(rms); else rms = 0.;
+
+  // Run conditions
+  //
+  G4cout << G4endl << G4endl << " The run consists of " << nofEvents
+         << " particle(s)" << G4endl << G4endl;
 }
 
-  // // Merge accumulables
-  // G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-  // accumulableManager->Merge();
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-  // // Compute dose = total energy deposit in a run and its variance
-  // //
-  // G4double edep  = fEdep.GetValue();
-  // G4double edep2 = fEdep2.GetValue();
-  //
-  // G4double rms = edep2 - edep*edep/nofEvents;
-  // if (rms > 0.) rms = std::sqrt(rms); else rms = 0.;
-  //
-  // const DetectorConstruction* detectorConstruction
-  //  = static_cast<const DetectorConstruction*>
-  //    (G4RunManager::GetRunManager()->GetUserDetectorConstruction());//you have to et the mass by callin the detector construction
-  //
-  // G4double mass = detectorConstruction->GetScoringVolume()->GetMass();
-  // //G4cout<<"mass is "<<G4BestUnit(mass,"Mass")<<G4endl;
-  // G4double dose = edep/mass;
-  // G4double rmsDose = rms/mass;
-  //
-  // // Run conditions
-  //
-  // G4cout
-  //    << G4endl
-  //    << " The run consists of " << nofEvents<<" particle(s)"
-  //    << G4endl
-  //    << " Cumulated dose per run, in scoring volume : "
-  //    << G4BestUnit(dose,"Dose") << " rms = " << G4BestUnit(rmsDose,"Dose")
-  //    << G4endl
-  //    << "------------------------------------------------------------"
-  //    << G4endl
-  //    << G4endl;
-
-// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//
-void RunAction::AddEngDep(G4double edep)
+void RunAction::AddEngDep(G4double& engDep)
 {
-  fEdep  += edep;
-  fEdep2 += edep*edep;
+  // Accumulate the energy deposition from the event calling this method for
+  //   the case of only one scoring volume.
+  fEngDep  += engDep;
+  fEngDepSqr += engDep * engDep;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void RunAction::AddEngDepArr(std::vector<G4double&>& engDep)
+{
+  for (i = 0; i < 2; i++)
+  {
+      // Grab the energy deposition for the scoring volume of interest. Throw an
+      //   error if we are out of range of the energy deposition vector number
+      //   of elements. (Use of ".at(i)" in place of "[i]" ensures this error
+      //   checking.)
+      engDepForI = engDep.at(i);
+
+      // Accumulate the energy deposition from the event calling this method for
+      //   the case of multiple scoring volumes.
+      fEngDep.at(i)  += engDepForI;
+      fEngDepSqr.at(i) += engDepForI * engDepForI;
+  }
 }

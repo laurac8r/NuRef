@@ -64,17 +64,24 @@ void ActionInitialization::BuildForMaster() const
 
 void ActionInitialization::Build() const
 {
-  SetUserAction(new RunAction(fOutputFileSpec));
+  // Define and set a new run action.
+  RunAction* runAction = new RunAction(fOutputFileSpec);
+  SetUserAction(runAction);
 
+  // Define and set a new primary generator action.
   SetUserAction(new PrimaryGeneratorAction());
 
-  // SetUserAction(new EventAction(runAction));
+  // Define and set a new event action.
+  EventAction* eventAction = new EventAction(runAction);
+  SetUserAction(eventAction);
 
-  HistoManager* histo = new HistoManager(fDetector);
+  // Define a new histogram manager.
+  HistoManager* histoManager = new HistoManager(fDetector);
 
   // SetUserAction(new TrackingAction(fDetector, event, histo));
 
-  SetUserAction(new SteppingAction(fDetector, event, histo));
+  // Define and set a new stepping action.
+  SetUserAction(new SteppingAction(fDetector, eventAction, histoManager));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
