@@ -1,0 +1,35 @@
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+#/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+# (if too many tracks cause core dump => /tracking/storeTrajectory 0)
+#
+/vis/scene/add/axes 0 0 0 1 m
+# Draw hits at end of event:
+#/vis/scene/add/hits
+# To superimpose all of the events from a given run:
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/refresh
+/vis/viewer/flush
+
+#hard coded position and direction for gun
+/gps/particle neutron
+/gps/pos/type Point
+#/gps/pos/centre 0. 47. 0. cm
+/gps/pos/centre -1. 44. 44. cm
+#/gps/pos/centre 0. 0. 0. cm
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 2.45 MeV
+
+#if you want make a run with particle
+/run/printProgress 1000
+/run/beamOn 10000
+#
+

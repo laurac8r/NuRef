@@ -1,0 +1,43 @@
+###################################################
+# Visualization of detector geometry and events  
+###################################################
+
+# create empty scene
+/vis/scene/create
+
+# reading Geometry from File
+/mydet/readFile test3.gdml
+/run/initialize
+
+# Create a scene handler for a specific graphics system
+/vis/open OGL
+
+# draw scene
+/vis/viewer/zoom 1.5
+#/vis/viewer/set/viewpointThetaPhi 45 45 deg
+#/vis/viewer/set/viewpointThetaPhi 90 -25 deg
+#/vis/viewer/flush
+/vis/drawVolume
+
+#if you want to see trajectories and hits points
+/vis/scene/add/trajectories
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 5
+
+# (if you prefer not refreshing each event, uncomment next line)
+ /vis/scene/endOfEventAction accumulate
+
+#hard coded position and direction for gun
+/gps/particle neutron
+/gps/pos/type Point
+/gps/pos/centre 0. 47. 0. cm
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/ene/mono 2.45 MeV
+
+#if you want make a run with particle
+#/tracking/verbose 1
+/run/beamOn 10
+#
+

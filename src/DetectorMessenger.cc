@@ -49,15 +49,15 @@ DetectorMessenger::DetectorMessenger( DetectorConstruction* myDet )
     fTheDetectorDir(0),
     fTheReadCommand(0)
 
-{ 
+{
   fTheDetectorDir = new G4UIdirectory( "/mydet/" );
   fTheDetectorDir->SetGuidance("Detector control.");
 
   fTheReadCommand = new G4UIcmdWithAString("/mydet/readFile", this);
-  fTheReadCommand ->SetGuidance("READ GDML file with given name");
-  fTheReadCommand ->SetParameterName("FileRead", false);
-  fTheReadCommand ->SetDefaultValue("test.gdml");
-  fTheReadCommand ->AvailableForStates(G4State_PreInit);
+  fTheReadCommand->SetGuidance("READ GDML file with given name");
+  fTheReadCommand->SetParameterName("FileRead", false);
+  fTheReadCommand->SetDefaultValue("test.gdml");
+  fTheReadCommand->AvailableForStates(G4State_PreInit);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -71,10 +71,10 @@ DetectorMessenger::~DetectorMessenger()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void DetectorMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
-{ 
+{
   if ( command == fTheReadCommand )
-  { 
-    fTheDetector->SetReadFile(newValue );
+  {
+    fTheDetector->SetReadFile(newValue);
   }
-  
+
 }

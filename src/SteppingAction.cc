@@ -27,7 +27,7 @@
 /// \brief Implementation of the SteppingAction class
 //
 // $Id: SteppingAction.cc 71404 2013-06-14 16:56:38Z maire $
-// 
+//
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -50,11 +50,14 @@
 #include "G4TouchableHandle.hh"
 
 #include "G4Neutron.hh"
-                           
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SteppingAction::SteppingAction(DetectorConstruction* det, EventAction* event, HistoManager* histo)
-: G4UserSteppingAction(), fDetector(det), fEventAction(event), fHisto(histo),
+// SteppingAction::SteppingAction(DetectorConstruction* det, EventAction* event, HistoManager* histo)
+// : G4UserSteppingAction(), fDetector(det), fEventAction(event), fHisto(histo),
+//   fScoringVolume(0),fScoringVolume1(0.)
+SteppingAction::SteppingAction(DetectorConstruction* det, HistoManager* histo)
+: G4UserSteppingAction(), fDetector(det), fHisto(histo),
   fScoringVolume(0),fScoringVolume1(0.)
 { }
 
@@ -68,8 +71,8 @@ SteppingAction::~SteppingAction()
 void SteppingAction::UserSteppingAction(const G4Step* aStep)
 {
   Run* run = static_cast<Run*>(
-        G4RunManager::GetRunManager()->GetNonConstCurrentRun());    
-  
+        G4RunManager::GetRunManager()->GetNonConstCurrentRun());
+
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
 
   //get scoring volume
@@ -78,54 +81,82 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
         (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
 
   if (fScoringVolume1.empty()){fScoringVolume1 = detectorConstruction->GetScoringVolume1();}
-  
+
   // Get the post and pre step points for a track.
   G4StepPoint* post = aStep->GetPostStepPoint();
   G4StepPoint* pre = aStep->GetPreStepPoint();
 
   // Obtain the name of the particle.
   G4String particle = aStep->GetTrack()->GetDefinition()->GetParticleName();
- 
+
   G4Track * theTrack = aStep->GetTrack();
 
   // Get the process object.
   const G4VProcess* process = post->GetProcessDefinedStep();
 
   // Get the process name.
-  // G4String processName = process->GetProcessName();
-  G4String processName = process->GetProcessDefinedStep()->GetName
+  G4String processName = process->GetProcessName();
+  // G4String processName = process->GetProcessDefinedStep()->GetName;
+
+  // Touch the volume for binning.
+  // G4TouchableHandle touch_handle = post->GetTouchableHandle();
+
+  // // Obtain the name of the volume for binning
+  G4String name = pre->GetPhysicalVolume()->GetLogicalVolume()->GetName();
+  // G4LogicalVolume* step_vol = pre->GetPhysicalVolume()->GetLogicalVolume();
+
+  // G4cout << "The name of the logical volume of particle death is: " << name << G4endl << G4endl;
+
+  // Obtain the initial kinetic energy of the current event.
+  const G4Event* event = static_cast<const G4Event*>(G4RunManager::GetRunManager()->GetCurrentEvent());
+  G4PrimaryVertex* primaryVertex = event->GetPrimaryVertex();
+  G4PrimaryParticle* primaryParticle = primaryVertex->GetPrimary();
+  G4double initial_ke = primaryParticle->GetKineticEnergy();
+
+  // Obtain the kinetic energy of the particle in the current step
+  G4double current_ke = aStep->GetTrack()->GetKineticEnergy();
+
+  // G4double deposited_ke = initial_ke - current_ke;
+  G4double deposited_ke = aStep->GetTotalEnergyDeposit();
+
+  // G4cout << "Initial kinetic energy of particle: " << initial_ke << G4endl << G4endl;
+  // G4cout << "Current kinetic energy of particle: " << current_ke << G4endl << G4endl;
+  // G4cout << "Deposited energy from particle kinetic energy: " << deposited_ke << G4endl << G4endl;
+
+  // Check if the pre-step point in the track is the volume of interest for binning.
+  // If so, bin the particle if it is a neutron.
+  // for(int ih=0; ih < fScoringVolume1.size(); ih++)
+  for(int ih=0; ih < 2; ih++)
+    {
+      //Check if we are in the scorin volume and particle is neutron
+      // if ( step_vol == fScoringVolume1[i] && particle == "neutron" )
+      if ( name == fScoringVolume1[ih]->GetName() && particle == "neutron" )
+        {
+          // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
+          if (deposited_ke > 0) { analysisManager->FillH1(ih+2, current_ke); }
+
+          //Check if the particle just entered the volume, ie it its first step in the volume
+          if (pre->GetStepStatus() == fGeomBoundary)
+            {
+
+              // Fill the histogram for the kinetic energy.
+              analysisManager->FillH1(ih, current_ke);
+              //G4cout<<"vol is: "<<fScoringVolume1[i]->GetName()<<" Energy is: "<<kinetic_energy<<G4endl;
+
+
+              //G4cout<<"E is: "<<kinetic_energy<<G4endl;
+              //G4double energy_deposited = aStep->GetTotalEnergyDeposit();
+              //analysisManager->FillH1(3,energy_deposited);
+            }
+        }
+    }
 
   // check if it is alive
   if( theTrack->GetTrackStatus()!=fAlive && particle =="neutron")
     {
       // G4cout<<"Neutron is dead"<<G4endl;
-      
+
       // G4cout<<"The process in the step is: "<<processName<<G4endl;
-
-      // Touch the volume for binning.
-      // G4TouchableHandle touch_handle = post->GetTouchableHandle();
-
-      // // Obtain the name of the volume for binning
-      G4String name = pre->GetPhysicalVolume()->GetLogicalVolume()->GetName();
-      // G4LogicalVolume* step_vol = pre->GetPhysicalVolume()->GetLogicalVolume();
-
-      // G4cout << "The name of the logical volume of particle death is: " << name << G4endl << G4endl;
-
-      // Obtain the initial kinetic energy of the current event.
-      const G4Event* event = static_cast<const G4Event*>(G4RunManager::GetRunManager()->GetCurrentEvent());
-      G4PrimaryVertex* primaryVertex = event->GetPrimaryVertex();
-      G4PrimaryParticle* primaryParticle = primaryVertex->GetPrimary();
-      G4double initial_ke = primaryParticle->GetKineticEnergy();
-
-      // Obtain the kinetic energy of the particle in the current step
-      G4double current_ke = aStep->GetTrack()->GetKineticEnergy();
-
-      // G4double deposited_ke = initial_ke - current_ke;
-      G4double deposited_ke = aStep->GetTotalEnergyDeposit();
-
-      // G4cout << "Initial kinetic energy of particle: " << initial_ke << G4endl << G4endl;
-      // G4cout << "Current kinetic energy of particle: " << current_ke << G4endl << G4endl;
-      // G4cout << "Deposited energy from particle kinetic energy: " << deposited_ke << G4endl << G4endl;
 
       if (processName == "Transportation" && pre->GetStepStatus() == fWorldBoundary )
         {
@@ -150,24 +181,8 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
                 {
                   analysisManager->FillH1(ih+4, deposited_ke);
 
-                  runAction->IncrementCount()
-                }
-
-              // Bin any neutron that have lost kinetic energy and thus have undergone scattering.
-              if (deposited_ke > 0) { analysisManager->FillH1(ih+2, current_ke); }
-
-              //Check if the particle just entered the volume, ie it its first step in the volume
-              if (pre->GetStepStatus() == fGeomBoundary)
-                {
-
-                  // Fill the histogram for the kinetic energy.
-                  analysisManager->FillH1(ih, current_ke);
-                  //G4cout<<"vol is: "<<fScoringVolume1[i]->GetName()<<" Energy is: "<<kinetic_energy<<G4endl;
-
-
-                  //G4cout<<"E is: "<<kinetic_energy<<G4endl;
-                  //G4double energy_deposited = aStep->GetTotalEnergyDeposit();
-                  //analysisManager->FillH1(3,energy_deposited);
+                  // runAction->IncrementCount(); // Implement IncrementCount void member function into
+                                                  // RunAction.hh and RunAction.cc
                 }
           }
       }
@@ -176,8 +191,8 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 // void SteppingAction::UserSteppingAction(const G4Step* aStep)
 // {
 //   Run* run = static_cast<Run*>(
-//         G4RunManager::GetRunManager()->GetNonConstCurrentRun());    
-  
+//         G4RunManager::GetRunManager()->GetNonConstCurrentRun());
+
 //   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
 
 // //get scoring volume
@@ -185,46 +200,46 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 // const DetectorConstruction* detectorConstruction
 //       = static_cast<const DetectorConstruction*>
 //         (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
-//    if (!fScoringVolume) { 
-//     fScoringVolume = detectorConstruction->ReturnVolume();   
+//    if (!fScoringVolume) {
+//     fScoringVolume = detectorConstruction->ReturnVolume();
 //   }
 
 //   // get volume of the current step
 //   //
 //   G4LogicalVolume* volume = aStep->GetPreStepPoint()->GetTouchableHandle()
 //                              ->GetVolume()->GetLogicalVolume();
-  
+
 //  // check if we are in scoring volume
-//   if (volume == fScoringVolume){ 
+//   if (volume == fScoringVolume){
 
 // // collect energy deposited in this step
 //   G4double edepStep = aStep->GetTotalEnergyDeposit();
 // //G4cout<<"Edeposit in this step is:"<<G4BestUnit(edepStep,"Energy")<<G4endl;
-//  fEventAction->AddEdep(edepStep);  
+//  fEventAction->AddEdep(edepStep);
 // }
 
 
-// //vector alternative method for more than one volume 
+// //vector alternative method for more than one volume
 // //
 // const DetectorConstruction* detectorConstruction1
 //       = static_cast<const DetectorConstruction*>
 //         (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
-//    if (fScoringVolume1.empty()) { 
-//     fScoringVolume1 = detectorConstruction1->GetScoringVolume1();   
+//    if (fScoringVolume1.empty()) {
+//     fScoringVolume1 = detectorConstruction1->GetScoringVolume1();
 //   }
 //  // get volume of the current step
-//   G4LogicalVolume* volume1 
+//   G4LogicalVolume* volume1
 //     = aStep->GetPreStepPoint()->GetTouchableHandle()
 //       ->GetVolume()->GetLogicalVolume();
-      
+
 //   // check if we are in scoring volume
 // for(int i =0;i<2;i++){
-//   if (volume1 == fScoringVolume1[i]) 
+//   if (volume1 == fScoringVolume1[i])
 // {
 // //G4cout<<"volume is "<<volume1->GetName()<<G4endl;
 // //getchar();
 //  G4double edepStep1 = aStep->GetTotalEnergyDeposit();
-//  fEventAction->AddEdep1(edepStep1,i); 
+//  fEventAction->AddEdep1(edepStep1,i);
 // //G4cout<<"Edeposit in this step is:"<<G4BestUnit(edepStep1,"Energy")<<G4endl;
 // }
 // }

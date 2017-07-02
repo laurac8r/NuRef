@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="detectorPos" unit="mm" x="0" y="0" z="0"/>
+<position name="detectorPos1" unit="mm" x="0" y="0" z="0"/>
+<position name="detectorPos2" unit="mm" x="0" y="0" z="0"/>
+<rotation name="detectorRot" unit="degree" x="0" y="0" z="0" />
+<rotation name="detector1Rot" unit="degree" x="0" y="0" z="0" />
+</define>
+<materials>
+<element name="Oxygen" formula="O" Z="8.">
+<atom value = "15.9994"/>
+</element>
+<element name="Nitrogen" formula="N" Z="7.">
+<atom value="14.01"/>
+</element>
+<material formula=" " name="Air" >
+<D value="0.000000000000001" unit="mg/cm3"/>
+<fraction n="0.7" ref="Nitrogen" />
+<fraction n="0.3" ref="Oxygen" />
+</material>
+</materials>
+<solids>
+<box lunit="mm" name="world" x="5000" y="5000" z="5000" />
+<box lunit="mm" name="myDetector" x="2000" y="2000" z="2000" />
+</solids>
+<structure>
+<volume name="Detector" >
+<materialref ref="Air" />
+<solidref ref="myDetector" />
+<physvol>
+<file name="Chamber2-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+</volume>
+<volume name="World" >
+<materialref ref="Air" />
+<solidref ref="world" />
+<physvol>
+<volumeref ref="Detector"/>
+<positionref ref="detectorPos"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+</volume>
+</structure>
+<setup name="Default" version="1.0" >
+<world ref="World" />
+</setup>
+</gdml>

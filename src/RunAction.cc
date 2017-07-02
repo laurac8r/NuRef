@@ -27,7 +27,7 @@
 /// \brief Implementation of the RunAction class
 //
 // $Id: RunAction.cc 70756 2013-06-05 12:20:06Z ihrivnac $
-// 
+//
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -47,39 +47,41 @@
 #include "G4SystemOfUnits.hh"
 
 #include "G4ParticleDefinition.hh"
-#include "G4particleTable.hh"
+#include "G4ParticleTable.hh"
 #include "G4LogicalVolumeStore.hh"
 #include "G4LogicalVolume.hh"
 
 #include "Randomize.hh"
 #include <iomanip>
+#include <assert.h>
+
 #include "G4ios.hh"
 #include "globals.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-RunAction::RunAction()
-  : G4UserRunAction(),
-    fEdep(0.),
-    fEdep2(0.)
+RunAction::RunAction(const G4String& outputFile)
+: G4UserRunAction(), fOutputFileSpec(outputFile)
+// fEdep(0.),
+// fEdep2(0.)
 {
 
-// add new units for dose
-  // 
-  const G4double milligray = 1.e-3*gray;
-  const G4double microgray = 1.e-6*gray;
-  const G4double nanogray  = 1.e-9*gray;  
-  const G4double picogray  = 1.e-12*gray;
-   
-  new G4UnitDefinition("milligray", "milliGy" , "Dose", milligray);
-  new G4UnitDefinition("microgray", "microGy" , "Dose", microgray);
-  new G4UnitDefinition("nanogray" , "nanoGy"  , "Dose", nanogray);
-  new G4UnitDefinition("picogray" , "picoGy"  , "Dose", picogray); 
-
-  // Register accumulable to the accumulable manager
-  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-  accumulableManager->RegisterAccumulable(fEdep);
-  accumulableManager->RegisterAccumulable(fEdep2);
+// // add new units for dose
+//   //
+//   const G4double milligray = 1.e-3*gray;
+//   const G4double microgray = 1.e-6*gray;
+//   const G4double nanogray  = 1.e-9*gray;
+//   const G4double picogray  = 1.e-12*gray;
+//
+//   new G4UnitDefinition("milligray", "milliGy" , "Dose", milligray);
+//   new G4UnitDefinition("microgray", "microGy" , "Dose", microgray);
+//   new G4UnitDefinition("nanogray" , "nanoGy"  , "Dose", nanogray);
+//   new G4UnitDefinition("picogray" , "picoGy"  , "Dose", picogray);
+//
+//   // Register accumulable to the accumulable manager
+//   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
+//   accumulableManager->RegisterAccumulable(fEdep);
+//   accumulableManager->RegisterAccumulable(fEdep2);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -90,85 +92,105 @@ RunAction::~RunAction()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void RunAction::BeginOfRunAction(const G4Run* aRun)
-{    
- //histograms
+// void RunAction::BeginOfRunAction(const G4Run* aRun)
+G4Run* RunAction::GenerateRun()
+{
+  // Histograms
   //
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-  if ( analysisManager->IsActive() ) {
-    analysisManager->OpenFile();
-  }
 
-  // save Rndm status
-   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
-   if (isMaster) G4Random::showEngineStatus();
+  // Open a ROOT file if the analysis manager is active.
+  if (analysisManager->IsActive()) analysisManager->OpenFile();
 
-// reset accumulables to their initial values
-  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-  accumulableManager->Reset();
+  // Save the random number store status.
+  G4RunManager::GetRunManager()->SetRandomNumberStore(false);
+  if (isMaster) G4Random::showEngineStatus();
+
+  // // reset accumulables to their initial values
+  // G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
+  // accumulableManager->Reset();
+
+  // Generate a new run.
+  return new Run;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void RunAction::EndOfRunAction(const G4Run* aRun )
+void RunAction::EndOfRunAction(const G4Run* aRun)
 {
 
-//run information
-//
-if (G4VVisManager::GetConcreteInstance())
-  {
-    G4UImanager::GetUIpointer()->ApplyCommand("/vis/viewer/update");//refreshes the visual viewer
-  } 
-
-  G4int nofEvents = aRun->GetNumberOfEvent();
-  if (nofEvents == 0) return;
-
-  // Merge accumulables 
-  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-  accumulableManager->Merge();
-
-  // Compute dose = total energy deposit in a run and its variance
+  // If a visul manager exists.
   //
-  G4double edep  = fEdep.GetValue();
-  G4double edep2 = fEdep2.GetValue(); 
-  
-  G4double rms = edep2 - edep*edep/nofEvents;
-  if (rms > 0.) rms = std::sqrt(rms); else rms = 0.;  
+  if (G4VVisManager::GetConcreteInstance())
+  {
+    // Refreshes the visual viewer
+    G4UImanager::GetUIpointer()->ApplyCommand("/vis/viewer/update");
+  }
 
-  const DetectorConstruction* detectorConstruction
-   = static_cast<const DetectorConstruction*>
-     (G4RunManager::GetRunManager()->GetUserDetectorConstruction());//you have to et the mass by callin the detector construction
+  // Print the number of events that occurred in the run.
+  G4cout << "Number of Events Processed: " << aRun->GetNumberOfEvent() << G4endl;
 
-  G4double mass = detectorConstruction->GetScoringVolume()->GetMass();
-  //G4cout<<"mass is "<<G4BestUnit(mass,"Mass")<<G4endl;
-  G4double dose = edep/mass;
-  G4double rmsDose = rms/mass;
+  // Cast the G4Run pointer onto a Run pointer. The cast pointer is expected to
+  //   exist. An error is thrown and the program exits if the cast fails.
+  const Run* theRun = dynamic_cast<const Run*>(aRun);
+  assert (0 != theRun);
 
-  // Run conditions
-  
-  G4cout
-     << G4endl
-     << " The run consists of " << nofEvents<<" particle(s)"
-     << G4endl
-     << " Cumulated dose per run, in scoring volume : " 
-     << G4BestUnit(dose,"Dose") << " rms = " << G4BestUnit(rmsDose,"Dose")
-     << G4endl
-     << "------------------------------------------------------------"
-     << G4endl
-     << G4endl;
+  // G4int nofEvents = aRun->GetNumberOfEvent();
+  // if (nofEvents == 0) return;
 
- // save histograms
+  // Get an instance of the analysis manager to save the histograms.
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-  if ( analysisManager->IsActive() ) {  
+
+  // If the analysis manager is active, write the histograms to the ROOT file
+  //   and close it.
+  if (analysisManager->IsActive())
+  {
     analysisManager->Write();
     analysisManager->CloseFile();
-  }    
+  }
+
+  // Dump the fluence data into the output file.
+  theRun->DumpData(fOutputFileSpec);
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+  // // Merge accumulables
+  // G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
+  // accumulableManager->Merge();
 
-void RunAction::AddEdep(G4double edep)
+  // // Compute dose = total energy deposit in a run and its variance
+  // //
+  // G4double edep  = fEdep.GetValue();
+  // G4double edep2 = fEdep2.GetValue();
+  //
+  // G4double rms = edep2 - edep*edep/nofEvents;
+  // if (rms > 0.) rms = std::sqrt(rms); else rms = 0.;
+  //
+  // const DetectorConstruction* detectorConstruction
+  //  = static_cast<const DetectorConstruction*>
+  //    (G4RunManager::GetRunManager()->GetUserDetectorConstruction());//you have to et the mass by callin the detector construction
+  //
+  // G4double mass = detectorConstruction->GetScoringVolume()->GetMass();
+  // //G4cout<<"mass is "<<G4BestUnit(mass,"Mass")<<G4endl;
+  // G4double dose = edep/mass;
+  // G4double rmsDose = rms/mass;
+  //
+  // // Run conditions
+  //
+  // G4cout
+  //    << G4endl
+  //    << " The run consists of " << nofEvents<<" particle(s)"
+  //    << G4endl
+  //    << " Cumulated dose per run, in scoring volume : "
+  //    << G4BestUnit(dose,"Dose") << " rms = " << G4BestUnit(rmsDose,"Dose")
+  //    << G4endl
+  //    << "------------------------------------------------------------"
+  //    << G4endl
+  //    << G4endl;
+
+// //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
+void RunAction::AddEngDep(G4double edep)
 {
   fEdep  += edep;
   fEdep2 += edep*edep;
-} 
+}

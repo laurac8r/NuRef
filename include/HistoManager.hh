@@ -28,9 +28,9 @@
 //
 //
 // $Id: HistoManager.hh 99607 2016-09-28 13:33:42Z gcosmo $
-// 
+//
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo...... 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #ifndef HistoManager_h
 #define HistoManager_h 1
@@ -41,10 +41,11 @@
 #include "g4root.hh"
 //#include "g4xml.hh"
 
-#include "Run.hh"
+// #include "Run.hh"
 #include "G4RunManager.hh"
 #include "G4LogicalVolume.hh"
 #include "vector"
+class Run;
 class DetectorConstruction;
 
 
@@ -59,7 +60,7 @@ class HistoManager
 
   private:
     void Book();
-    DetectorConstruction* fDetector;  
+    DetectorConstruction* fDetector;
     G4String fFileName;
     G4LogicalVolume* fScoringVolume;
     std::vector<G4LogicalVolume*> fScoringVolume1;
@@ -68,4 +69,3 @@ class HistoManager
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
-

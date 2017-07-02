@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="detectorPos" unit="mm" x="0" y="0" z="0"/>
+<position name="detectorPos1" unit="mm" x="0" y="0" z="0"/>
+<position name="detectorPos2" unit="mm" x="0" y="0" z="0"/>
+<rotation name="detectorRot" unit="degree" x="0" y="0" z="0" />
+<rotation name="detector1Rot" unit="degree" x="0" y="0" z="0" />
+</define>
+<materials>
+<element name="Oxygen" formula="O" Z="8.">
+<atom value = "15.9994"/>
+</element>
+<element name="Nitrogen" formula="N" Z="7.">
+<atom value="14.01"/>
+</element>
+<material formula=" " name="Air" >
+<D value="1.290" unit="mg/cm3"/>
+<fraction n="0.7" ref="Nitrogen" />
+<fraction n="0.3" ref="Oxygen" />
+</material>
+</materials>
+<solids>
+<box lunit="mm" name="world" x="5000" y="5000" z="5000" />
+</solids>
+<structure>
+<volume name="World" >
+<materialref ref="Air" />
+<solidref ref="world" />
+
+<physvol>
+<file name="SPIRAL_ANTENNA-3.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="SPIRAL_ANTENNA-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TargetV4_Assem-1 Target_Lid_4-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TargetV4_Assem-1 Target_Lid_4-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TargetV4_Assem-1 Target_Faceplate2-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TARGET_COOLING_SUPPLY_TUBE_1-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TARGET_COOLING_SUPPLY_TUBE_1-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TARGET_FEEDTHRU_CHIMNEY_PIPE-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TARGET_INSULATOR_CAP-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Insulator_Shield2-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="TARGET_MAIN_SUPPOT_ROD-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="SPACER_FOR_KEVIN-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="SPACER_FOR_KEVIN-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Shroud_spacer-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Shroud_spacer-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Ion_Source_Assembly-2 Quartz_Window-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Ion_Source_Assembly-1 Quartz_Window-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="MAIN_INSULATOR_CAP-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Shroud_V3_Assem_Slit-1 round_faceplate-3.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Shroud_V3_Assem_Slit-1 round_faceplate-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Shroud_V3_Assem_Slit-1 Shoud_Half_B1-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Shroud_V3_Assem_Slit-1 Shoud_Half_A1-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Ion_Source_Assembly-2 Ion_Source-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Mini_Corona-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="extraction plate holder-1.gdml"/>
+<positionref ref="detectorPos1"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol name="detecPhy">
+<file name="Target.gdml"/>
+<positionref ref="detectorPos"/>
+<rotationref ref="detectorRot"/>
+</physvol>
+<physvol>
+<file name="extraction plate holder-2.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Chamber2-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+
+<physvol>
+<file name="Holder_assem-1 CR39-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="CHAMBER_BOTTOM-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+<physvol>
+<file name="Ion_Source_Assembly-1 Ion_Source-1.gdml"/>
+<positionref ref="detectorPos2"/>
+<rotationref ref="detector1Rot"/>
+</physvol>
+
+</volume>
+</structure>
+<setup name="Default" version="1.0" >
+<world ref="World" />
+</setup>
+</gdml>

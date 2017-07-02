@@ -33,90 +33,153 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #ifdef G4MULTITHREADED
-#include "G4MTRunManager.hh"
+  #include "G4MTRunManager.hh"
 #else
-#include "G4RunManager.hh"
+  #include "G4RunManager.hh"
 #endif
 
 #include "G4UImanager.hh"
+#include "G4ScoringManager.hh"
 #include "Randomize.hh"
 
 #include "DetectorConstruction.hh"
 //#include "PhysicsList.hh"
 #include "QGSP_BERT.hh"
-#include "Shielding.hh"
+// #include "Shielding.hh"
 #include "ActionInitialization.hh"
-#include "SteppingVerbose.hh"
+// #include "SteppingVerbose.hh"
 
 #ifdef G4VIS_USE
- #include "G4VisExecutive.hh"
+  #include "G4VisExecutive.hh"
 #endif
 
 #ifdef G4UI_USE
-#include "G4UIExecutive.hh"
+  #include "G4UIExecutive.hh"
 #endif
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-int main(int argc,char** argv) {
+int main(int argc, char** argv)
+{
+  // Define default arguments for the executable.
+  G4String macroFile = "None";
+  G4String startingSeed = "1";
+  G4String outputFile = "fluence.csv";
 
-  G4RunManager* runManager = new G4RunManager;
+  // Parse the arguments for the executable depending on the number of
+  // arguments passed to the executable.
+  if (argc > 1) macroFile = argv[1];
+  if (argc > 2) startingSeed = argv[2];
+  if (argc > 3) outputFile = argv[3];
 
-  //choose the Random engine
+  // Print the arguments used for the executable.
+  G4cout << "Starting run with... " << G4endl << G4endl;
+  G4cout << "Macro file    : " << macroFile << G4endl << G4endl;
+  G4cout << "Starting seed : " << startingSeed << G4endl << G4endl;
+  G4cout << "Output file   : " << outputFile << G4endl << G4endl;
+
+  // Initiate the multithreaded run manager if Geant4 is run in multi-threaded
+  //   mode.
+  #ifdef G4MULTITHREADED
+    G4MTRunManager* runManager = new G4MTRunManager;
+  #else
+    G4RunManager* runManager = new G4RunManager;
+  #endif
+
+  // Initiate the random engine. POSSIBLY UPDATE ???
   G4Random::setTheEngine(new CLHEP::RanecuEngine);
 
-  // set mandatory initialization classes
-  DetectorConstruction* det= new DetectorConstruction;
+  // Convert the starting seed to an integer and feed it to the random engine.
+  unsigned startingSeedInt;
+  std::istringstream is(startingSeed);
+  is >> startingSeedInt;
+  G4Random::setTheSeed(startingSeedInt);
+
+  // // Instantiate the scoring manager. NECESSARY ???
+  G4ScoringManager::GetScoringManager();
+
+  // Instantiate the geometry.
+  DetectorConstruction* det = new DetectorConstruction;
   runManager->SetUserInitialization(det);
 
-  G4VUserPhysicsList* phyList = new QGSP_BERT;
-  runManager->SetUserInitialization(phyList);
+  // Instantiate the physics list. POSSIBLY UPDATE ???
+  // G4VUserPhysicsList* phyList = new QGSP_BERT;
+  runManager->SetUserInitialization(new QGSP_BERT);
 
-  runManager->SetUserInitialization(new ActionInitialization(det));
+  //
+  runManager->SetUserInitialization(new ActionInitialization(det, outputFile));
 
   // Initialisation of runManager via macro for the interactive mode
   // This gives possibility to give different names for GDML file to READ
- 
-#ifdef G4VIS_USE
-  G4VisManager* visManager = new G4VisExecutive;
-  visManager->Initialize();
-#endif
+  #ifdef G4VIS_USE
 
- // Open a UI session: will stay there until the user types "exit"
+    G4VisManager* visManager = new G4VisExecutive;
+    visManager->Initialize();
+
+  #endif
+
+  // Open a UI session: will stay there until the user types "exit"
   //
-  G4UImanager* UImanager = G4UImanager::GetUIpointer(); 
+  G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
-  if ( argc==1 )   // Automatically run default macro for writing... 
-{
-#ifdef G4UI_USE
-      G4UIExecutive * ui = new G4UIExecutive(argc,argv);
-#ifdef G4VIS_USE
-    UImanager->ApplyCommand("/control/execute vis.mac");     
-#endif
-    ui->SessionStart();
-    delete ui;
-#endif
-  } else {            // Provides macro in input
+  // Run the default macro file if no macro has been specified as an argument
+  //   to the executable, and visualization is turned on.
+  if (argc == 1)
+  {
+    #ifdef G4UI_USE
+      // Create a new UI executive object to start the simulation session if the
+      //   executable has been run in interactive mode.
+      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 
-#ifdef G4UI_USE
-    G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-    G4String command = "/control/execute "; 
-    G4String fileName = argv[1]; 
-    UImanager->ApplyCommand(command+fileName); 
-    ui->SessionStart();
+    #ifdef G4VIS_USE
+      // Run the visualization macro.
+      UImanager->ApplyCommand("/control/execute vis.mac");
+
+    #endif
+      // Start the simulation session.
       ui->SessionStart();
+
+      // Delete the UI executive object after the session is over.
       delete ui;
-#endif
-}
 
-#ifdef G4VIS_USE
-     delete runManager;
-#endif
+    #endif
+  }
 
-  // job termination
+  // Run the executable with the specified macro provided as an argument to the
+  //   executable.
+  else
+  {
+    #ifdef G4UI_USE
+      // Create a new UI executive object to start the simulation session if
+      //   the executable has been run in interactive mode.
+      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+
+      // Define command prefix to use to execute the macro file.
+      G4String command_prefix = "/control/execute ";
+
+      // Apply the full command, including the macro file name.
+      UImanager->ApplyCommand(command_prefix + macroFile);
+
+      // Start the simulation session.
+      ui->SessionStart();
+
+      // Delete the UI executive object after the session is over.
+      delete ui;
+
+    #endif
+  }
+
+  // #ifdef G4VIS_USE
   //
+  //   // Delete the run manager.
+  //   delete runManager;
+  //
+  // #endif
+
+  // Terminate the simulation.
   delete runManager;
 
+  // Exit the main function function with no errors.
   return 0;
 }
 

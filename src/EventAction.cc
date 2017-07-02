@@ -33,22 +33,21 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #include "EventAction.hh"
-
-#include "Run.hh"
 #include "HistoManager.hh"
+#include "Run.hh"
+#include "RunAction.hh"
+
 #include "G4ios.hh"
 #include "G4Event.hh"
 #include "G4RunManager.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4UnitsTable.hh"
-#include "RunAction.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-EventAction::EventAction(RunAction* runAction)
-:G4UserEventAction(),  fRunAction(runAction),
- fEdep(0.), fEdep1{0.}
-{ } 
+EventAction::EventAction(RunAction* runAction(const G4String& outputFile))
+: G4UserEventAction(), fRunAction(runAction), fEngDep(0.), fEngDepArr{0.}
+{ }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -57,10 +56,15 @@ EventAction::~EventAction()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void EventAction::BeginOfEventAction(const G4Event* )
+void EventAction::BeginOfEventAction()
 {
-  fEdep = 0.;
-  fEdep1[0] = fEdep1[1] = {0.};
+  // Initialize the accumulated energy deposition variabl.
+  // fEngDep = fEngDepArr[0] = fEngDepArr[1] = 0.;
+  fEngDep 0.;
+  fEngDepArr = {0.};
+
+  G4cout << G4endl << G4endl << "The accumulated energy deposition vector is "
+         << fEngDepArr << G4endl << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -68,26 +72,31 @@ void EventAction::BeginOfEventAction(const G4Event* )
 void EventAction::EndOfEventAction(const G4Event* event)
 {
 
-  // Accumulate statistics in run action.
+  // Obtain the event ID so we can add it's energy deposition to the
+  //   accumulated energy deposition variables.
   G4int eventID = event->GetEventID();
 
   // Print energy deposited in each event.
-  fRunAction->AddEdep(fEdep);
+  fRunAction->AddEngDep(fEngDep);
 
-  if(fEdep > 0){ 
-  G4cout<<"Total Edep for this event "<< eventID<<" is:"<<G4BestUnit(fEdep,"Energy")<<G4endl;}
+  // If the accumulated energy deposition is nonzero for the single logical
+  //   scoring volume at the end of the event action, print it.
+  if (fEngDep > 0)
+  {
+    G4cout << G4endl << G4endl << "Total energy deposition for this event "
+           << eventID << " in the single logical scoring volume is:"
+           << G4BestUnit(fEngDep, "Energy") << G4endl;
+  }
 
   // Using vector container
-  // fRunAction->AddEdep1(fEdep1);
+  fRunAction->AddEngDepArr(fEngDepArr);
 
   // Print energy deposited in each event
   for(int i = 0; i<2; i++)
    {
-    if(fEdep1[i]>0){ 
-    G4cout<<"Total Edep for this event "<< eventID<<" for logical volume having the ID "<<i<<" is:"<<G4BestUnit(fEdep1[i],"Energy")<<G4endl;}
+    if(fEngDepArr[i]>0){
+    G4cout<<"Total Edep for this event "<< eventID<<" for logical volume having the ID "<<i<<" is:"<<G4BestUnit(fEngDepArr[i],"Energy")<<G4endl;}
    }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-

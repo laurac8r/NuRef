@@ -1,0 +1,31 @@
+###################################################
+# Visualization of detector geometry and events  
+###################################################
+
+# create empty scene
+/vis/scene/create
+
+# reading Geometry from File
+/mydet/readFile test.gdml
+/run/initialize
+
+# Create a scene handler for a specific graphics system
+/vis/open OGL
+#/vis/open HepRepFile
+
+/vis/scene/add/axes 0 0 0 1 m
+# draw scene
+/vis/viewer/zoom 0.5
+#/vis/viewer/set/viewpointThetaPhi 45 45 deg
+#/vis/viewer/set/viewpointThetaPhi 90 -25 deg
+#/vis/viewer/flush
+/vis/drawVolume
+
+#if you want to see trajectories and hits points
+/vis/scene/add/trajectories
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 5
+
+# (if you prefer not refreshing each event, uncomment next line)
+ /vis/scene/endOfEventAction accumulate

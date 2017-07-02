@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\2de094f356e3f5e14049148290639a77\G02.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\G02" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2A8DE1C2-889D-314E-B3AB-C7FE85268ABF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

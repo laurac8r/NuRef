@@ -1,0 +1,21 @@
+# Macro test2.g4mac
+#/cuts/setLowEdge    100 eV
+#/run/setCut  1 nm
+#/run/initialize
+/control/verbose 0
+/tracking/verbose 0
+/event/verbose 0
+/gps/verbose 0
+/gps/particle neutron
+/gps/pos/type Point
+/gps/pos/centre -1 44 44 cm
+
+# pencil beam source
+/gps/ang/type beam1d
+/gps/ene/type Mono
+/gps/ene/mono 2.45 MeV
+/gps/direction 0 0 1
+#/run/printProgress 10000
+/run/beamOn 0
+
+

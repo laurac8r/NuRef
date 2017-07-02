@@ -34,69 +34,37 @@
 #ifndef Run_h
 #define Run_h 1
 
+// #include "G4Event.hh"
 #include "G4Run.hh"
-#include "G4VProcess.hh"
-#include "globals.hh"
+// #include "G4THitsMap.hh"
 #include <map>
 
-class DetectorConstruction;
-class G4ParticleDefinition;
+class G4THitsMap
+class G4Event;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 class Run : public G4Run
 {
   public:
-    Run(DetectorConstruction*);
-   ~Run();
+    Run();
+    virtual ~Run();
 
-  public:
-    void SetPrimary(G4ParticleDefinition* particle, G4double energy);
-    void CountProcesses(const G4VProcess* process);        
-    // void CountProcesses(const G4VProcess* process, G4int iVol);
-    void ParticleCount(G4String, G4double); 
-    // void ParticleCount(G4String, G4double, G4int);
-    void AddEdep (G4double edep);
-    void AddEflow (G4double eflow);
-    // void AddEdep (G4double edep1, G4double edep2);
-    void ParticleFlux(G4String, G4double); 
-                          
+    virtual void RecordEvent(const G4Event*);
     virtual void Merge(const G4Run*);
-    void EndOfRun();
-    // void WriteActivity(G4int);
-   
+    void DumpData(G4String&) const;
+
   private:
-    struct ParticleData {
-     ParticleData()
-       : fCount(0), fEmean(0.), fEmin(0.), fEmax(0.) {}
-     ParticleData(G4int count, G4double ekin, G4double emin, G4double emax)
-       : fCount(count), fEmean(ekin), fEmin(emin), fEmax(emax) {}
-     G4int     fCount;
-     G4double  fEmean;
-     G4double  fEmin;
-     G4double  fEmax;
-    };
-     
-  private:
-    DetectorConstruction* fDetector;
-    G4ParticleDefinition* fParticle;
-    G4double              fEkin;
+    void Print(const std::vector<G4String>& title,
+               const std::map< G4int, std::vector<G4double> >& out,
+               G4String&) const;
 
-    G4double fEnergyDeposit, fEnergyDeposit2;
-    G4double fEnergyFlow,    fEnergyFlow2;
+    std::map<G4int, G4THitsMap<G4double>*> fluenceMap;
 
-    // G4double fEdepTarget, fEdepTarget2;
-    // G4double fEdepDetect, fEdepDetect2;
-
-    std::map<G4String,G4int>        fProcCounter;
-
-    // std::map<G4String,G4int>        fProcCounter1;
-    // std::map<G4String,G4int>        fProcCounter2;
-    std::map<G4String,ParticleData> fParticleDataMap1;        
-    std::map<G4String,ParticleData> fParticleDataMap2;
+    // Define the number of theta bins.
+    const G4int numThetaBins = 233;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
-

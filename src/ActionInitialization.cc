@@ -28,20 +28,24 @@
 /// \file ActionInitialization.cc
 /// \brief Implementation of the ActionInitialization class
 
+#include "globals.hh"
+
 #include "ActionInitialization.hh"
 #include "PrimaryGeneratorAction.hh"
 #include "RunAction.hh"
-#include "EventAction.hh"
 #include "HistoManager.hh"
-#include "TrackingAction.hh"
 #include "SteppingAction.hh"
-#include "SteppingVerbose.hh"
+
+// #include "EventAction.hh"
+// #include "TrackingAction.hh"
+// #include "SteppingVerbose.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-ActionInitialization::ActionInitialization(DetectorConstruction* detector)
+ActionInitialization::ActionInitialization(DetectorConstruction* detector,
+                                           const G4String& outputFile)
  : G4VUserActionInitialization(),
-   fDetector(detector)
+   fDetector(detector), fOutputFileSpec(outputFile)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -53,37 +57,31 @@ ActionInitialization::~ActionInitialization()
 
 void ActionInitialization::BuildForMaster() const
 {
-  RunAction* runAction = new RunAction();
-  SetUserAction(runAction);
+  SetUserAction(new RunAction(fOutputFileSpec));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void ActionInitialization::Build() const
 {
-  PrimaryGeneratorAction* primary = new PrimaryGeneratorAction();
-  SetUserAction(primary);
-    
-  RunAction* runAction = new RunAction();
-  SetUserAction(runAction);
-  
-  EventAction* event = new EventAction(runAction);
-  SetUserAction(event);
+  SetUserAction(new RunAction(fOutputFileSpec));
+
+  SetUserAction(new PrimaryGeneratorAction());
+
+  // SetUserAction(new EventAction(runAction));
 
   HistoManager* histo = new HistoManager(fDetector);
-  
-  TrackingAction* trackingAction = new TrackingAction(fDetector, event, histo);
-  SetUserAction(trackingAction);
-  
-  SteppingAction* steppingAction = new SteppingAction(fDetector, event, histo);
-  SetUserAction(steppingAction);
-}  
+
+  // SetUserAction(new TrackingAction(fDetector, event, histo));
+
+  SetUserAction(new SteppingAction(fDetector, event, histo));
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4VSteppingVerbose* ActionInitialization::InitializeSteppingVerbose() const
-{
-  return new SteppingVerbose();
-}  
+// G4VSteppingVerbose* ActionInitialization::InitializeSteppingVerbose() const
+// {
+//   return new SteppingVerbose();
+// }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

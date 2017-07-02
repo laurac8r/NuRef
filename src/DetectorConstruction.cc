@@ -66,18 +66,25 @@
 #include "G4GDMLParser.hh"
 #include "DetectorMessenger.hh"
 
+#include "G4SDManager.hh"
+#include "G4SDParticleFilter.hh"
+#include "G4MultiFunctionalDetector.hh"
+#include "G4VPrimitiveScorer.hh"
+#include "G4PSCellFlux.hh"
+
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 DetectorConstruction::DetectorConstruction()
-:G4VUserDetectorConstruction(), 
+:G4VUserDetectorConstruction(),
  fWorldMater(0), fPhysiWorld(0),
  fDetectorMessenger(0),fScoringVolume(0),
  fScoringVolume1(0)
 {
   fReadFile ="test3.gdml";
-  fWritingChoice=1;      
+  fWritingChoice=1;
   DefineMaterials();
-    
+
   fDetectorMessenger = new DetectorMessenger(this);
 }
 
@@ -89,13 +96,16 @@ DetectorConstruction::~DetectorConstruction()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
-{    
+{
     G4VPhysicalVolume* fWorldPhysVol;
     fParser.Read(fReadFile,false);
     fWorldPhysVol = fParser.GetWorldVolume();
     fScoringVolume = fParser.GetVolume("Target_logical");
     fScoringVolume1.push_back(fParser.GetVolume("TargetV4_Assem-1_Target_Faceplate2-2_logical"));
     fScoringVolume1.push_back(fParser.GetVolume("Target_logical"));
+
+    ConstructSDandField();
+
   return fWorldPhysVol;
 }
 
@@ -103,11 +113,11 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
 void DetectorConstruction::DefineMaterials(){
   // build materials
- 
+
   G4Element* N  = new G4Element("Nitrogen", "N", 7, 14.01*g/mole);
   G4Element* O  = new G4Element("Oxygen",   "O", 8, 16.00*g/mole);
   //
-  G4int ncomponents; G4double fractionmass;      
+  G4int ncomponents; G4double fractionmass;
   G4Material* Air20 = new G4Material("Air", 1.205*mg/cm3, ncomponents=2,
                       kStateGas, 293.*kelvin, 1.*atmosphere);
     Air20->AddElement(N, fractionmass=0.7);
@@ -118,9 +128,9 @@ void DetectorConstruction::DefineMaterials(){
   // G4NistManager* nist = G4NistManager::Instance();
 
   // G4Material* fWorldMater = nist->FindOrBuildMaterial("G4_Al");
-  
+
   // or use G4 materials data base
-  
+
   // G4NistManager* mat_manager = G4NistManager::Instance();
 }
 
@@ -148,7 +158,36 @@ void DetectorConstruction::SetReadFile( const G4String& File )
   fWritingChoice=0;
 }
 
+void DetectorConstruction::ConstructSDandField()
+{
+  // Create a new sensitive detector (SD) manager pointer.
+  G4SDManager* SD_manager = G4SDManager::GetSDMpointer();
+
+  // Set the verbose level of the SD manager to 1.
+  SD_manager->SetVerboseLevel(1);
+
+  // Create a reference to the SD cache pointer.
+  G4MultiFunctionalDetector* &sensitiveDetector =
+    fSensitiveDetectorCache.Get();
+
+  if (!sensitiveDetector)
+  {
+    sensitiveDetector = new G4MultiFunctionalDetector("MyDetector");
+
+    G4VPrimitiveScorer* flux_scorer;
+
+    G4String filterName, particleName;
+    G4SDParticleFilter* neutronFilter =
+      new G4SDParticleFilter(filterName = "neutronFilter",
+                             particleName = "neutron");
+
+    flux_scorer = new G4PSCellFlux("neutron cell flux");
+    flux_scorer->SetFilter(neutronFilter);
+    sensitiveDetector->RegisterPrimitive(flux_scorer);
+  }
+
+  SD_manager->AddNewDetector(sensitiveDetector);
+  fScoringVolume->SetSensitiveDetector(sensitiveDetector);
+}
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-
-

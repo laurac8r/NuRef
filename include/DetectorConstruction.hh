@@ -27,7 +27,7 @@
 /// \brief Definition of the DetectorConstruction class
 //
 // $Id: DetectorConstruction.hh 66586 2012-12-21 10:48:39Z ihrivnac $
-// 
+//
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -38,11 +38,13 @@
 #include "G4GDMLParser.hh"
 #include "G4VUserDetectorConstruction.hh"
 #include "globals.hh"
-#include<vector>
+#include "G4Cache.hh"
+#include <vector>
 
 class G4VPhysicalVolume;
 class G4LogicalVolume;
 class G4Material;
+class G4MultiFunctionalDetector;
 class DetectorMessenger;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -50,12 +52,12 @@ class DetectorMessenger;
 class DetectorConstruction : public G4VUserDetectorConstruction
 {
   public:
-  
+
     DetectorConstruction();
    ~DetectorConstruction();
 
   public:
-  
+
     virtual G4VPhysicalVolume* Construct();
     G4LogicalVolume* ReturnVolume() const
     {
@@ -74,12 +76,13 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     // Reading GDML
     //
     void SetReadFile( const G4String& File );
-         
-                       
+
+    void ConstructSDandField();
+
   private:
-  
+
     G4GDMLParser       fParser;
-    G4Material*        fWorldMater;     
+    G4Material*        fWorldMater;
     G4VPhysicalVolume* fPhysiWorld;
     G4int fWritingChoice;
     G4String fReadFile;
@@ -88,11 +91,14 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     std::vector<G4LogicalVolume*> fScoringVolume1;
 
     void DefineMaterials();
-    G4VPhysicalVolume* ConstructVolumes();     
+    G4VPhysicalVolume* ConstructVolumes();
+
+    // Use of G4Cache for multi-threaded operation. Allows for storage of
+    // a seperate detector pointer per thread.
+    const G4Cache<G4MultiFunctionalDetector*> fSensitiveDetectorCache;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 
 #endif
-

@@ -38,30 +38,29 @@
 #include "globals.hh"
 #include "G4Accumulable.hh"
 
-
 class Run;
-
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 class RunAction : public G4UserRunAction
 {
   public:
-    RunAction();
-   ~RunAction();
+    RunAction(const G4String&);
+    virtual ~RunAction();
 
-  public:
-    virtual void BeginOfRunAction(const G4Run*);
-    virtual void   EndOfRunAction(const G4Run*);
-            void AddEdep (G4double edep); 
-                            
+    // virtual void BeginOfRunAction(const G4Run*);
+    virtual G4Run* GenerateRun();
+
+    virtual void EndOfRunAction(const G4Run*);
+    void AddEngDep (G4double edep);
+
   private:
     G4Accumulable<G4double> fEdep;
     G4Accumulable<G4double> fEdep2;
-        
+
+    G4String fOutputFileSpec;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
-

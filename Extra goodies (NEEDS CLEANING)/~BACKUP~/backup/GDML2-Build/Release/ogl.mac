@@ -1,0 +1,3 @@
+/vis/viewer/set/viewpointThetaPhi 60. 90.
+/vis/viewer/zoom 2.7
+/vis/viewer/set/style wireframe

@@ -43,6 +43,7 @@ class HistoManager;
 class DetectorConstruction;
 class EventAction;
 class G4LogicalVolume;
+class RunAction;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -53,6 +54,8 @@ class SteppingAction : public G4UserSteppingAction
    ~SteppingAction();
 
     virtual void UserSteppingAction(const G4Step*);
+
+    RunAction* runAction;
     
   private:
     HistoManager* fHisto;

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D869CEE8-7A11-3F03-A61E-6EE53CD99782}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>G02</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\GDML2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\GDML2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\GDML2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Nnaemeka\Geant4\geant4_10_03-install\include\Geant4;\Users\Nnaemeka\xercesc\include;\Users\Nnaemeka\Geant4\GDML2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/GDML2 -BC:/Users/Nnaemeka/Geant4/GDML2-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\GDML2\read_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\read_step.mac;\Users\Nnaemeka\Geant4\GDML2\test.gdml;\Users\Nnaemeka\Geant4\GDML2\vis.mac;\Users\Nnaemeka\Geant4\GDML2\write_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\mbb.geom;\Users\Nnaemeka\Geant4\GDML2\mbb.tree;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/GDML2 -BC:/Users/Nnaemeka/Geant4/GDML2-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\GDML2\read_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\read_step.mac;\Users\Nnaemeka\Geant4\GDML2\test.gdml;\Users\Nnaemeka\Geant4\GDML2\vis.mac;\Users\Nnaemeka\Geant4\GDML2\write_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\mbb.geom;\Users\Nnaemeka\Geant4\GDML2\mbb.tree;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/GDML2 -BC:/Users/Nnaemeka/Geant4/GDML2-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">/Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\GDML2\read_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\read_step.mac;\Users\Nnaemeka\Geant4\GDML2\test.gdml;\Users\Nnaemeka\Geant4\GDML2\vis.mac;\Users\Nnaemeka\Geant4\GDML2\write_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\mbb.geom;\Users\Nnaemeka\Geant4\GDML2\mbb.tree;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule /Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -H/Users/Nnaemeka/Geant4/GDML2 -BC:/Users/Nnaemeka/Geant4/GDML2-Build --check-stamp-file C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">/Users/Nnaemeka/Geant4/GDML2/CMakeLists.txt;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCCompiler.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\3.7.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4ConfigVersion.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4Config.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Modules\IntelCompileFeatures.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\Geant4LibraryDepends-release.cmake;C:\Users\Nnaemeka\Geant4\geant4_10_03-install\lib\Geant4-10.3.0\UseGeant4.cmake;\Users\Nnaemeka\Geant4\GDML2\read_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\read_step.mac;\Users\Nnaemeka\Geant4\GDML2\test.gdml;\Users\Nnaemeka\Geant4\GDML2\vis.mac;\Users\Nnaemeka\Geant4\GDML2\write_gdml.mac;\Users\Nnaemeka\Geant4\GDML2\mbb.geom;\Users\Nnaemeka\Geant4\GDML2\mbb.tree;\Users\Nnaemeka\Geant4\GDML2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\2de094f356e3f5e14049148290639a77\G02.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/2de094f356e3f5e14049148290639a77/G02.rule;C:\Users\Nnaemeka\Geant4\GDML2-Build\Debug\geotest.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\G02</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/2de094f356e3f5e14049148290639a77/G02.rule;C:\Users\Nnaemeka\Geant4\GDML2-Build\Release\geotest.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\G02</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/2de094f356e3f5e14049148290639a77/G02.rule;C:\Users\Nnaemeka\Geant4\GDML2-Build\MinSizeRel\geotest.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\G02</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Nnaemeka/Geant4/GDML2-Build/CMakeFiles/2de094f356e3f5e14049148290639a77/G02.rule;C:\Users\Nnaemeka\Geant4\GDML2-Build\RelWithDebInfo\geotest.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\G02</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Nnaemeka\Geant4\GDML2-Build\CMakeFiles\G02" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/Nnaemeka/Geant4/GDML2-Build/ZERO_CHECK.vcxproj">
+      <Project>1D5B550C-7C89-31E5-9692-6628AF35CE15</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Nnaemeka/Geant4/GDML2-Build/geotest.vcxproj">
+      <Project>9564E275-6470-3491-B293-C9A32BE4BA4F</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

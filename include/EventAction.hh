@@ -27,7 +27,7 @@
 /// \brief Definition of the EventAction class
 //
 // $Id: EventAction.hh 76293 2013-11-08 13:11:23Z gcosmo $
-// 
+//
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -38,30 +38,51 @@
 #include "G4UserEventAction.hh"
 #include "globals.hh"
 
-
 class RunAction;
 
 class EventAction : public G4UserEventAction
 {
   public:
-    EventAction(RunAction* runAction);
+    // Define the event action constructor.
+    EventAction(RunAction* runAction(const G4String&));
+
+    // Define the event action destructor.
    ~EventAction();
 
   public:
-    virtual void BeginOfEventAction(const G4Event*);
-    virtual void   EndOfEventAction(const G4Event*);
-    
-    void AddEdep(G4double edep) { fEdep += edep; }
-    void AddEdep1(G4double edep1,G4int i) { fEdep1[i] += edep1; }
-                
+    // Define the beginning of the event action, in which both of the
+    //   accumulated energy deposition variables are initialized.
+    virtual void BeginOfEventAction();
+
+    // Define the end of the event action, whuch
+    virtual void EndOfEventAction(const G4Event*, G4bool&);
+
+    // Define a method to add the current-event energy deposition to the
+    //   accumulated energy deposition for a single scoring logical volume.
+    void AddEngDep(G4double engDep) {fEngDep += engDep;}
+
+    // Define a method to add the current-event energy deposition to the
+    //   accumulated energy deposition for multiple scoring logical volumes.
+    void AddEngDepArr(G4double engDep, G4int i) {fEngDepArr[i] += engDep;}
+
   private:
+    // Define the output file name for the fluence.
+    G4String fOutputFileSpec;
+
+    // Define the run action.
     RunAction* fRunAction;
-    G4double fEdep;
-    G4double fEdep1[2];
+
+    // Define a double-precision floating-point number to store the
+    //   accumulated energy deposition if there is only a single scoring
+    //   logical volume.
+    G4double fEngDep;
+
+    // Define a double-precision floating-point array to store the
+    //   accumulated energy deposition if there is more than one scoring
+    //   logical volume.
+    G4double fEngDepArr[2];
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
-
-    

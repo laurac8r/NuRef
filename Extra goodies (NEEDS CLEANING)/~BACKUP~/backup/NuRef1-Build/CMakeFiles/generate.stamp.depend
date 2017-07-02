@@ -1,0 +1,32 @@
+# CMake generation dependency list for this directory.
+/Users/Nnaemeka/Geant4/NuRef/CMakeLists.txt
+C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/3.7.0-rc2/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/3.7.0-rc2/CMakeCCompiler.cmake
+C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/3.7.0-rc2/CMakeCXXCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC.cmake
+C:/Users/Nnaemeka/Geant4/NuRef-Build/CMakeFiles/3.7.0-rc2/CMakeRCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake
+/Users/Nnaemeka/Geant4/geant4_10_03-install/lib/Geant4-10.3.0/Geant4ConfigVersion.cmake
+/Users/Nnaemeka/Geant4/geant4_10_03-install/lib/Geant4-10.3.0/Geant4Config.cmake
+/Users/Nnaemeka/Geant4/geant4_10_03-install/lib/Geant4-10.3.0/Modules/IntelCompileFeatures.cmake
+/Users/Nnaemeka/Geant4/geant4_10_03-install/lib/Geant4-10.3.0/Geant4LibraryDepends.cmake
+/Users/Nnaemeka/Geant4/geant4_10_03-install/lib/Geant4-10.3.0/Geant4LibraryDepends-release.cmake
+/Users/Nnaemeka/Geant4/geant4_10_03-install/lib/Geant4-10.3.0/UseGeant4.cmake
+/Users/Nnaemeka/Geant4/NuRef/plotHisto.C
+/Users/Nnaemeka/Geant4/NuRef/read_gdml.mac
+/Users/Nnaemeka/Geant4/NuRef/vis.mac

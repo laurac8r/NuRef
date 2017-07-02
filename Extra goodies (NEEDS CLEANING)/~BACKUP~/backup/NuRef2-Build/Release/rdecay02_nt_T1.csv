@@ -1,0 +1,8 @@
+#class tools::wcsv::ntuple
+#title Emitted Particles
+#separator 44
+#vector_separator 59
+#column double PID
+#column double Energy
+#column double Time
+#column double Weight
