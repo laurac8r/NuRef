@@ -27,7 +27,7 @@
 /// \brief Implementation of the HistoManager class
 //
 // $Id: HistoManager.cc 98265 2016-07-04 17:47:54Z gcosmo $
-// 
+//
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -37,11 +37,14 @@
 #include "Run.hh"
 #include "G4RunManager.hh"
 #include "G4LogicalVolume.hh"
+#include <string>
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-HistoManager::HistoManager(DetectorConstruction* det)
-  : fFileName("HFNG"), fDetector(det), fScoringVolume1(0.)
+// HistoManager::HistoManager(DetectorConstruction* det)
+  // , fDetector(det), fScoringVolume1(0.)
+HistoManager::HistoManager()
+: fFileName("HFNG_histograms")
 {
   Book();
 }
@@ -50,16 +53,15 @@ HistoManager::HistoManager(DetectorConstruction* det)
 
 HistoManager::~HistoManager()
 {
-
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void HistoManager::Book()
 {
-  // Obtain the run manager.
-  Run* run = static_cast<Run*>(
-        G4RunManager::GetRunManager()->GetNonConstCurrentRun()); 
+  // // Obtain the run manager.
+  // Run* run = static_cast<Run*>(
+  //       G4RunManager::GetRunManager()->GetNonConstCurrentRun());
 
   // Create or get analysis manager
   // The choice of analysis technology is done via selection of a namespace
@@ -68,11 +70,11 @@ void HistoManager::Book()
   analysisManager->SetFileName(fFileName);
   analysisManager->SetVerboseLevel(1);
   analysisManager->SetActivation(true);     // Enable activation of histograms
-  
+
   //get scoring volume
   //
-  const DetectorConstruction* detectorConstruction = static_cast<const DetectorConstruction*>
-        (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
+  // const DetectorConstruction* detectorConstruction = static_cast<const DetectorConstruction*>
+        // (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
 
   // G4LogicalVolume* fScoringVolume1 = detectorConstruction->GetScoringVolume();
 
@@ -82,45 +84,75 @@ void HistoManager::Book()
 //fScoringVolume1 = fDetector->GetScoringVolume1();
 //G4cout<<"Scoring volume size is: "<<fScoringVolume1.size()<<G4endl;
 //getchar();
-  
+
   // fScoringVolume1 = detectorConstruction->GetScoringVolume1();
 
   //for(int j = 0; j < 3; j++)
    // {
       // Retrieve the name of the current scoring volume.
-  //  if (!fScoringVolume) { 
-   //  fScoringVolume = detectorConstruction->ReturnVolume();   
+  //  if (!fScoringVolume) {
+   //  fScoringVolume = detectorConstruction->ReturnVolume();
   // }
    //   G4String volume_name = fScoringVolume1[j]->GetName();
 
-      // Define histograms start values.
-      const G4int kMaxHisto = 9;
-      const G4String id[] = {"0", "1", "2","3", "4", "5", "6", "7", "8"};
-      //const G4String id[] = {std::to_string(j*10), std::to_string(j*10 + 1), std::to_string(j*10 + 2)};
-      const G4String title[] = 
-                    {
-                      "All Neutrons Entering Volume 1",               // ID = 0
-                      "All Neutrons Entering Volume 2",               // ID = 1
-                      "Energy of Neutrons Scattered Into Volume 1",   // ID = 2
-                      "Energy of Neutrons Scattered Into Volume 2",   // ID = 3
-                      "Neutron Captured in Volume 1",                 // ID = 4
-                      "Neutron Captured in Volume 2",                 // ID = 5
-                      "Neutron Flux Into Volume 1",                   // ID = 6
-                      "Neutron Flux Into Volume 2",                   // ID = 7
-                      "Neutrons Leaving World"                        // ID = 8
-                    };
 
-      // Bin parameters               
-      G4int nbins = 500;
-      G4double x_min = 0.;  // Minimum value on the x-axis
-      G4double x_max = 5.;  // Minimum value on the y-axis
+      // Define an array to store the title of each histogram.
+      const G4String title[] =
+              {
+                "Neutrons Leaving World"                          // ID = 0
+                "Neutrons Entering Volume 1",                     // ID = 1
+                "Neutrons Entering Volume 2",                     // ID = 2
+                "Neutrons Scattering in Volume 1"                 // ID = 3
+                "Neutrons Scattering in Volume 2"                 // ID = 4
+                "Energy Deposition in Volume 1",                  // ID = 5
+                "Energy Deposition in Volume 2",                  // ID = 6
+                "Neutron Fluence Into Volume 1",                  // ID = 7
+                "Neutron Fluence Into Volume 2",                  // ID = 8
+              };
 
-      // Create all histograms
+      // Define the maximum number of histograms as the number of elements in
+      //  the title array. The numerator gives the total number of bytes used to
+      //  hold the array in memory. The denominator gives the number of bytes
+      //  used to hold the one element of the array in memory (the first).
+      const G4int kMaxHisto = sizeof(title) / size(*title);
+
+      // Initialize an array to hold the histogram IDs.
+      G4String id[kMaxHisto];
+
+      // Fill the histogram ID array.
+      for (int i=0; i<kMaxisto; i++)
+      {
+        // Create a temporary, dynamic pointer to hold the string version of
+        //  the histogram ID.
+        std::string* temp_ptr = new std::string;
+
+        // Set the temporary pointer's dereference value equal to the string
+        //  version of the histogram ID currently chosen by the for loop
+        //  iterator.
+        *temp_ptr = std::to_string(i);
+
+        // Dynamically cast the temporary pointer to a G4String reference
+        //  object and set the casted reference equal to the reference of the
+        //  ID array element currently chosen by the for loop iterator.
+        &id[i] = dynamic_cast<G4String&> (temp_ptr);
+
+        // Release the memory held by the temporary pointer.
+        delete temp_ptr;
+      }
+      // const G4String id[] = {"0", "1", "2","3", "4", "5", "6", "7", "8"};
+
+      // Bin parameters
+      G4int nbins = 500;    // For a set energy window, affects energy width
+                            //   of each bin
+      G4double x_min = 0.;  // Minimum value on the x-axis (MeV)
+      G4double y_min = 5.;  // Minimum value on the y-axis (MeV)
+
+      // Iterate through and create all histograms.
       for (G4int k=0; k<kMaxHisto; k++)
-        {
-          G4int ih = analysisManager->CreateH1(id[k], title[k], nbins, x_min, x_max);
-          analysisManager->SetH1Activation(ih, true);
-        }
+      {
+        G4int ih = analysisManager->CreateH1(id[k], title[k], nbins, x_min, y_min);
+        analysisManager->SetH1Activation(ih, true);
+      }
     //}
 }
 

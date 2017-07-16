@@ -66,8 +66,8 @@ class EventAction : public G4UserEventAction
     void AddEngDepArr(G4double engDep, G4int i) {fEngDepArr[i] += engDep;}
 
   private:
-    // Define the output file name for the fluence.
-    G4String fOutputFileSpec;
+    // // Define the output file name for the fluence.
+    // G4String fOutputFileSpec;
 
     // Define the run action.
     RunAction* fRunAction;

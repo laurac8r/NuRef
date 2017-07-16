@@ -61,7 +61,8 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 RunAction::RunAction(const G4String& outputFile)
-: G4UserRunAction(), fOutputFileSpec(outputFile), fEngDep(0.), fEngDepSqr(0.)
+: G4UserRunAction(),
+  fOutputFileSpec(outputFile), fEngDep(0.), fEngDepSqr(0.), fNeutCap(0)
 {
   // Create an instance of an accumulable manager.
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();

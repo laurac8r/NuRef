@@ -50,19 +50,24 @@ class RunAction;
 class SteppingAction : public G4UserSteppingAction
 {
   public:
-    SteppingAction(DetectorConstruction*, EventAction*, HistoManager*);
+    SteppingAction(RunAction*, EventAction*);
    ~SteppingAction();
 
     virtual void UserSteppingAction(const G4Step*);
 
     RunAction* runAction;
-    
+
   private:
-    HistoManager* fHisto;
-    DetectorConstruction* fDetector;
+    // Initialize the local, private run action variable for use in this class.
+    RunAction* fRunAction;
+
+    // Initialize the local, private event action variable for use in this class.
     EventAction* fEventAction;
+
+    // Initialize the local, private scoring volume and scoring volume vector for use
+    //  in this class.
     G4LogicalVolume* fScoringVolume;
-    std::vector<G4LogicalVolume*> fScoringVolume1;
+    std::vector<G4LogicalVolume*> fScoringVolumeVec;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -81,7 +81,7 @@ void ActionInitialization::Build() const
   // SetUserAction(new TrackingAction(fDetector, event, histo));
 
   // Define and set a new stepping action.
-  SetUserAction(new SteppingAction(fDetector, eventAction, histoManager));
+  SetUserAction(new SteppingAction(runAction, eventAction));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

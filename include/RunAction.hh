@@ -67,6 +67,9 @@ class RunAction : public G4UserRunAction
     //   deposition occurs.
     virtual void EndOfRunAction(const G4Run*);
 
+    // Define a method to increment the neutron capture counter.
+    void IncrementNeutCap() {fNeutCap++;}
+
     void AddEngDep (G4double&);
     void AddEngDepArr (std::vector<G4double&>&);
 
@@ -82,6 +85,10 @@ class RunAction : public G4UserRunAction
     //   VARIABLE IN THE DETECTOR CONSTRUCTION CLASS.
     std::vector< G4Accumulable<G4double> > fEngDepArr(2);
     std::vector< G4Accumulable<G4double> > fEngDepSqrArr(2);
+
+    // Define a double-precision floating-point number to store the
+    //  accumulated number of neutron captures.
+    G4int fNeutCap;
 
     // // Reserve the number of scoring logical volumes for memory for the energy
     // //   deposit arrays.
