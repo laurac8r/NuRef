@@ -75,7 +75,8 @@ void ActionInitialization::Build() const
   EventAction* eventAction = new EventAction(runAction);
   SetUserAction(eventAction);
 
-  // Define a new histogram manager.
+  // Define a new histogram manager. The setup of new histograms is done with this
+  //  HistoManager class instantiation.
   HistoManager* histoManager = new HistoManager(fDetector);
 
   // SetUserAction(new TrackingAction(fDetector, event, histo));
