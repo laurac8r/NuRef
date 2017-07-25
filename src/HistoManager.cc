@@ -114,30 +114,32 @@ void HistoManager::Book()
       //  the title array. The numerator gives the total number of bytes used to
       //  hold the array in memory. The denominator gives the number of bytes
       //  used to hold the one element of the array in memory (the first).
-      const G4int kMaxHisto = sizeof(title) / size(*title);
+      const G4int kMaxHisto = sizeof(title) / sizeof(*title);
 
       // Initialize an array to hold the histogram IDs.
       G4String id[kMaxHisto];
 
       // Fill the histogram ID array.
-      for (int i=0; i<kMaxisto; i++)
+      for (int i=0; i<kMaxHisto; i++)
       {
-        // Create a temporary, dynamic pointer to hold the string version of
-        //  the histogram ID.
-        std::string* temp_ptr = new std::string;
+        // // Create a temporary, dynamic pointer to hold the string version of
+        // //  the histogram ID.
+        // std::string* temp_ptr = new std::string;
+        //
+        // // Set the temporary pointer's dereference value equal to the string
+        // //  version of the histogram ID currently chosen by the for loop
+        // //  iterator.
+        // *temp_ptr = std::to_string(i);
+        //
+        // // Dynamically cast the temporary pointer to a G4String reference
+        // //  object and set the casted reference equal to the reference of the
+        // //  ID array element currently chosen by the for loop iterator.
+        // &id[i] = dynamic_cast<G4String*> (temp_ptr);
 
-        // Set the temporary pointer's dereference value equal to the string
-        //  version of the histogram ID currently chosen by the for loop
-        //  iterator.
-        *temp_ptr = std::to_string(i);
-
-        // Dynamically cast the temporary pointer to a G4String reference
-        //  object and set the casted reference equal to the reference of the
-        //  ID array element currently chosen by the for loop iterator.
-        &id[i] = dynamic_cast<G4String&> (temp_ptr);
+        id[i] = std::to_string(i);
 
         // Release the memory held by the temporary pointer.
-        delete temp_ptr;
+        // delete temp_ptr;
       }
       // const G4String id[] = {"0", "1", "2","3", "4", "5", "6", "7", "8"};
 

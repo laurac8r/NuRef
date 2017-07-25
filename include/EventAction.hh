@@ -44,7 +44,7 @@ class EventAction : public G4UserEventAction
 {
   public:
     // Define the event action constructor.
-    EventAction(RunAction* runAction(const G4String&));
+    EventAction(RunAction*);
 
     // Define the event action destructor.
    ~EventAction();
@@ -55,7 +55,7 @@ class EventAction : public G4UserEventAction
     virtual void BeginOfEventAction();
 
     // Define the end of the event action, whuch
-    virtual void EndOfEventAction(const G4Event*, G4bool&);
+    virtual void EndOfEventAction(const G4Event*);
 
     // Define a method to add the current-event energy deposition to the
     //   accumulated energy deposition for a single scoring logical volume.

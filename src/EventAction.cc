@@ -45,9 +45,9 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-EventAction::EventAction(RunAction* runAction(const G4String& outputFile))
+EventAction::EventAction(RunAction* runAction)
 : G4UserEventAction(),
-  fRunAction(runAction), fEngDep(0.), fEngDepArr{0.}
+  fRunAction(runAction), fEngDep(0.), fEngDepArr({0.})
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

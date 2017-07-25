@@ -35,8 +35,8 @@
 #include "RunAction.hh"
 #include "HistoManager.hh"
 #include "SteppingAction.hh"
+#include "EventAction.hh"
 
-// #include "EventAction.hh"
 // #include "TrackingAction.hh"
 // #include "SteppingVerbose.hh"
 
@@ -77,7 +77,7 @@ void ActionInitialization::Build() const
 
   // Define a new histogram manager. The setup of new histograms is done with this
   //  HistoManager class instantiation.
-  HistoManager* histoManager = new HistoManager(fDetector);
+  // HistoManager* histoManager = new HistoManager();
 
   // SetUserAction(new TrackingAction(fDetector, event, histo));
 

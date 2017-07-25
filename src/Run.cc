@@ -29,6 +29,8 @@
 // $Id: Run.cc 71376 2013-06-14 07:44:50Z maire $
 
 #include "Run.hh"
+#include "G4Event.hh"
+#include "G4THitsMap.hh"
 
 #include "G4MultiFunctionalDetector.hh"
 #include "G4SDManager.hh"

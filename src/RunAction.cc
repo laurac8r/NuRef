@@ -62,7 +62,7 @@
 
 RunAction::RunAction(const G4String& outputFile)
 : G4UserRunAction(),
-  fOutputFileSpec(outputFile), fEngDep(0.), fEngDepSqr(0.), fNeutCap(0)
+  fOutputFileSpec(outputFile), fEngDep(0.), fEngDepSqr(0.), fNeutCap(0),
 {
   // Create an instance of an accumulable manager.
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
@@ -75,10 +75,13 @@ RunAction::RunAction(const G4String& outputFile)
   // Iterate through and register all the elements in the vectors containing the
   //   energy deposition accumulables and the squares of those quantities in the
   //   case of multiple scoring volumes.
-  for (i = 0; i < 2; i++)
+  for (int i = 0; i < 2; i++)
   {
-    accumulableManager->RegisterAccumulable(fEngDepArr.at(i));
-    accumulableManager->RegisterAccumulable(fEngDepSqrArr.at(i));
+    accumulableManager->RegisterAccumulable(fEngDepArr[i]);
+    accumulableManager->RegisterAccumulable(fEngDepSqrArr[i]);
+
+    // accumulableManager->RegisterAccumulable(fEngDepArr.at(i));
+    // accumulableManager->RegisterAccumulable(fEngDepSqrArr.at(i));
   }
 }
 
@@ -175,21 +178,22 @@ void RunAction::AddEngDep(G4double& engDep)
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void RunAction::AddEngDepArr(std::vector<G4double&>& engDep)
+void RunAction::AddEngDepArr(G4double (&engDep)[2])
 {
   // Iterate through all the scoring volumes and accumulate the energy
   //   deposition from the event action calling this method.
-  for (i = 0; i < 2; i++)
+  for (int i = 0; i < 2; i++)
   {
     // Grab the energy deposition for the scoring volume of interest. Throw an
     //   error if we are out of range of the energy deposition vector number
     //   of elements. (Use of ".at(i)" in place of "[i]" ensures this error
     //   checking.)
-    engDepForI = engDep.at(i);
+    G4double engDepForI = engDep[i];
+    // engDepForI = engDep.at(i);
 
     // Accumulate the energy deposition from the event action calling this
     //   method for the case of multiple scoring volumes.
-    fEngDepArr.at(i)  += engDepForI;
-    fEngDepSqrArr.at(i) += engDepForI * engDepForI;
+    fEngDepArr[i]  += engDepForI;
+    fEngDepSqrArr[i] += engDepForI * engDepForI;
   }
 }

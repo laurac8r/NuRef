@@ -71,7 +71,7 @@ class RunAction : public G4UserRunAction
     void IncrementNeutCap() {fNeutCap++;}
 
     void AddEngDep (G4double&);
-    void AddEngDepArr (std::vector<G4double&>&);
+    void AddEngDepArr (G4double (&engDep)[2]);
 
   private:
     // Create ordinary accumulables for energy deposition for the case of only
@@ -83,8 +83,8 @@ class RunAction : public G4UserRunAction
     //   scoring logical volumes. CHANGE THE DEFAULT NUMBER OF SCORING
     //   VOLUMES TO THAT DEFINED BY SOME CUSTOM METHOD CALLING A PRIVATE
     //   VARIABLE IN THE DETECTOR CONSTRUCTION CLASS.
-    std::vector< G4Accumulable<G4double> > fEngDepArr(2);
-    std::vector< G4Accumulable<G4double> > fEngDepSqrArr(2);
+    std::vector< G4Accumulable<G4double> > fEngDepArr;
+    std::vector< G4Accumulable<G4double> > fEngDepSqrArr;
 
     // Define a double-precision floating-point number to store the
     //  accumulated number of neutron captures.

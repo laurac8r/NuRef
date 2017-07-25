@@ -34,13 +34,13 @@
 #ifndef Run_h
 #define Run_h 1
 
-// #include "G4Event.hh"
+#include "G4Event.hh"
 #include "G4Run.hh"
-// #include "G4THitsMap.hh"
+#include "G4THitsMap.hh"
 #include <map>
 
-class G4THitsMap
-class G4Event;
+// class G4THitsMap
+// class G4Event;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

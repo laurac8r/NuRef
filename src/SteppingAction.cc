@@ -36,6 +36,7 @@
 
 #include "DetectorConstruction.hh"
 #include "Run.hh"
+#include "RunAction.hh"
 #include "EventAction.hh"
 #include "G4Event.hh"
 #include "HistoManager.hh"

@@ -47,16 +47,15 @@
 #include "vector"
 class Run;
 class DetectorConstruction;
-
+class G4LogicalVolume;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-class G4LogicalVolume;
 
 class HistoManager
 {
   public:
     // HistoManager(DetectorConstruction* det);
-    HistoManager()
+    HistoManager();
    ~HistoManager();
 
   private:
