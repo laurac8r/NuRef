@@ -22,14 +22,11 @@
 // * use  in  resulting  scientific  publications,  and indicate your *
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
-//
-/// \file DetectorConstruction.hh
-/// \brief Definition of the DetectorConstruction class
-//
-// $Id: DetectorConstruction.hh 66586 2012-12-21 10:48:39Z ihrivnac $
-//
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
+//  Detector Construction Class
+//
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #ifndef DetectorConstruction_h
@@ -54,12 +51,10 @@ class DetectorConstruction : public G4VUserDetectorConstruction
   public:
 
     DetectorConstruction();
-   ~DetectorConstruction();
-
-  public:
+    virtual ~DetectorConstruction();
 
     virtual G4VPhysicalVolume* Construct();
-    G4LogicalVolume* ReturnVolume() const {return fScoringVolume;}
+    // G4LogicalVolume* ReturnVolume() const {return fScoringVolume;}
     G4LogicalVolume* GetScoringVolume() const {return fScoringVolume;}
 
     std::vector<G4LogicalVolume*> GetScoringVolumeVec() const
@@ -75,6 +70,8 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     // void SetReadFile( const G4String& File);
     void SetReadFile( const G4String&);
 
+    // Construct the sensitive detectors and electromagnetic fields through them,
+    //  if desired.
     void ConstructSDandField();
 
   private:

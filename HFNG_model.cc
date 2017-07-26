@@ -78,7 +78,7 @@ int main(int argc, char** argv)
   G4cout << "Starting seed : " << startingSeed << G4endl << G4endl;
   G4cout << "Output file   : " << outputFile << G4endl << G4endl;
 
-  // Initiate the multithreaded run manager if Geant4 is run in multi-threaded
+  // Initiate the multithreaded run manager if Geant4 is run in multithreaded
   //   mode.
   #ifdef G4MULTITHREADED
     G4MTRunManager* runManager = new G4MTRunManager;
@@ -95,7 +95,7 @@ int main(int argc, char** argv)
   is >> startingSeedInt;
   G4Random::setTheSeed(startingSeedInt);
 
-  // // Instantiate the scoring manager. NECESSARY ???
+  // Instantiate the scoring manager. NECESSARY ???
   G4ScoringManager::GetScoringManager();
 
   // Instantiate the geometry.
@@ -103,14 +103,17 @@ int main(int argc, char** argv)
   runManager->SetUserInitialization(det);
 
   // Instantiate the physics list. POSSIBLY UPDATE ???
-  // G4VUserPhysicsList* phyList = new QGSP_BERT;
   runManager->SetUserInitialization(new QGSP_BERT);
 
-  //
+  // Set the action initialization.
   runManager->SetUserInitialization(new ActionInitialization(det, outputFile));
 
-  // Initialisation of runManager via macro for the interactive mode
-  // This gives possibility to give different names for GDML file to READ
+  // Initialize the visual and UI managers with or without the macro file.
+  //  If initialized with the macro file, the simulation is run in interactive
+  //  mode.
+  //
+  // Note: This gives possibility to import the geometry from different GDML
+  //       files.
   #ifdef G4VIS_USE
 
     G4VisManager* visManager = new G4VisExecutive;
@@ -118,24 +121,29 @@ int main(int argc, char** argv)
 
   #endif
 
-  // Open a UI session: will stay there until the user types "exit"
+  // Open an UI session: It will stay open until the user types "exit" or
+  // simply uses a keyboard interrupt.
   //
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
   // Run the default macro file if no macro has been specified as an argument
-  //   to the executable, and visualization is turned on.
+  //  to the executable, the executable is set to use an UI and visualization
+  //  is turned on.
   if (argc == 1)
   {
     #ifdef G4UI_USE
+
       // Create a new UI executive object to start the simulation session if the
-      //   executable has been run in interactive mode.
+      //  executable has been run in interactive mode.
       G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 
     #ifdef G4VIS_USE
+
       // Run the visualization macro.
       UImanager->ApplyCommand("/control/execute vis.mac");
 
     #endif
+
       // Start the simulation session.
       ui->SessionStart();
 
@@ -146,12 +154,13 @@ int main(int argc, char** argv)
   }
 
   // Run the executable with the specified macro provided as an argument to the
-  //   executable.
+  //   executable if one or more arguments have been provided by the user.
   else
   {
     #ifdef G4UI_USE
+
       // Create a new UI executive object to start the simulation session if
-      //   the executable has been run in interactive mode.
+      //  the executable has been run in interactive mode.
       G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 
       // Define command prefix to use to execute the macro file.
@@ -169,17 +178,10 @@ int main(int argc, char** argv)
     #endif
   }
 
-  // #ifdef G4VIS_USE
-  //
-  //   // Delete the run manager.
-  //   delete runManager;
-  //
-  // #endif
-
   // Terminate the simulation.
   delete runManager;
 
-  // Exit the main function function with no errors.
+  // Exit the main function with no errors.
   return 0;
 }
 

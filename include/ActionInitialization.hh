@@ -22,11 +22,12 @@
 // * use  in  resulting  scientific  publications,  and indicate your *
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //
-// $Id: ActionInitialization.hh 68058 2013-03-13 14:47:43Z gcosmo $
+// Action initialization class.
 //
-/// \file ActionInitialization.hh
-/// \brief Definition of the ActionInitialization class
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #ifndef ActionInitialization_h
 #define ActionInitialization_h 1
@@ -36,12 +37,12 @@
 class DetectorConstruction;
 // class G4VSteppingVerbose;
 
-/// Action initialization class.
-///
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 class ActionInitialization : public G4VUserActionInitialization
 {
   public:
+
     ActionInitialization(DetectorConstruction*, const G4String&);
     virtual ~ActionInitialization();
 
@@ -51,6 +52,7 @@ class ActionInitialization : public G4VUserActionInitialization
     // virtual G4VSteppingVerbose* InitializeSteppingVerbose() const;
 
   private:
+
     DetectorConstruction* fDetector;
 
     const G4String fOutputFileSpec;

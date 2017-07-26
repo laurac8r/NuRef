@@ -1,8 +1,3 @@
-# $Id: GNUmakefile 88647 2015-03-03 11:06:49Z gcosmo $
-# --------------------------------------------------------------
-# GNUmakefile for examples module.  Gabriele Cosmo, 06/04/98.
-# --------------------------------------------------------------
-
 name := HFNG_model
 G4TARGET := $(name)
 G4EXLIB := true
