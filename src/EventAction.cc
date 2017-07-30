@@ -47,8 +47,13 @@
 
 EventAction::EventAction(RunAction* runAction)
 : G4UserEventAction(),
-  fRunAction(runAction), fEngDep(0.), fEngDepArr({0.})
-{ }
+  fRunAction(runAction)
+{
+  // Initialize the accumulated energy deposition variables.
+  // fEngDep = fEngDepArr[0] = fEngDepArr[1] = 0.;
+  fEngDep = 0.;
+  fEngDepArr[2] = {0.};
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -59,11 +64,6 @@ EventAction::~EventAction()
 
 void EventAction::BeginOfEventAction()
 {
-  // Initialize the accumulated energy deposition variabl.
-  // fEngDep = fEngDepArr[0] = fEngDepArr[1] = 0.;
-  fEngDep 0.;
-  fEngDepArr = {0.};
-
   G4cout << G4endl << G4endl << "The accumulated energy deposition vector is "
          << fEngDepArr << G4endl << G4endl;
 }

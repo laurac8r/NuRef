@@ -49,7 +49,7 @@ set(HFNG_model_SCRIPTS
     "TargetV4_Assem-1 Target_Lid_4-2.gdml"
     test3.gdml
     vis.mac
-    xerces-c_3_1.dll
+    xerces-c_2_8.dll
   )
 
 foreach(_script ${HFNG_model_SCRIPTS})

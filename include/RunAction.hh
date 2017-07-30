@@ -40,7 +40,9 @@
 
 #include <vector>
 
-class Run;
+#include "Run.hh"
+
+// class Run;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

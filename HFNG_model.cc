@@ -89,11 +89,11 @@ int main(int argc, char** argv)
   // Initiate the random engine. POSSIBLY UPDATE ???
   G4Random::setTheEngine(new CLHEP::RanecuEngine);
 
-  // Convert the starting seed to an integer and feed it to the random engine.
-  unsigned startingSeedInt;
-  std::istringstream is(startingSeed);
-  is >> startingSeedInt;
-  G4Random::setTheSeed(startingSeedInt);
+  // // Convert the starting seed to an integer and feed it to the random engine.
+  // unsigned startingSeedInt;
+  // std::istringstream is(startingSeed);
+  // is >> startingSeedInt;
+  // G4Random::setTheSeed(startingSeedInt);
 
   // Instantiate the scoring manager. NECESSARY ???
   G4ScoringManager::GetScoringManager();

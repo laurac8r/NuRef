@@ -30,12 +30,14 @@
 
 #include "globals.hh"
 
+#include "DetectorConstruction.hh"
+
 #include "ActionInitialization.hh"
 #include "PrimaryGeneratorAction.hh"
 #include "RunAction.hh"
-#include "HistoManager.hh"
-#include "SteppingAction.hh"
+// #include "HistoManager.hh"
 #include "EventAction.hh"
+#include "SteppingAction.hh"
 
 // #include "TrackingAction.hh"
 // #include "SteppingVerbose.hh"
