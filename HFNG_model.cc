@@ -44,7 +44,7 @@
 
 #include "DetectorConstruction.hh"
 //#include "PhysicsList.hh"
-#include "QGSP_BERT.hh"
+#include "QGSP_BERT_HP.hh"
 // #include "Shielding.hh"
 #include "ActionInitialization.hh"
 // #include "SteppingVerbose.hh"
@@ -79,11 +79,15 @@ int main(int argc, char** argv)
   G4cout << "Output file   : " << outputFile << G4endl << G4endl;
 
   // Initiate the multithreaded run manager if Geant4 is run in multithreaded
-  //   mode.
+  //   mode. Otherwise, initiate the regular run manager.
   #ifdef G4MULTITHREADED
+
     G4MTRunManager* runManager = new G4MTRunManager;
+
   #else
+
     G4RunManager* runManager = new G4RunManager;
+
   #endif
 
   // Initiate the random engine. POSSIBLY UPDATE ???
@@ -103,7 +107,7 @@ int main(int argc, char** argv)
   runManager->SetUserInitialization(det);
 
   // Instantiate the physics list. POSSIBLY UPDATE ???
-  runManager->SetUserInitialization(new QGSP_BERT);
+  runManager->SetUserInitialization(new QGSP_BERT_HP);
 
   // Set the action initialization.
   runManager->SetUserInitialization(new ActionInitialization(det, outputFile));
@@ -123,15 +127,17 @@ int main(int argc, char** argv)
 
   // Open an UI session: It will stay open until the user types "exit" or
   // simply uses a keyboard interrupt.
-  //
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
+  #ifdef G4UI_USE
+
   // Run the default macro file if no macro has been specified as an argument
-  //  to the executable, the executable is set to use an UI and visualization
+  //  to the executable. The executable is set to use an UI and visualization
   //  is turned on.
+  //
+  //  aka., run in interactive mode
   if (argc == 1)
   {
-    #ifdef G4UI_USE
 
       // Create a new UI executive object to start the simulation session if the
       //  executable has been run in interactive mode.
@@ -149,16 +155,14 @@ int main(int argc, char** argv)
 
       // Delete the UI executive object after the session is over.
       delete ui;
-
-    #endif
   }
 
   // Run the executable with the specified macro provided as an argument to the
   //   executable if one or more arguments have been provided by the user.
+  //
+  //  aka., run in batch mode
   else
   {
-    #ifdef G4UI_USE
-
       // Create a new UI executive object to start the simulation session if
       //  the executable has been run in interactive mode.
       G4UIExecutive* ui = new G4UIExecutive(argc, argv);
@@ -174,9 +178,16 @@ int main(int argc, char** argv)
 
       // Delete the UI executive object after the session is over.
       delete ui;
-
-    #endif
   }
+
+  #endif
+
+  // Terminate the visualization if it was used.
+  #ifdef G4VIS_USE
+
+    delete visManager;
+
+  #endif
 
   // Terminate the simulation.
   delete runManager;
